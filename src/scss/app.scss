@@ -1,0 +1,12 @@
+//Utils
+@import "../fonts/fonts";
+@import './utils';
+// Pages
+
+ html {
+    height: 100%;
+    font-size: $main-font-size;
+    font-family: $main-font;
+    font-weight: $main-font-weight;
+    font-style: $main-font-style;
+ }

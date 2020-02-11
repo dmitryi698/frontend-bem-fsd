@@ -1,0 +1,15 @@
+mixin header(options)
+  if !options
+    - options = {}
+
+  - let classes = '';
+
+  if options.isUikit
+    header.header(class = classes)
+      .header__logo
+  else
+    header.header(class = classes)
+      .header__logo
+      .header__nav
+      if options.isButtons
+        .header__buttons

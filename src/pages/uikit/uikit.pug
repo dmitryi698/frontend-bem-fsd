@@ -1,0 +1,17 @@
+extends ../../components/layout/layout
+
+
+block title
+  | UI kit
+block body
+  body.body
+
+block header
+  include ../../components/header/header
+  +header({isUikit: true})
+
+block main
+  main.main
+    section.section.section_uikit
+      .uikit__col
+      .uikit__col
