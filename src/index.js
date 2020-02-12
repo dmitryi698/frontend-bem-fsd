@@ -4,11 +4,12 @@ import './scss/app.scss';
 //plugins css
 import '../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css';
 
-//plugins
+// plugins
 import '../node_modules/inputmask/dist/jquery.inputmask';
 import '../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js';
 import '../node_modules/paginationjs/dist/pagination.min.js';
 
+/* The function so as not to engage in copying styles was taken in the project */
 function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
 }

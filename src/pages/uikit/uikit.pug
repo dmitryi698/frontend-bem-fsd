@@ -1,17 +1,15 @@
 extends ../../components/layout/layout
+include ../../components/main/main
+include ../../components/header/header
+include ../../components/section/section
 
 
 block title
   | UI kit
-block body
-  body.body
 
 block header
-  include ../../components/header/header
   +header({isUikit: true})
 
 block main
-  main.main
-    section.section.section_uikit
-      .uikit__col
-      .uikit__col
+  +main()
+    +section()

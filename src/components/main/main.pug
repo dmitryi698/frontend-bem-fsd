@@ -1,0 +1,9 @@
+mixin main(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = '';
+  
+  main.main(class = classes)
+    block

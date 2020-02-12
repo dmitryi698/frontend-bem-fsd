@@ -51,7 +51,7 @@ if (blockName) {
           // fileCreateMsg = 'Для импорта стилей: ' + styleFileImport;
         }
         else if (extention == 'pug') {
-          fileContent = 'mixin  ' + blockName + '(options)' + '\n ' + 'if !options' + '\n ' + ' - options = {}' + '\n\n .' + blockName;
+          fileContent = 'mixin ' + blockName + '(options)' + '\n  ' + 'if !options' + '\n' + '    - options = {}' + '\n\n  .' + blockName;
         }
 
         // Создаем файл, если он еще не существует
