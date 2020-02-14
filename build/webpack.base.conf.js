@@ -1,8 +1,8 @@
 const path = require('path')
 const fs = require('fs')
-const glob = require('glob-all')
+// const Glob = require('glob-all')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const PurgeCssPlugin = require('purgecss-webpack-plugin')
+// const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
@@ -95,7 +95,7 @@ module.exports = {
         ]},
     resolve:{
         alias:{
-            '~': 'src',
+            '@': PATHS.src,
         }
     },
     plugins: [
