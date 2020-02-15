@@ -1,0 +1,32 @@
+//-
+  options.
+    color :
+      darker
+      dark    
+      medium 
+      light   
+      lighter 
+      purple  
+      green   
+
+
+mixin type(options)
+  if !options
+    - options = {}
+
+  -
+    let colorClass = '';
+    let fontClass = '';
+    let descClass = '';
+    colorClass = options.color ? 'type__color_' + options.color : '';
+    fontClass = options.font ? 'type__font_' + options.font : '';
+    descClass = options.font ? 'type__description_' + options.font : '';
+  .type
+    if options.color
+      .type__color(class = colorClass)
+      .type__content
+        h1.type__title=options.title
+        p.type__text=options.text
+    else
+      span.type__font(class = fontClass)=options.font
+      p.type__description(class = descClass)=options.description
