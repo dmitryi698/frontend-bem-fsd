@@ -1,2 +1,9 @@
-/* uikit */ 
+/* colors */ 
 @import '../../scss/utils.scss';
+
+.colors {
+
+  &__logo {
+    margin-left: 30px;
+  }
+}
