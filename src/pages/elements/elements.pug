@@ -1,0 +1,22 @@
+extends ../../components/layout/layout
+include ../../components/main/main
+include ../../components/header/header
+include ../../components/section/section
+include ../../components/column/column
+include ../../components/type/type
+include ../../components/logo/logo
+
+block title
+   | UI KIT Elements
+
+block header
+  +header({
+    isUikit: true,
+    logoHref: '/'})
+
+block main
+  +main()
+    +section()
+
+      
+
