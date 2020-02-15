@@ -13,12 +13,11 @@ $colors: (
 );
 
 .type {
-  margin-top: rem(20);
-   display: flex;
-   flex-flow: row wrap;
-   align-items: center;
-   width: 100%;
-
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-width: 280px;
+  
   &__color {
     width: rem(70);
     height: rem(70);

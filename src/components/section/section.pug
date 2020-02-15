@@ -1,6 +1,10 @@
 mixin section(options)
   if !options
     - options = {}
+
+  -
+    let classes = '';
+    classes += options.theme === color ? ' section__theme_color' : '';
   
-  section.section
+  section.section(class = classes)
     block

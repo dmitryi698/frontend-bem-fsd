@@ -1,8 +1,8 @@
 @import '../../scss/utils.scss';
 
 .main {
-  background: $default-color;
-  max-width: $desktop-width;
+  background: $default;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
