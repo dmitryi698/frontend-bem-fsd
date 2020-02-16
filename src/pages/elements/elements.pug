@@ -5,6 +5,8 @@ include ../../components/section/section
 include ../../components/column/column
 include ../../components/type/type
 include ../../components/logo/logo
+include ../../components/textfield/textfield
+include ../../components/title/title
 
 block title
    | UI KIT Elements
@@ -17,6 +19,12 @@ block header
 block main
   +main()
     +section()
-
-      
-
+      .column_theme_elements
+        .elements__item
+          +title({main: 'Text Field', desc: 'Default'})
+          +textfield({
+            type: 'email',
+            placeholder: 'Email'
+          })
+      .column_theme_elements
+      .column_theme_elements
