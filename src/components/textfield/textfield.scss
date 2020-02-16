@@ -1,0 +1,62 @@
+/* textfield */ 
+@import '../../scss/utils.scss';
+
+.textfield {
+  position: relative;
+  flex-basis: rem(300);
+  
+  
+  &__input {
+    
+    padding: 13px 0 13px 15px;
+    width: 100%;
+
+    background: $default;
+    border: 1px solid $light;
+    box-sizing: border-box;
+    border-radius: rem(4);
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    overflow: hidden;
+    color: $light;
+
+      &::placeholder {
+        color: $light;
+      }
+      &:hover,
+      &:focus,
+      &_activated {
+        border-color: $medium;
+        color: $dark;
+
+        &::placeholder {
+          color: $dark;
+        }
+      }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    position: absolute;
+    right: 0;
+    bottom: 30%;
+    width:  rem(44);
+    text-align: center;
+
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(24);
+
+    background: $primary-grad;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $primary;
+  } 
+}
