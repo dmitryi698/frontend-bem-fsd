@@ -1,0 +1,29 @@
+/* title */ 
+@import '../../scss/utils.scss';
+
+.title {
+  margin-bottom: rem(5);
+  display: flex;
+
+  &__main {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    margin-right: auto;
+
+    text-transform: uppercase;
+    color: $dark;
+  }
+
+  &__desc {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $medium;
+  }
+}

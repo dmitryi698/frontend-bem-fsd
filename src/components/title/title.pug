@@ -1,0 +1,8 @@
+mixin title(options)
+  if !options
+    - options = {}
+
+  .title
+    h3.title__main=options.main
+    if options.desc
+      span.title__desc=options.desc
