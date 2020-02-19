@@ -1,0 +1,177 @@
+/* dropdown */ 
+@import '../../scss/utils.scss';
+
+.dropdown {
+  flex-basis: rem(320);
+
+  &__input {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+    
+    &_default {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &__selection {
+    cursor: pointer;
+    position: relative;
+    padding: rem(12) 0 rem(12) rem(15);
+    display: flex;
+    background: $default;
+    border: 1px solid $light;
+    box-sizing: border-box;
+    border-radius: rem(4);
+
+    &_open {
+      border-radius: rem(4) rem(4) 0 0;
+      border-bottom: none;
+      border-color: $medium;
+    }
+  }
+
+  &__selection_open > &__button-icon {
+    color: $dark;
+  }
+
+  &__button-icon {
+    width: rem(44);
+    text-align: center;
+    margin-left: auto;
+
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(24);
+    color: $medium;
+  }
+
+  &__menu {  
+    display: none;
+
+    &_open {
+      display: flex;
+      flex-direction: column;
+      background: $default;
+      border: 1px solid $medium;
+      border-radius: 0 0 rem(4) rem(4);
+      padding: rem(7) rem(7) rem(7) rem(15);
+    }
+  }
+
+  /*Dropdown option items*/
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: rem(7);
+  }
+
+  &__content {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $darker;
+  }
+
+  &__counter {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $darker;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: rem(92);
+  }
+  
+  &__button-decrement,
+  &__button-increment {
+    cursor: pointer;
+    border: 1px solid $light;
+    border-radius: rem(22);
+    width: 30px;
+    height: 30px;
+    background-color: $default;
+
+  }
+
+  &__button-decrement {
+    &_no-activated {
+      opacity: 0.38;
+    }
+  }
+
+  &__icon-increment,
+  &__icon-decrement {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18);
+    line-height: rem(22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $medium;
+  }
+
+  &__icon-decrement {
+    &_active {
+      opacity: 0.38;
+    }
+  }
+
+  /*Dropdown option items*/
+
+  /*Dropdown buttons*/
+  &__buttons {
+    width: 100%;
+    display: flex;
+    margin-top: rem(20);
+  }
+
+  &__button {
+
+    &_clear,
+    &_confirm {
+      cursor: pointer;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(12);
+      line-height: rem(15);
+      text-transform: uppercase;
+      color: $medium;
+    }
+    
+    &_confirm {
+      color: $primary;
+      margin-left: auto;
+    }
+  }
+}

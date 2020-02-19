@@ -1,0 +1,32 @@
+//- 
+  options.isRooms - if option enable dropdown - dropdown rooms
+  options.default - for uikit elements
+  options.buttons - if option enable, added buttons confirm and clear
+
+mixin dropdown(options)
+  if !options
+    - options = {}
+  -
+    let classes = '';
+    let menuClass = '';
+    classes += options.isRooms ? ' js-dropdown_rooms' : 'js-dropdown_guests';
+    inputClass = options.noMenu ? ' dropdown__input_open' : '';
+
+  .dropdown.js-dropdown(class = classes)
+    .dropdown__selection(class = inputClass)
+      p.dropdown__input
+      i.dropdown__button-icon keyboard_arrow_down
+    .dropdown__menu
+      .dropdown__option(data-id='adult', data-defaultcount='0', data-mincount='0')
+        div
+          .dropdown__text Взрослые
+      .dropdown__option(data-id='minor', data-defaultcount='0', data-mincount='0')
+        div
+          .dropdown__text Дети
+      .dropdown__option(data-id='infant', data-defaultcount='0', data-mincount='0')
+        div
+          .dropdown__text Младенцы
+      if (options.buttons)
+      .dropdown__buttons
+        span.dropdown__button_clear Очистить
+        span.dropdown__button_confirm Применить
