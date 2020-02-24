@@ -186,14 +186,14 @@ import './dropdown.scss';
 
 
       $this.click(() => {
-        $('.dropdown__selection').toggleClass(' dropdown__selection_open')
         $menu.toggleClass('dropdown__menu_open');
+        $this.find('.dropdown__selection').toggleClass(' dropdown__selection_open')
       });
       $(document).mouseup(function (e) {
         if (!$this.is(e.target)
           && $this.has(e.target).length === 0) {
           $menu.removeClass('dropdown__menu_open');
-          $('.dropdown__selection').removeClass(' dropdown__selection_open')
+          $this.find('.dropdown__selection').removeClass(' dropdown__selection_open')
         }
 
       });
