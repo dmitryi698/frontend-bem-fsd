@@ -1,0 +1,305 @@
+/* date-dropdown */ 
+@import '../../scss/utils.scss';
+
+// ************** Date dropdown input ***************** //
+.date-dropdown {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  
+  &__selection {
+    height: rem(44);
+    flex-basis: rem(150);
+    cursor: pointer;
+    position: relative;
+    padding: rem(12) 0 rem(12) rem(15);
+    display: flex;
+    align-items: center;
+    background: $default;
+    border: 1px solid $light;
+    box-sizing: border-box;
+    border-radius: rem(4);
+
+    &_theme-filter {
+      flex-basis: rem(266);
+      width: 75%;
+    }
+
+  }
+
+  &__input {
+    flex-basis: 65%;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+
+  &__button-icon {
+    width: rem(44);
+    text-align: center;
+    margin-left: auto;
+
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(24);
+    color: $medium;
+  }
+  
+}
+// ******************************* //
+
+// **************  Datepicker cells other month ***************** //
+.datepicker--cell-day.-other-month-,
+.datepicker--cell-year.-other-decade- {
+  color: #dedede;
+}
+
+.datepicker--cell-day.-other-month-:hover,
+.datepicker--cell-year.-other-decade-:hover {
+  color: #c5c5c5;
+}
+
+.-disabled-.-focus-.datepicker--cell-day.-other-month-,
+.-disabled-.-focus-.datepicker--cell-year.-other-decade- {
+  color: $default;
+}
+
+.-selected-.datepicker--cell-day.-other-month-,
+.-selected-.datepicker--cell-year.-other-decade- {
+  color: $default;
+  background: $primary-grad;
+
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-,
+.-selected-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+}
+
+.-in-range-.datepicker--cell-day.-other-month-,
+.-in-range-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+  color: #cccccc;
+}
+
+.-in-range-.-focus-.datepicker--cell-day.-other-month-,
+.-in-range-.-focus-.datepicker--cell-year.-other-decade- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+}
+
+.datepicker--cell-day.-other-month-:empty,
+.datepicker--cell-year.-other-decade-:empty {
+  background: none;
+  border: none;
+}
+// ******************************* //
+
+   // **************    Datepicker cells  ***************** //
+
+.datepicker--cell.-focus- {
+  font-weight: bold;
+  background: $secondary-grad;
+  border-radius: rem(22);
+  color: $default;
+}
+
+.datepicker--cell.-current- {
+  color: $medium;
+}
+
+.datepicker--cell.-current-.-focus- {
+  color: $default;
+}
+
+.datepicker--cell.-current-.-in-range- {
+  color: $medium;
+}
+
+.datepicker--cell.-in-range- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+  color: $medium;
+  border-radius: 0;
+}
+
+.datepicker--cell.-in-range-.-focus- {
+  background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+  
+}
+
+.datepicker--cell.-range-from- {
+  border: none;
+  background: $primary-grad;
+  border-radius: 22px;
+  font-weight: bold;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(39.8);
+      height: rem(40);
+      border-radius: rem(22) 0 0 rem(22);
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+      z-index: -100;
+    }
+}
+
+.datepicker--cell.-range-to- {
+  border: none;
+  background: $primary-grad;
+  border-radius: 22px;
+  font-weight: bold;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(39.9);
+      height: rem(40);
+      border-radius: 0 rem(22) rem(22) 0;
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 255, 0.25) 100%);
+      z-index: -100;
+    }
+}
+
+.datepicker--cell.-range-from-.-range-to- {
+  border-radius: 4px;
+}
+
+.datepicker--cell.-selected- {
+  color:$default;
+  border: none;
+  background: $primary-grad;
+  border-radius: rem(22);
+}
+
+.datepicker--cell.-selected-.-current- {
+  color: $default;
+  background: $primary-grad;
+}
+
+.datepicker--cell.-selected-.-focus- {
+  background: $secondary-grad;
+}
+
+// ******************************* //
+
+// ************** Custom style of datepicker ***************** //
+
+.datepicker {
+  width: rem(320);
+  height: rem(370);
+  background: $default;
+  border: 1px solid $light;
+  box-sizing: border-box;
+  box-shadow: 0 rem(10) rem(20) $lighter;
+  border-radius: rem(4);
+  padding: rem(20);
+
+  &--pointer {
+    display: none;
+  }
+
+  &--nav {
+    margin-bottom: rem(30);
+    border-bottom: none;
+    padding: 0;
+  }
+
+  &--nav-action{
+      font-family: $icon;
+      font-style: normal;
+      font-weight: normal;
+      font-size: rem(24);
+      line-height: rem(20);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: $primary;
+      width: rem(24);
+    }
+
+  &--nav-title {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(19);
+    line-height: rem(24);
+    text-align: center;
+    color: $darker;
+  }
+
+  &--content {
+    padding: 0;
+  }
+
+  &--days-names {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--day-name {
+    padding: rem(13) rem(10);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(13);
+    line-height: rem(15);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary;
+  }
+
+  &--cell-day {
+    height: rem(40);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(15);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $medium;
+  }
+
+  &--buttons {
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(10);
+
+  }
+
+  &--button {
+    position: relative;
+    height: auto;
+    width: auto;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $primary;
+    
+    &:hover {
+      color: $medium;
+      background: none;
+    }
+  }
+}
