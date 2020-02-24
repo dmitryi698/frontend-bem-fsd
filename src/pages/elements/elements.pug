@@ -53,16 +53,25 @@ block main
           +date-dropdown({
             placeholder: 'ДД.ММ.ГГГГ'
           })
-        .elements__item
-          +title({main: 'subscription text field', desc: 'Default'})
-          +textfield({
-            name: 'sub-email',
-            type: 'email',
-            placeholder: 'Email',
-            subscription: true
-          })
-        .elements__item
-          +title({main: 'filter date Dropdown'})
-          +date-dropdown({isDateFilter: true})
+        .elements__grope
+          .elements__item
+            +title({main: 'filter date Dropdown'})
+            +date-dropdown({isDateFilter: true})
+          .elements__item
+            +title({main: 'subscription text field', desc: 'Default'})
+            +textfield({
+              name: 'sub-email',
+              type: 'email',
+              placeholder: 'Email',
+              subscription: true
+            })
+          .elements__item
+            +title({main: 'dropdown', desc: 'Default'})
+            +dropdown({isRooms: true})
+          .elements__item
+            +title({main: 'dropdown', desc: 'Expanded'})
+            +dropdown({
+              isRooms: true,
+              expand: true})
       .column_theme_elements
       .column_theme_elements
