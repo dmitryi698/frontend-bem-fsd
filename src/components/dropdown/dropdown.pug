@@ -19,16 +19,16 @@ mixin dropdown(options)
       p.dropdown__input
       i.dropdown__button-icon keyboard_arrow_down
     .dropdown__menu(class = menuClass)
-      .dropdown__option(data-id='adult', data-defaultcount='0', data-mincount='0')
+      .dropdown__option(data-id='adult', data-defaultcount='2', data-mincount='0')
         div
           .dropdown__text
-      .dropdown__option(data-id='minor', data-defaultcount='0', data-mincount='0')
+      .dropdown__option(data-id='minor', data-defaultcount='2', data-mincount='0')
         div
           .dropdown__text
       .dropdown__option(data-id='infant', data-defaultcount='0', data-mincount='0')
         div
           .dropdown__text
-      if (options.buttons)
+    if (options.buttons)
       .dropdown__buttons
         span.dropdown__button_clear Очистить
         span.dropdown__button_confirm Применить
