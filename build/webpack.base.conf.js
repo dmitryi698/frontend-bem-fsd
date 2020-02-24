@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
 // const Glob = require('glob-all')
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -101,6 +102,9 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: `${PATHS.assets}css/[name].[hash].css`
+        }),
+        new MomentLocalesPlugin({
+            localesToKeep: ['es-us', 'ru'],
         }),
         // new PurgeCssPlugin({
         //     paths: glob.sync([
