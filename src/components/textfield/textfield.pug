@@ -1,4 +1,4 @@
-//- options.isActiv added modifier 'activated';
+//- options.isActive added modifier 'activated';
 //- options.isMasked added modifier 'masked';
 
 mixin textfield(options)
@@ -6,8 +6,8 @@ mixin textfield(options)
     - options = {}
   -
     let inputClass = '';
-    inputClass = options.isActive ? 'textfield__input_activated' : '';
-    inputClass = (options.isMasked === true & options.type === 'text') ? 'js-textfield__input_masked' : '';
+    inputClass += options.isActive ? ' textfield__input_activated' : '';
+    inputClass += (options.isMasked === true & options.type === 'text') ? ' js-textfield__input_masked' : '';
 
   .textfield.js-textfield
     if (options.type === 'text' || options.type === 'email' || options.type === 'password')

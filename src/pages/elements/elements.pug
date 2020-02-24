@@ -7,6 +7,8 @@ include ../../components/type/type
 include ../../components/logo/logo
 include ../../components/textfield/textfield
 include ../../components/title/title
+include ../../components/dropdown/dropdown
+include ../../components/date-dropdown/date-dropdown
 
 block title
    | UI KIT Elements
@@ -23,8 +25,44 @@ block main
         .elements__item
           +title({main: 'Text Field', desc: 'Default'})
           +textfield({
+            name: 'mail',
             type: 'email',
-            placeholder: 'Email'
+            placeholder: 'Email',
           })
+        .elements__item
+          +title({main: 'Text Field', desc: 'Hover / Focus'})
+          +textfield({
+            name: 'mail-active',
+            type: 'email',
+            placeholder: 'Email',
+            isActive: true
+          })
+        .elements__item
+          +title({main: 'dropdown', desc: 'Default'})
+          +dropdown({})
+        .elements__item
+          +title({main: 'Masked Text Field', desc: 'Default'})
+          +textfield({
+            name: 'masked',
+            type: 'text',
+            placeholder: 'ДД.ММ.ГГГГ',
+            isMasked: true
+          })
+        .elements__item
+          +title({main: 'date Dropdown'})
+          +date-dropdown({
+            placeholder: 'ДД.ММ.ГГГГ'
+          })
+        .elements__item
+          +title({main: 'subscription text field', desc: 'Default'})
+          +textfield({
+            name: 'sub-email',
+            type: 'email',
+            placeholder: 'Email',
+            subscription: true
+          })
+        .elements__item
+          +title({main: 'filter date Dropdown'})
+          +date-dropdown({isDateFilter: true})
       .column_theme_elements
       .column_theme_elements

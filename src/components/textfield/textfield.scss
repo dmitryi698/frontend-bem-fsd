@@ -8,9 +8,9 @@
   
   &__input {
     
-    padding: 13px 0 13px 15px;
+    padding-left: 15px;
     width: 100%;
-
+    height: rem(44);
     background: $default;
     border: 1px solid $light;
     box-sizing: border-box;
@@ -27,6 +27,7 @@
       &::placeholder {
         color: $light;
       }
+
       &:hover,
       &:focus,
       &_activated {
@@ -58,5 +59,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: $primary;
+    
   } 
 }
