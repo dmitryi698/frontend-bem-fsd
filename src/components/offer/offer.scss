@@ -1,0 +1,36 @@
+/* offer */ 
+@import '../../scss/utils.scss';
+
+.offer {
+  display: flex;
+  padding-bottom: rem(17);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+
+  &__icon {
+    position: relative;
+    margin-right: rem(10);
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(48);
+    line-height: rem(41);
+    text-align: center;
+    background: $primary-grad;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  &__title,
+  &__text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+
+  &__text {
+    font-weight: normal;
+  }
+}

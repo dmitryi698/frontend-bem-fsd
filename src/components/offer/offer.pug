@@ -1,0 +1,9 @@
+mixin offer(options)
+  if !options
+    - options = {}
+
+  .offer
+    i.offer__icon()=options.icon
+    .offer__content
+      h3.offer__title()=options.title
+      p.offer__text()=options.text
