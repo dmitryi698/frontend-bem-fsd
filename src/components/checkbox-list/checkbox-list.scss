@@ -1,0 +1,52 @@
+/* checkbox-list */ 
+@import '../../scss/utils.scss';
+
+.checkbox-list {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $darker;
+  }
+
+  &__icon-button {
+    cursor: pointer;
+    width: rem(44);
+    margin-left: auto;
+    
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(24);
+    text-align: center;
+    color: $medium;
+  }
+
+  &__list {
+    display: none;
+  }
+}
+
+.checkbox-list_open .checkbox-list__icon-button {
+  transform: rotate(-180deg);
+}
+
+.checkbox-list_open .checkbox-list__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(7);
+}

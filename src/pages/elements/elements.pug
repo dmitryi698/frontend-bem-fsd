@@ -9,6 +9,8 @@ include ../../components/textfield/textfield
 include ../../components/title/title
 include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
+include ../../components/checkbox-list/checkbox-list
+include ../../components/checkbox/checkbox
 
 block title
    | UI KIT Elements
@@ -73,5 +75,15 @@ block main
             +dropdown({
               isRooms: true,
               expand: true})
+          .elements__item
+            +checkbox-list({title: 'expandable checkbox list'})
+              +checkbox({label: 'Завтрак', })
+              +checkbox({label: 'Письменный стол', checked: true})
+              +checkbox({label: 'Стул для кормления', checked: true})
+              +checkbox({label: 'Кроватка', checked: true})
+              +checkbox({label: 'Телевизор', })
+              +checkbox({label: 'Шампунь', })
+              +checkbox({label: 'Телевизор', })
+              +checkbox({label: 'Шампунь', })
       .column_theme_elements
       .column_theme_elements
