@@ -1,0 +1,87 @@
+@import '../../scss/utils.scss';
+
+
+/* checkbox */
+
+/* Checkbox main style */
+.checkbox {
+  margin-top: rem(10);
+  
+  &__label {
+    cursor: pointer;
+    padding-left: rem(30);
+    display: block;
+  }
+
+  &__input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+/* Checkbox mark style */
+
+
+  &__mark {
+    position: absolute;
+    margin-left: rem(-30);
+    margin-top: rem(-2);
+    width: rem(20);
+    height: rem(20);
+    overflow: hidden;
+    border-radius: rem(4);
+    background: $default;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: rem(1) solid $light;
+  }
+
+/* Checkbox text stye */
+
+  &__text-label {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $medium;
+  }
+
+  &__text-label-rich {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $main-font-color;
+  }
+
+  &__rich-text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(14);
+    color: $medium;
+    margin-top: rem(5);
+  }
+
+}
+
+/* Checked */
+
+.checkbox__input:checked+.checkbox__mark {
+  background-image: url('/assets/img/checkbox.svg');
+  border: rem(1) solid $primary;
+  box-sizing: border-box;
+  border-radius: rem(4)
+}
+
+/* Focused */
+
+.checkbox__input:focus+.checkbox__mark {
+  box-shadow:
+    0 0 0 rem(1) $primary,
+}

@@ -1,0 +1,19 @@
+mixin checkbox(options)
+  if !options
+    - options = {}
+  -
+    let labelClassName = 'checkbox__text-label'
+    labelClassName += options.isRich ? ' checkbox__text-label-rich' : ''
+
+  .checkbox
+    label.checkbox__label
+      input.checkbox__input(
+        type = 'checkbox'
+        name = options.name
+        tabindex = options.tabindex
+        required = options.required
+        checked = options.checked)
+      span.checkbox__mark
+      span(class=labelClassName)=options.label
+      -if(options.text)
+        p.checkbox__rich-text=options.text
