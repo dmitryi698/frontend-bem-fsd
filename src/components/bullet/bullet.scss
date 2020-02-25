@@ -1,0 +1,22 @@
+/* bullet */ 
+@import '../../scss/utils.scss';
+
+.bullet {
+  
+  &__list {
+    list-style-image: url('/assets/img/ellipse.svg');
+    margin-left: rem(15);
+  }
+
+  &__item {
+    margin-top: rem(10);
+    padding-left: rem(5);
+    text-transform: none;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $main-font-color;
+  }
+}
