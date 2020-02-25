@@ -13,6 +13,7 @@ include ../../components/checkbox-list/checkbox-list
 include ../../components/checkbox/checkbox
 include ../../components/bullet/bullet
 include ../../components/offer/offer
+include ../../components/radio/radio
 
 block title
    | UI KIT Elements
@@ -70,6 +71,17 @@ block main
               subscription: true
             })
       .elements__column
+        .elements__item
+          +title({main: 'Checkbox Buttons'})
+          +checkbox({label: 'Можно курить'})
+          +checkbox({label: 'Можно с питомцами', checked: true})
+          +checkbox({label: 'Можно пригласить гостей (до 10 человек)', checked: true})
+        .elements__item
+          +title({main: 'Radio Buttons'})
+          .elements__item_theme_radio
+            +radio({label: 'Мужчина', name: 'female'})
+            +radio({label: 'Женщина', name: 'female'})
+
       .elements__column
     +section({theme: 'dropdown'})
       .elements__column

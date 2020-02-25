@@ -10,6 +10,16 @@
     &_theme_list {
       margin-bottom: 50px;
     }
+
+    &_theme_checkbox {
+      flex-basis: 222px;
+    }
+    &_theme_radio {
+      width: 222px;
+      display: flex;
+      justify-content: space-between;
+
+    }
   }
 
   &__grope {
