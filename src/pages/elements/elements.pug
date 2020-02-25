@@ -14,6 +14,7 @@ include ../../components/checkbox/checkbox
 include ../../components/bullet/bullet
 include ../../components/offer/offer
 include ../../components/radio/radio
+include ../../components/toggle/toggle
 
 block title
    | UI KIT Elements
@@ -76,11 +77,15 @@ block main
           +checkbox({label: 'Можно курить'})
           +checkbox({label: 'Можно с питомцами', checked: true})
           +checkbox({label: 'Можно пригласить гостей (до 10 человек)', checked: true})
-        .elements__item
+        .elements__item_theme_toggle
           +title({main: 'Radio Buttons'})
           .elements__item_theme_radio
             +radio({label: 'Мужчина', name: 'female'})
             +radio({label: 'Женщина', name: 'female'})
+        .elements__item_theme_toggle
+          +title({main: 'Toggle'})
+          +toggle({label: 'Получать спецпредложения', checked: true})
+          +toggle({label: 'Получать спецпредложения', })
 
       .elements__column
     +section({theme: 'dropdown'})

@@ -1,0 +1,65 @@
+/* toggle */ 
+@import '../../scss/utils.scss';
+
+.toggle {
+  margin-top: rem(10);
+
+  &__label {
+    cursor: pointer;
+    padding-left: rem(50);
+    display: block;
+  }
+
+  &__input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__mark {
+    position: absolute;
+    margin-left: rem(-50);
+    margin-top: rem(2);
+    width: rem(40);
+    height: rem(20);
+    overflow: hidden;
+    border-radius: rem(10);
+    background: $default;
+    background-image: url('/assets/img/toggle.svg');
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    border: rem(1) solid $light;
+    transition: all 0.5s ease;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $medium;
+  }
+}
+
+.toggle__input:checked + .toggle__mark {
+  background-image: url('/assets/img/toggle-active.svg');
+  background-position: 90% 50%;
+  border: rem(1) solid $primary;
+  box-sizing: border-box;
+  border-radius: rem(10);
+  transition: all 0.5s ease;
+}
+
+.toggle__input:checked ~ .toggle__text {
+  color: $dark;
+}
+
+/* Focused */
+
+.toggle__input:focus + .toggle__mark {
+  box-shadow:
+    0 0 0 rem(1) $primary,
+}
