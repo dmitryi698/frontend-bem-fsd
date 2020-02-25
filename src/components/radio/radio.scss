@@ -1,0 +1,63 @@
+/* radio */ 
+@import '../../scss/utils.scss';
+
+.radio {
+  
+  margin-top: rem(10);
+  
+  &__label {
+    cursor: pointer;
+    padding-left: rem(30);
+    display: block;
+  }
+
+  &__input {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  &__mark {
+    position: absolute;
+    margin-left: rem(-30);
+    margin-top: 0;
+    width: rem(20);
+    height: rem(20);
+    overflow: hidden;
+    border-radius: 50%;
+    background: $default;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: rem(1) solid $light;
+  }
+
+  &__text-label {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $medium;
+  }
+}
+
+/* Checked */
+
+.radio__input:checked + .radio__mark {
+  background-image: url('/assets/img/radio-icon.svg');
+  border: rem(1) solid $primary;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.radio__input:checked ~ .radio__text-label {
+  color: $dark;
+}
+
+/* Focused */
+
+.radio__input:focus + .radio__mark {
+  box-shadow:
+    0 0 0 rem(1) $primary,
+}

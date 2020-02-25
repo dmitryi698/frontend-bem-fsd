@@ -1,0 +1,14 @@
+mixin radio(options)
+  if !options
+    - options = {}
+
+  .radio
+    label.radio__label
+      input.radio__input(
+        type = 'radio'
+        name = options.name
+        tabindex = options.tabindex
+        required = options.required
+        checked = options.checked)
+      span.radio__mark
+      span.radio__text-label(class = labelClassName)=options.label
