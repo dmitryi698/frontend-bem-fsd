@@ -3,7 +3,7 @@ mixin checkbox(options)
     - options = {}
   -
     let labelClassName = 'checkbox__text-label'
-    labelClassName += options.isRich ? ' checkbox__text-label-rich' : ''
+    labelClassName += options.text ? ' checkbox__text-label-rich' : ''
 
   .checkbox
     label.checkbox__label
