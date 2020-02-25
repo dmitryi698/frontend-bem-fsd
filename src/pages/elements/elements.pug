@@ -11,6 +11,8 @@ include ../../components/dropdown/dropdown
 include ../../components/date-dropdown/date-dropdown
 include ../../components/checkbox-list/checkbox-list
 include ../../components/checkbox/checkbox
+include ../../components/bullet/bullet
+include ../../components/offer/offer
 
 block title
    | UI KIT Elements
@@ -23,7 +25,7 @@ block header
 block main
   +main()
     +section()
-      .column_theme_elements
+      .elements__column
         .elements__item
           +title({main: 'Text Field', desc: 'Default'})
           +textfield({
@@ -67,6 +69,11 @@ block main
               placeholder: 'Email',
               subscription: true
             })
+      .elements__column
+      .elements__column
+    +section({theme: 'dropdown'})
+      .elements__column
+        .elements__grope
           .elements__item
             +title({main: 'dropdown', desc: 'Default'})
             +dropdown({isRooms: true})
@@ -75,8 +82,21 @@ block main
             +dropdown({
               isRooms: true,
               expand: true})
-          .elements__item
+      .elements__column
+        .elements__item
+          +title({main: 'dropdown'})
+          +dropdown({buttons: true, expand: true, shadow: true})
+      .elements__column
+        .elements__item
+          +title({main: 'dropdown'})
+          +dropdown({buttons: true, expand: true})
+    +section({theme: 'list'})
+      .elements__column
+        .elements__grope
+          .elements__item.elements__item_theme_list
             +checkbox-list({title: 'expandable checkbox list'})
+          .elements__item
+              +checkbox-list({title: 'expandable checkbox list',})
               +checkbox({label: 'Завтрак', })
               +checkbox({label: 'Письменный стол', checked: true})
               +checkbox({label: 'Стул для кормления', checked: true})
@@ -85,5 +105,29 @@ block main
               +checkbox({label: 'Шампунь', })
               +checkbox({label: 'Телевизор', })
               +checkbox({label: 'Шампунь', })
-      .column_theme_elements
-      .column_theme_elements
+      .elements__column
+        +title({main: 'Rich Checkbox Buttons'})
+        +checkbox({label: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'})
+        +checkbox({label: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+      .elements__column
+        +title({main: 'bullet list'})
+        +bullet({items: [
+          'Нельзя с питомцами',
+          'Без вечеринок и мероприятий',
+          'Время прибытия — после 13:00, а выезд до 12:00'
+        ]})
+    +section({theme: 'offer'})
+      .elements__column
+          .elements__grope
+            .elements__item
+              +offer({
+                icon: 'insert_emoticon',
+                title: 'Комфорт',
+                text: 'Шумопоглощающие стены'
+              })
+            .elements__item
+              +offer({
+                icon: 'location_city',
+                title: 'Удобство',
+                text: 'Окно в каждой из спален'
+              })

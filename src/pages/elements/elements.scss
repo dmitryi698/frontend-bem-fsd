@@ -1,7 +1,15 @@
 .elements {
 
+  &__column {
+    flex-basis: 320px;
+  }
+
   &__item {
     margin-bottom: 20px;
+
+    &_theme_list {
+      margin-bottom: 50px;
+    }
   }
 
   &__grope {

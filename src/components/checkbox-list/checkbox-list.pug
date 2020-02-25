@@ -1,9 +1,6 @@
 mixin checkbox-list(options)
   if !options
     - options = {};
-  -
-    let classes = '';
-    classes = options.isExpand ? ' checkbox-list_open' : ''
     
   .checkbox-list.js-checkbox-list(class = classes)
     .checkbox-list__label

@@ -2,7 +2,7 @@ mixin checkbox(options)
   if !options
     - options = {}
   -
-    let labelClassName = 'checkbox__text-label'
+    let labelClassName = ''
     labelClassName += options.text ? ' checkbox__text-label-rich' : ''
 
   .checkbox
@@ -14,6 +14,6 @@ mixin checkbox(options)
         required = options.required
         checked = options.checked)
       span.checkbox__mark
-      span(class=labelClassName)=options.label
+      span.checkbox__text-label(class = labelClassName)=options.label
       -if(options.text)
         p.checkbox__rich-text=options.text
