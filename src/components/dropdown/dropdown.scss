@@ -99,6 +99,10 @@
       border-radius: 0 0 rem(4) rem(4);
       padding: rem(7) rem(7) rem(7) rem(15);
     }
+
+    &_shadow {
+      box-shadow: 0px 10px 20px $lighter;
+    }
   }
 
   /*Dropdown option items*/
