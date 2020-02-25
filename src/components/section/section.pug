@@ -4,7 +4,10 @@ mixin section(options)
 
   -
     let classes = '';
-    classes += options.theme === color ? ' section__theme_color' : '';
+    classes += options.theme === 'color' ? ' section__theme_color' : '';
+    classes += options.theme === 'dropdown' ? ' section__theme_dropdown' : '';
+    classes += options.theme === 'list' ? ' section__theme_list' : '';
+    classes += options.theme === 'offer' ? ' section__theme_offer' : '';
   
   section.section(class = classes)
     block

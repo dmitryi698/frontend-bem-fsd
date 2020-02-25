@@ -9,4 +9,18 @@
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: space-between;
+
+  &__theme_dropdown {
+    margin-top: rem(100);
+  }
+
+  &__theme_list {
+    margin-top: rem(55);
+  }
+
+  &__theme_offer {
+    margin-top: rem(40);
+  }
+
+
 }
