@@ -1,0 +1,12 @@
+mixin rating(options)
+  if !options
+    - options = {}
+
+  fieldset.rating
+    .rating__grope
+      - for (let count = 0; count < options.count; count++)
+        input.rating__star(
+          type = "radio"
+          name = options.name
+          value = count
+          checked = options.isChecked)

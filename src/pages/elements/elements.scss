@@ -18,8 +18,19 @@
       width: 222px;
       display: flex;
       justify-content: space-between;
-
     }
+
+    &_theme_like-btn {
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_theme_rating {
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+    }
+
     &_theme_toggle {
       margin-top: 40px;
     }

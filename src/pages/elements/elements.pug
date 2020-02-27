@@ -16,6 +16,8 @@ include ../../components/offer/offer
 include ../../components/radio/radio
 include ../../components/toggle/toggle
 include ../../components/like-btn/like-btn
+include ../../components/rating/rating
+include ../../components/range-slider/range-slider
 
 block title
    | UI KIT Elements
@@ -89,9 +91,19 @@ block main
           +toggle({label: 'Получать спецпредложения', })
         .elements__item_theme_toggle
           +title({main: 'like button'})
-          +like-btn({count: '2'})
+          .elements__item_theme_like-btn
+            +like-btn({count: '2'})
+            +like-btn({count: '12', isActivated: true})
+        .elements__item_theme_toggle
+          +title({main:'rate button'})
+          .elements__item_theme_rating
+            +rating({count: '4', name: 'uikit-rate', isChecked:true})
+            +rating({count: '5', isChecked:true, name: 'uikit-rate1'})
+        
 
       .elements__column
+        .elements__item
+          +range-slider({description: 'Range Slider', name: 'range-slider'})
     +section({theme: 'dropdown'})
       .elements__column
         .elements__grope

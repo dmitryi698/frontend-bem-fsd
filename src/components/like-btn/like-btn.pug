@@ -2,7 +2,7 @@ mixin like-btn(options)
   if !options
     - options = {}
   -
-    let classes = options.active ? ' like-btn__counter_active' : ''
+    let classes = options.isActivated ? ' like-btn__counter_active' : ''
 
   .like-btn.js-like-btn
     a.like-btn__counter.js-like-btn__counter(

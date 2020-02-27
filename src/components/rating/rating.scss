@@ -1,0 +1,63 @@
+/* rating */ 
+@import '../../scss/utils.scss';
+
+.rating {
+  border: none;
+  
+  &__grope {
+    position: relative;
+    width: 120px;
+    height: 24px;
+    background-image: url('/assets/img/star_border.svg');
+  }
+
+  /* Rating star */
+
+  &__star {
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    
+    &:checked,
+    &:hover {
+      background-image: url('/assets/img/star.svg');
+    }
+  }
+}
+/* Checked hover, checked */
+
+
+.rating__star:hover~.rating__star {
+  background-image: url('/assets/img/star_border.svg');
+
+}
+
+/* nth-of-type */
+
+.rating__star:nth-of-type(1) {
+  width: 24px;
+  z-index: 5;
+}
+
+.rating__star:nth-of-type(2) {
+  width: calc(24px*2);
+  z-index: 4;
+}
+
+.rating__star:nth-of-type(3) {
+  width: calc(24px*3);
+  z-index: 3;
+}
+
+.rating__star:nth-of-type(4) {
+  width: calc(24px*4);
+  z-index: 2;
+}
+
+.rating__star:nth-of-type(5) {
+  width: calc(24px*5);
+  z-index: 1;
+}
