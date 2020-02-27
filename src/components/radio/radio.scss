@@ -57,7 +57,7 @@
 
 /* Focused */
 
-.radio__input:focus + .radio__mark {
+.radio__input:focus ~ .radio__mark {
   box-shadow:
     0 0 0 rem(1) $primary,
 }
