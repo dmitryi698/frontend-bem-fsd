@@ -1,0 +1,53 @@
+/* like-btn */ 
+@import '../../scss/utils.scss';
+
+
+.like-btn {
+
+  &__counter {
+    cursor: pointer;
+    width: rem(40);
+    height: rem(20);
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: $default;
+    border: 1px solid $light;
+    justify-content: space-evenly;
+    border-radius: rem(10);
+  }
+
+  &__counter:after {
+    content: attr(data-count);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(10);
+    line-height: rem(12);
+    width: 50%;
+    text-align: left;
+    color: $light;
+  }
+
+  &__icon {
+    width: 50%;
+    height: 100%;
+    background-image: url('/assets/img/favorite_border.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+/********* Activated *********/
+
+.like-btn__counter_active {
+    border-color: $primary;
+
+    &.like-btn__counter:after{
+      color: $primary;
+    }
+
+    & > .like-btn__icon {
+      background-image: url('/assets/img/favorite.svg');
+    }
+  }

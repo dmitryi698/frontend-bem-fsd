@@ -15,6 +15,7 @@ include ../../components/bullet/bullet
 include ../../components/offer/offer
 include ../../components/radio/radio
 include ../../components/toggle/toggle
+include ../../components/like-btn/like-btn
 
 block title
    | UI KIT Elements
@@ -86,6 +87,9 @@ block main
           +title({main: 'Toggle'})
           +toggle({label: 'Получать спецпредложения', checked: true})
           +toggle({label: 'Получать спецпредложения', })
+        .elements__item_theme_toggle
+          +title({main: 'like button'})
+          +like-btn({count: '2'})
 
       .elements__column
     +section({theme: 'dropdown'})
