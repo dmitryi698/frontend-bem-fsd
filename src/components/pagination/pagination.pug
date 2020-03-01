@@ -1,0 +1,14 @@
+mixin pagination(options)
+  if !options
+    - options = {}
+
+  .pagination.js-pagination
+      .pagination__inner
+        a.pagination__link.pagination__previous(href="/sombody_page") arrow_forward
+        a.pagination__link.pagination__link_activated(href="/sombody_page") 1
+        a.pagination__link(href="/sombody_page") 2
+        a.pagination__link(href="/sombody_page") 3
+        a.pagination__link(href="/sombody_page") ...
+        a.pagination__link(href="/sombody_page") 15
+        a.pagination__link.pagination__next(href="/sombody_page") arrow_forward
+      .pagination__cards 1 – 12 из 100+ вариантов аренды

@@ -1,0 +1,73 @@
+/* pagination */ 
+@import '../../scss/utils.scss';
+
+.pagination {
+  min-width: rem(240);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    border-radius: 22px;
+    text-decoration: none;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: $medium;
+
+    &:hover,
+    &:focus {
+      background: $primary-grad;
+      font-weight: bold;
+      color: $default;
+
+    }
+
+    &_activated {
+      border-radius: 22px;
+      background: $primary-grad;
+      font-weight: bold;
+      color: $default;
+    }
+  }
+
+  &__previous,
+  &__next {
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(20);
+    color: $default;
+    background: $secondary-grad;
+    border-radius: 22px;
+
+    &:hover {
+      font-weight: normal;
+    }
+  }
+
+  &__previous {
+    transform: rotate(-180deg);
+    display: none;
+  }
+
+  &__cards {
+    text-align: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+}
