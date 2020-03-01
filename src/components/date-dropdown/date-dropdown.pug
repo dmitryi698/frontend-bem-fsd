@@ -13,15 +13,19 @@ mixin date-dropdown(options)
         i.date-dropdown__button-icon keyboard_arrow_down
   else
     .date-dropdown.js-date-dropdown
-      .date-dropdown__selection
-        input.date-dropdown__input.js-date-dropdown__input_start(
-          type = 'text'
-          placeholder = options.placeholder
-        )
-        i.date-dropdown__button-icon keyboard_arrow_down
-      .date-dropdown__selection
-        input.date-dropdown__input.js-date-dropdown__input_end(
-          type = 'text'
-          placeholder = options.placeholder
-        )
-        i.date-dropdown__button-icon keyboard_arrow_down
+      .date-dropdown__inner
+        +title({main: options.titleLeft})
+        .date-dropdown__selection
+          input.date-dropdown__input.js-date-dropdown__input_start(
+            type = 'text'
+            placeholder = options.placeholder
+          )
+          i.date-dropdown__button-icon keyboard_arrow_down
+      .date-dropdown__inner
+        +title({main: options.titleRight})
+        .date-dropdown__selection
+          input.date-dropdown__input.js-date-dropdown__input_end(
+            type = 'text'
+            placeholder = options.placeholder
+          )
+          i.date-dropdown__button-icon keyboard_arrow_down

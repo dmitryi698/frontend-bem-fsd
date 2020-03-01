@@ -7,7 +7,10 @@
   justify-content: space-between;
   position: relative;
 
-  
+  &__inner {
+    max-width: rem(150);
+  }
+
   &__selection {
     height: rem(44);
     flex-basis: rem(150);
