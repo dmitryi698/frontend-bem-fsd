@@ -1,0 +1,30 @@
+//- 
+  options.color - задает цвет кнопок: blue, white; по умолчанию
+  options.isTransparent - задает прозрачность для фона кнопки
+  options.isArrow - добавляет иконку стрелки для кнопки
+  options.titleColor - изменяет цвет кнопки(blue)
+  options.type - тип кнопки (button по умолчанию)
+
+
+
+
+mixin button(options)
+  if !options
+    - options = {}
+
+  -
+    let btnClassName = 'button__main'
+    let titleClassName = 'button__title'
+    btnClassName += options.color ? ' button__main_' + options.color : ''
+    btnClassName += options.isTransparent ? ' button__main_transparent' : ''
+    btnClassName += options.isArrow ? ' button_large' : ''
+    titleClassName += options.titleColor ? ' button__title_' + options.titleColor : ''
+
+  .button
+    button(
+      class = btnClassName
+      type= options.type ? options.type : 'button'
+      autofocus)
+      span(class=titleClassName)=options.title
+      if options.isArrow
+        i.button__arrow arrow_forward
