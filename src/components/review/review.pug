@@ -1,0 +1,21 @@
+include ../like-btn/like-btn
+mixin review(options)
+  if !options
+    - options = {}
+  
+  .review
+    .review__guest
+      img.review__img(
+        src = '/assets/img/' + options.image
+        alt = options.alt
+      )
+      .review__caption
+        h3.review__title=options.title
+        span.review__subtitle=options.subtitle
+    .review__inner
+      .review__like-btn
+        +like-btn({
+          count: options.count,
+          isActivated: true
+        })
+      p.review__text=options.review

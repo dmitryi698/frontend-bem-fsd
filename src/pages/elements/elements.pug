@@ -20,6 +20,7 @@ include ../../components/rating/rating
 include ../../components/range-slider/range-slider
 include ../../components/button/button
 include ../../components/pagination/pagination
+include ../../components/review/review
 
 block title
    | UI KIT Elements
@@ -184,3 +185,10 @@ block main
                 title: 'Удобство',
                 text: 'Окно в каждой из спален'
               })
+      +review({
+        image: 'murad.png',
+        title: 'Мурад Сарафанов',
+        subtitle: '5 дней назад',
+        count: '12',
+        review: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+        })

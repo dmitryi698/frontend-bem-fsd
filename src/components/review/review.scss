@@ -1,0 +1,58 @@
+/* review */ 
+@import '../../scss/utils.scss';
+
+.review {
+  display: flex;
+  flex-direction: column;
+  min-width: rem(320);
+  flex-basis: rem(700);
+  width: 100%;
+
+  &__guest {
+    display: flex;
+    flex-direction: row nowrap;
+  }
+
+  &__img {}
+
+  &__caption {
+    padding-left: rem(10);
+
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+
+  &__subtitle {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row nowrap;
+    margin-top: rem(10);
+  }
+
+  &__like-btn {}
+
+  &__text {
+    padding-left: rem(17);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+  }
+}
