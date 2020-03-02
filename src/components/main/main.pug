@@ -4,6 +4,7 @@ mixin main(options)
 
   -
     let classes = '';
+    classes = options.theme ? 'main_theme_' + options.theme : ''
   
   main.main(class = classes)
     block
