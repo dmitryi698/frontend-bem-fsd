@@ -1,0 +1,50 @@
+mixin registration(options)
+  if !options
+    - options = {}
+
+  form.registration
+    h2.registration__title Регистрация аккаунта
+    .registration__name
+      +textfield({
+        placeholder: 'Имя',
+        type: 'text'
+        })
+    .registration__surname
+      +textfield({
+        placeholder: 'Фамилия',
+        type: 'text'
+        })
+    .registration__gender
+      +radio({label: 'Мужчина', name: 'gender', checked: true})
+      +radio({label: 'Женщина', name: 'gender'})
+    .registration__birthday
+      +title({main: 'дата рождения'})
+      +textfield({
+        type: 'text',
+        placeholder: 'ДД.ММ.ГГ',
+        isMasked: true})
+    .registration__mail
+      +title({main: 'данные для входа'})
+      +textfield({
+        placeholder: 'Email',
+        type: 'email'
+        })
+    .registration__pass
+      +textfield({
+        placeholder: 'Пароль',
+        type: 'password'
+        })
+    .registration__offer
+      +toggle({label: 'Получать спецпредложения'})
+    .registration__button
+      +button({
+        title: 'перейти к оплате',
+        isArrow: true,
+        color: 'blue',
+        type: 'submit'})
+    .registration__footer
+      p.registration__text Уже есть аккаунт на Toxin
+      +button({
+        title: 'Войти',
+        color: 'white',
+      })
