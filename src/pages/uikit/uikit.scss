@@ -1,9 +1,107 @@
-/* colors */ 
+/* uikit */ 
 @import '../../scss/utils.scss';
 
-.colors {
+.uikit {
 
   &__logo {
-    margin-left: 30px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
   }
+
+  &__row {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-between;
+
+    &_theme_dropdown {
+      margin-top: rem(100);
+    }
+
+    &_theme_list {
+      margin-top: rem(55);
+    }
+
+    &_theme_offer {
+      margin-top: rem(40);
+    }
+  }
+
+  /********** Colors & types ***********/
+
+  &__colors {
+    flex-basis: 300px;
+
+    & .type {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__fonts {
+    flex-basis: 395px;
+    
+    & .type {
+      margin-bottom: rem(50);
+    }
+  }
+  /********** Colors & types ***********/
+
+  /********** Form elements ***********/
+    &__column {
+      flex-basis: 320px;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+
+      &_theme_list {
+        margin-bottom: 50px;
+      }
+
+      &_theme_checkbox {
+        flex-basis: 222px;
+      }
+
+      &_theme_radio {
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &_theme_like-btn {
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &_theme_rating {
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &_theme_toggle {
+        margin-top: 40px;
+        margin-bottom: 16px;
+      }
+
+      &_theme_button {
+        margin-top: 16px;
+        margin-bottom: 30px;
+        display: flex;
+
+        & .button {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__grope {
+      width: 83%;
+    }
+  /********** Form elements ***********/
+
 }

@@ -1,72 +1,247 @@
 extends ../../components/layout/layout
-include ../../components/main/main
-include ../../components/header/header
-include ../../components/section/section
-include ../../components/column/column
-include ../../components/type/type
-include ../../components/logo/logo
+
 
 
 block title
   | UI kit
 
-block header
-  +header({
-    theme: 'uikit',
-    logoHref: '/'})
-
 block main
   +main()
-    +section()
-
-      //- Colors and Types -//
+    //- Colors and Types -//
       
-      .column.column__colors
-        +type(
-          {color: 'darker',
-          title: 'Dark Shade 100%',
-          text: '#1F2041'
+    +section()
+      .uikit__logo
+        +logo
+      .uikit__row
+        .uikit__colors
+          +type(
+            {color: 'darker',
+            title: 'Dark Shade 100%',
+            text: '#1F2041'
+            })
+          +type(
+            {color: 'dark',
+            title: 'Dark Shade 75%',
+            text: '#1F2041'
+            })
+          +type(
+            {color: 'medium',
+            title: 'Dark Shade 50%',
+            text: '#1F2041'
+            })
+          +type(
+            {color: 'light',
+            title: 'Dark Shade 25%',
+            text: '#1F2041'
+            })
+          +type(
+            {color: 'lighter',
+            title: 'Dark Shade 5%',
+            text: '#1F2041'
+            })
+          +type(
+            {color: 'purple',
+            title: 'Purple',
+            text: '#BC9CFF'
+            })
+          +type(
+            {color: 'green',
+            title: 'Green',
+            text: '#6FCF97'
+            })
+        .uikit__fonts
+          +type(
+            {font: 'h1',
+            description: 'This one is the sub-section or widget title'})
+          +type(
+            {font: 'h2',
+            description: 'Next one is the item title inside widgets'})
+          +type(
+            {font: 'h3',
+            description: 'This is a label or CTA text'})
+          +type(
+            {font: 'body',
+            description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+
+
+    //- Colors and Types -//
+
+    //- Form uikit -//
+    +section()
+      .uikit__logo
+        +logo
+      .uikit__row
+        .uikit__column
+          .uikit__item
+            +title({main: 'Text Field', desc: 'Default'})
+            +textfield({
+              name: 'mail',
+              type: 'email',
+              placeholder: 'Email',
+            })
+          .uikit__item
+            +title({main: 'Text Field', desc: 'Hover / Focus'})
+            +textfield({
+              name: 'mail-active',
+              type: 'email',
+              placeholder: 'Email',
+              isActive: true
+            })
+          .uikit__item
+            +title({main: 'dropdown', desc: 'Default'})
+            +dropdown({})
+          .uikit__item
+            +title({main: 'Masked Text Field', desc: 'Default'})
+            +textfield({
+              name: 'masked',
+              type: 'text',
+              placeholder: 'ДД.ММ.ГГГГ',
+              isMasked: true
+            })
+          .uikit__item
+            +title({main: 'date Dropdown'})
+            +date-dropdown({
+              placeholder: 'ДД.ММ.ГГГГ'
+            })
+          .uikit__grope
+            .uikit__item
+              +title({main: 'filter date Dropdown'})
+              +date-dropdown({isDateFilter: true})
+            .uikit__item
+              +title({main: 'subscription text field', desc: 'Default'})
+              +textfield({
+                name: 'sub-email',
+                type: 'email',
+                placeholder: 'Email',
+                subscription: true
+              })
+        .uikit__column
+          .uikit__item
+            +title({main: 'Checkbox Buttons'})
+            +checkbox({label: 'Можно курить'})
+            +checkbox({label: 'Можно с питомцами', checked: true})
+            +checkbox({label: 'Можно пригласить гостей (до 10 человек)', checked: true})
+          .uikit__item_theme_toggle
+            +title({main: 'Radio Buttons'})
+            .uikit__item_theme_radio
+              +radio({label: 'Мужчина', name: 'female'})
+              +radio({label: 'Женщина', name: 'female'})
+          .uikit__item_theme_toggle
+            +title({main: 'Toggle'})
+            +toggle({label: 'Получать спецпредложения', checked: true})
+            +toggle({label: 'Получать спецпредложения', })
+          .uikit__item_theme_toggle
+            +title({main: 'like button'})
+            .uikit__item_theme_like-btn
+              +like-btn({count: '2'})
+              +like-btn({count: '12', isActivated: true})
+          .uikit__item_theme_toggle
+            +title({main:'rate button'})
+            .uikit__item_theme_rating
+              +rating({count: '4', name: 'uikit-rate', isChecked:true})
+              +rating({count: '5', isChecked:true, name: 'uikit-rate1'})
+          
+
+        .uikit__column
+          .uikit__item
+            +range-slider({
+              description: 'Range Slider',
+              name: 'range-slider'})
+          .uikit__item_theme_toggle
+            +title({main: 'buttons'})
+            .uikit__item_theme_button
+              +button({title: 'click me',})
+              +button({title: 'click me', titleColor: 'blue'})
+            .uikit__item_theme_button
+              +button({title: 'click me', color: 'blue'})
+              +button({title: 'click me', color: 'blue', isTransparent: true,})
+            .uikit__item_theme_button
+              +button({title: 'click me', color: 'white'})
+              +button({title: 'click me', color: 'white', isTransparent: true,})
+            +button({title: 'перейти к оплате', color: 'blue', isArrow: true})
+          .uikit__item_theme_toggle
+            +title({main: 'pagination'})
+            +pagination({})
+      .uikit__row.uikit__row_theme_dropdown
+        .uikit__column
+          .uikit__grope
+            .uikit__item
+              +title({main: 'dropdown', desc: 'Default'})
+              +dropdown({isRooms: true})
+            .uikit__item
+              +title({main: 'dropdown', desc: 'Expanded'})
+              +dropdown({
+                isRooms: true,
+                expand: true})
+        .uikit__column
+          .uikit__item
+            +title({main: 'dropdown'})
+            +dropdown({buttons: true, expand: true, shadow: true})
+        .uikit__column
+          .uikit__item
+            +title({main: 'dropdown'})
+            +dropdown({buttons: true, expand: true})
+      .uikit__row.uikit__row_theme_list
+        .uikit__column
+          .uikit__grope
+            .uikit__item.uikit__item_theme_list
+              +checkbox-list({title: 'expandable checkbox list'})
+            .uikit__item
+                +checkbox-list({title: 'expandable checkbox list',})
+                +checkbox({label: 'Завтрак', })
+                +checkbox({label: 'Письменный стол', checked: true})
+                +checkbox({label: 'Стул для кормления', checked: true})
+                +checkbox({label: 'Кроватка', checked: true})
+                +checkbox({label: 'Телевизор', })
+                +checkbox({label: 'Шампунь', })
+                +checkbox({label: 'Телевизор', })
+                +checkbox({label: 'Шампунь', })
+        .uikit__column
+          +title({main: 'Rich Checkbox Buttons'})
+          +checkbox({label: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'})
+          +checkbox({label: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+        .uikit__column
+          +title({main: 'bullet list'})
+          +bullet({items: [
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00'
+          ]})
+      .uikit__row.uikit__row_theme_offer
+        .uikit__column
+            .uikit__grope
+              .uikit__item
+                +offer({
+                  icon: 'insert_emoticon',
+                  title: 'Комфорт',
+                  text: 'Шумопоглощающие стены'
+                })
+              .uikit__item
+                +offer({
+                  icon: 'location_city',
+                  title: 'Удобство',
+                  text: 'Окно в каждой из спален'
+                })
+        +review({
+          image: 'murad.png',
+          title: 'Мурад Сарафанов',
+          subtitle: '5 дней назад',
+          count: '12',
+          review: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
           })
-        +type(
-          {color: 'dark',
-          title: 'Dark Shade 75%',
-          text: '#1F2041'
-          })
-        +type(
-          {color: 'medium',
-          title: 'Dark Shade 50%',
-          text: '#1F2041'
-          })
-        +type(
-          {color: 'light',
-          title: 'Dark Shade 25%',
-          text: '#1F2041'
-          })
-        +type(
-          {color: 'lighter',
-          title: 'Dark Shade 5%',
-          text: '#1F2041'
-          })
-        +type(
-          {color: 'purple',
-          title: 'Purple',
-          text: '#BC9CFF'
-          })
-        +type(
-          {color: 'green',
-          title: 'Green',
-          text: '#6FCF97'
-          })
-      .column.column__fonts
-        +type(
-          {font: 'h1',
-          description: 'This one is the sub-section or widget title'})
-        +type(
-          {font: 'h2',
-          description: 'Next one is the item title inside widgets'})
-        +type(
-          {font: 'h3',
-          description: 'This is a label or CTA text'})
-        +type(
-          {font: 'body',
-          description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
+
+    //- Form uikit -//
+
+    //- Cards -//
+    +section({theme: 'cards'})
+      .uikit__logo
+        +logo
+      .uikit__row
+        .uikit__column
+          +search
+          +registration
+          
+        .uikit__column
+          | 2
+        .uikit__column
+          | 3
