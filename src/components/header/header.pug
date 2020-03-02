@@ -2,11 +2,8 @@ mixin header(options)
   if !options
     - options = {}
 
-  - let classes = options.isUikit ? 'header_theme_uikit' : '';
+  - let classes = options.theme ? 'header_theme_' + options.theme : '';
 
-  if options.isUikit
     header.header(class = classes)
-      +logo({isUikit: true, href: options.logoHref}) 
-  else
-    header.header(class = classes)
+      +logo({theme: options.logoTheme, href: options.logoHref}) 
       block
