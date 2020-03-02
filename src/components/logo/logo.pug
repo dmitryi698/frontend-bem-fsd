@@ -3,7 +3,7 @@ mixin logo(options)
     - options = {}
   -
     let classes = '';
-    classes = options.isUikit ? 'logo_theme_uikit' : '';
+    classes = options.theme ? 'logo_theme_' + options.theme : '';
 
   .logo(class = classes)
     a.logo__link(href=options.href)
