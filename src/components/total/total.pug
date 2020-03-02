@@ -1,0 +1,40 @@
+mixin total(options)
+  if !options
+    - options = {}
+
+  form.total
+    .total__header
+        p.total__room № 888
+          span.total__suite  люкс
+        p.total__price-to-day 9 990₽
+          span.total__sub  в сутки
+    .total__datepicker
+      +date-dropdown({
+        titleLeft: 'Прибытие',
+        titleRight: 'Выезд',
+        placeholder: 'ДД.ММ.ГГ'
+        })
+    .total__dropdown
+      +title({main: 'гости'})
+      +dropdown
+    .total__options
+      p.total__text 9 990₽ х 4 суток
+      span.total__price 39 960₽
+    .total__options
+      p.total__text Сбор за услуги: скидка 2 179₽
+        a.total__info(href='some_page/') i
+      span.total__price 0₽
+    .total__options
+      p.total__text Сбор за дополнительные услуги
+        a.total__info(href='some_page/') i
+      span.total__price 300₽
+    .total__all
+      h2.total__title Итого
+      span.total__line
+      span.total__price-all 38 081₽
+    .total__button
+      +button({
+        title: 'забронировать',
+        color: 'blue',
+        isArrow: true
+      })
