@@ -2,23 +2,15 @@
 @import '../../scss/utils.scss';
 
 .section {
-  display: flex;
-  max-width: $lg;
+  position: relative;
+  max-width: $xlg;
   margin: 0 auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
+  padding: 140px;
   overflow: hidden;
-  justify-content: space-between;
+  background: #FFFFFF;
 
-  &__theme_dropdown {
-    margin-top: rem(100);
-  }
-
-  &__theme_list {
-    margin-top: rem(55);
-  }
-
-  &__theme_offer {
-    margin-top: rem(40);
+  &_theme_cards {
+    height: 100vh;
+    background: #F4F4F6;
   }
 }
