@@ -1,13 +1,10 @@
 @import '../../scss/utils.scss';
 
 .main {
-  background: $default;
+  position: relative;
   width: 100%;
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
-
-  &_theme_cards {
-    background: #F4F4F6;
-  }
+  background-color: #E5E5E5;
 }
