@@ -1,0 +1,26 @@
+mixin signin(options)
+  if !options
+    - options = {}
+
+  form.signin
+    .signin__title Войти
+    .signin__mail
+      +textfield({
+        placeholder: 'Email',
+        type: 'email'
+        })
+    .signin__pass
+      +textfield({
+        placeholder: 'Пароль',
+        type: 'password'
+        })
+    .signin__button
+      +button({
+        title: 'Войти',
+        color: 'blue',
+        isArrow: true})
+    .signin__footer
+      p.signin__text Уже есть аккаунт на Toxin
+      +button({
+        title: 'Войти',
+        color: 'white',})
