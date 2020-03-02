@@ -51,7 +51,7 @@ if (blockName) {
           // fileCreateMsg = 'Для импорта стилей: ' + styleFileImport;
         }
         else if (extention == 'pug') {
-          fileContent = 'extends ../../components/layout/layout' + '\n' + 'block title' + '\n   ' + '| ' + blockName + '\n' + 'block body';
+          fileContent = 'extends ../../components/layout/layout' + '\n' + 'block title' + '\n   ' + '| ' + blockName + '\n' + 'block header' + '\n' + 'block main';
         }
 
         // Создаем файл, если он еще не существует
