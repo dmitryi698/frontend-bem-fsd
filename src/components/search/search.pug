@@ -1,0 +1,22 @@
+mixin search(options)
+  if !options
+    - options = {}
+
+  form.search
+    h2.search__title Найдём номера под ваши пожелания
+    .searh__element
+      +date-dropdown({
+        titleLeft: 'Прибытие',
+        titleRight: 'Выезд',
+        placeholder: 'ДД.ММ.ГГ'
+        })
+    .search__element
+      +title({main: 'гости'})
+      +dropdown
+    .search__element
+      +button({
+        title: 'подобрать номер',
+        color: 'blue',
+        isArrow: true,
+        type: 'submit'
+        })
