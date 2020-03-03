@@ -1,31 +1,49 @@
+//- 
+  options.isAction - добавляет иконки для перелистывания слайдера
+  options.iamge - изображение номера
+  options.alt - подпись к img
+  options.number - номер
+  options.suite - вид номера люкс или ''
+  options.price - цена номера за сутки
+  options.starcount - рейтинг колличество звезд
+  options.checked - true или false(default)
+  options.counter - колличество отзывов
+
 mixin room(options)
   if !options
     - options = {}
 
   .room
-    .room__slider
-      img.room__img(
-        src = '/assets/img/' + options.image || 'room.jpg'
-        alt = options.alt)
-      i.room__action_prev expand_more
-      i.room__action_next expand_more
-      .room__controls
-        .room__control.room__control_activated
-        .room__control
-        .room__control
-        .room__control
+    if options.isAction
+      .room__slider
+        img.room__img(
+          src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
+          alt = options.alt)
+        i.room__action.room__action_prev expand_more
+        i.room__action.room__action_next expand_more
+        .room__controls
+          .room__control.room__control_activated
+          .room__control
+          .room__control
+          .room__control
+    else
+      .room__slider
+        img.room__img(
+          src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
+          alt = options.alt)
+        .room__controls
+          .room__control.room__control_activated
+          .room__control
+          .room__control
+          .room__control
     .room__content
       .room__title
-        h2.room__number=options.number || '№ 888'
-          span.room__suite=options.suite || 'Люкс'
-        p.room__price=options.price || '9 990₽'
-          span.room__sub в сутки
-    .room__rate
-      .room__stars
-        +rating({count: options.count, checked: options.checked })
-      .room__count
+        h2.room__number=options.number ? '№' + options.number : '№ 888'
+          span.room__suite=options.suite || ''
+        p.room__price=options.price ? options.price + '₽' : '9 990₽'
+          span.room__sub  в сутки
+      .room__rate
+        .room__stars
+          +rating({count: options.starcount, isChecked: options.checked })
         p.room__counter=options.counter || '145'
           span.room__sub  Отзывов
-
-
-      

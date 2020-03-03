@@ -249,4 +249,17 @@ block main
             +signin
         .uikit__column
           .uikit__room
-            +room({})
+            +room({
+              isAction: true,
+              alt: 'hotel room',
+              starcount: 5,
+              checked: true})
+          .uikit__room
+            +room({
+              image: 'room2.jpg',
+              alt: 'hotel room',
+              number: '840',
+              price: '9 990',
+              counter: '65',
+              starcount: 4,
+              checked: true})

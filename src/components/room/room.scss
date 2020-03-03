@@ -2,5 +2,141 @@
 @import '../../scss/utils.scss';
 
 .room {
+  position: relative;
+  width: rem(270);
+  background: $default;
+  box-shadow: 0 rem(10) rem(20) $lighter;
+  border-radius: rem(4);
+  overflow: hidden;
+
+  &__slider {
+    position: relative;
+    
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__action {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    width: rem(44);
+    height: rem(44);
+    
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $default;
+
+    &_prev {
+      transform: rotate(90deg);
+      left: 0;
+      z-index: 100;
+    }
+
+    &_next {
+      transform: rotate(-90deg);
+      right: 0;
+      z-index: 100;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__control {
+    cursor: pointer;
+    width: rem(7.5);
+    height: rem(7.5);
+    margin-left: rem(4);
+    border: 1px solid $default;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 rem(5) rem(5) rgba(31, 32, 65, 0.3);
+
+    &_activated,
+    &:hover {
+      background: $default;
+    }
+  }
+
+  &__content {
+    background: $default;
+    padding: rem(20) rem(20);
+  }
+
+  &__title {
+    display: flex;
+    margin-bottom: rem(10);
+  }
+
+  &__number {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(17);
+    color: $darker;
+  }
+
+  &__suite {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  &__price {
+    margin-left: auto;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $medium;
+  }
+
+  &__sub {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: $medium;
+  }
+
+  &__rate {
+    display: flex;
+    padding-top: rem(8);
+    border-top: 1px solid rgba(31, 32, 65, 0.1);
+    align-items: center;
+  }
+
+  &__counter {
+    margin-left: auto;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(14);
+    line-height: rem(18);
+    color: $medium;
+  }
+
   
 }
