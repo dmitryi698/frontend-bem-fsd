@@ -32,14 +32,24 @@ $secondary              : #6fcf97;
 $back                   : #e5e5e5;
 
 //Gradients
-$primary-grad           : linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-$secondary-grad         : linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+$primary-grad           : linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+$secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgba(102, 210, 234, 1) 100%);
 
 /* Variables */
 
 /*************************************/
 
-/* Mixins */
+/********** Mixins and functions **********/
+
+/* Background transparency change function */
+@function alpha-grad($grad, $alpha: 1) {
+  @if ($grad : $primary-grad) {
+    @return linear-gradient(180deg, rgba(188, 156, 255, $alpha) 0%, rgba(139, 164, 249, $alpha) 100%);
+  }
+  @else if ($grad : $secondary-grad) {
+    @return linear-gradient(180deg, rgba(111, 207, 151, $alpha) 0%, rgba(102, 210, 234, $alpha) 100%);
+  }
+}
 
 // px to rem
 @function rem($pixels, $context: $main-font-size) {
