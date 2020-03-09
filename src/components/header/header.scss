@@ -1,5 +1,13 @@
+@import '../../scss/utils.scss';
+
 .header {
-  width: 100%;
+  max-width: $xlg;
+  margin: 0 auto;
+  background: $default;
+  padding-top: rem(15);
+  padding-right: rem(15);
+  padding-bottom: rem(15);
+  padding-left: rem(15);
 
   &_theme_uikit {
     padding: 30px 0 65px 30px;
@@ -8,4 +16,6 @@
     padding: 30px 0 72px 30px;
     background: #F4F4F6;
   }
+
+  @include media-block;
 }
