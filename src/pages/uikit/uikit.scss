@@ -112,6 +112,7 @@
 
     &__registration {
       margin-top: 40px;
+      margin-bottom: 40px;
     }
 
     &__total {
@@ -122,8 +123,12 @@
       margin-top: 40px;
     }
 
+    &__datepicker {
+      margin-bottom: 40px;
+    }
+
     &__room {
-      margin-top: rem(40);
+      margin-bottom: 40px;
     }
 
 }

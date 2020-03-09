@@ -42,7 +42,7 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 /********** Mixins and functions **********/
 
 /* Background transparency change function */
-@function alpha-grad($grad, $alpha: 1) {
+@function alphagrad($grad, $alpha: 1) {
   @if ($grad : $primary-grad) {
     @return linear-gradient(180deg, rgba(188, 156, 255, $alpha) 0%, rgba(139, 164, 249, $alpha) 100%);
   }

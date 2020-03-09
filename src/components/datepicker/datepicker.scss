@@ -1,0 +1,167 @@
+/* datepicker */ 
+@import '../../scss/utils.scss';
+
+.datepicker-layout {
+  flex-basis: rem(320);
+  min-width: rem(300);
+  padding: rem(20);
+  background: $default;
+  border: 1px solid $light;
+  box-sizing: border-box;
+  box-shadow: 0px rem(10) rem(20) $lighter;
+  border-radius: rem(4);
+  overflow: hidden;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(30);
+  }
+
+  &__action {
+    cursor: pointer;
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(20);
+    color: $primary;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(19);
+    line-height: rem(24);
+    color: $darker;
+  }
+
+  &__content {
+
+  }
+
+  &__days {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__day {
+    width: rem(40);
+    height: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: $primary;
+  }
+
+  &__cell {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(40);
+    width: rem(40);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(15);
+    color: $medium;
+
+    &_selected {
+      background: alphagrad($primary-grad, .25);
+    }
+    
+    &_other-month {
+      color: $light;
+    }
+
+    &_from {
+      position: relative;
+      background: $primary-grad;
+      border-radius: rem(22);
+      font-weight: bold;
+      color: $default;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: rem(40);
+        width: rem(20);
+        background: alphagrad($primary-grad, .25);
+        
+      }
+    }
+
+    &_to {
+      background: $primary-grad;
+      border-radius: rem(22);
+      font-weight: bold;
+      color: $default;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: rem(40);
+          width: rem(20);
+          background: alphagrad($primary-grad, .25);
+
+        }
+    }
+
+    &_activated {
+      background: $primary-grad;
+      border-radius: rem(22); 
+      font-weight: bold;
+      color: $default;
+    }
+
+     &_focused,
+     &:hover {
+       background: $secondary-grad;
+       border-radius: rem(22);
+       font-weight: bold;
+       color: $default;
+     }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // &__button {
+
+  //   &_confirm {
+      
+  //   }
+
+  //   &_remove {
+
+  //   }
+  // }
+}

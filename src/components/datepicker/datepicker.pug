@@ -1,0 +1,61 @@
+mixin datepicker(options)
+  if !options
+    - options = {}
+  -
+    let days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    let cells = ['1', ... '31'];
+
+  .datepicker-layout
+    .datepicker-layout__nav
+      i.datepicker-layout__action.datepicker-layout__action_prev arrow_back
+      h2.datepicker-layout__title Август 2019
+      i.datepicker-layout__action.datepicker-layout__action_next arrow_forward
+    table.datepicker-layout__content
+      tr.datepicker-layout__days
+        each day in days
+          th.datepicker-layout__day= day
+      tr.datepicker-layout__days
+        td.datepicker-layout__cell.datepicker-layout__cell_other-month 29
+        td.datepicker-layout__cell.datepicker-layout__cell_other-month 30
+        td.datepicker-layout__cell.datepicker-layout__cell_other-month 31
+        td.datepicker-layout__cell 1
+        td.datepicker-layout__cell 2
+        td.datepicker-layout__cell 3
+        td.datepicker-layout__cell 4
+      tr.datepicker-layout__days
+        td.datepicker-layout__cell 5
+        td.datepicker-layout__cell 6
+        td.datepicker-layout__cell 7
+        td.datepicker-layout__cell.datepicker-layout__cell_activated.datepicker-layout__cell_focused 8
+        td.datepicker-layout__cell 9
+        td.datepicker-layout__cell 10
+        td.datepicker-layout__cell 11
+      tr.datepicker-layout__days
+        td.datepicker-layout__cell 12
+        td.datepicker-layout__cell 13
+        td.datepicker-layout__cell 14
+        td.datepicker-layout__cell 15
+        td.datepicker-layout__cell 16
+        td.datepicker-layout__cell 17
+        td.datepicker-layout__cell 18
+      tr.datepicker-layout__days
+        td.datepicker-layout__cell.datepicker-layout__cell_from 19
+        td.datepicker-layout__cell.datepicker-layout__cell_selected 20
+        td.datepicker-layout__cell.datepicker-layout__cell_selected 21
+        td.datepicker-layout__cell.datepicker-layout__cell_selected 22
+        td.datepicker-layout__cell.datepicker-layout__cell_to 23
+        td.datepicker-layout__cell 24
+        td.datepicker-layout__cell 25
+      tr.datepicker-layout__days
+        td.datepicker-layout__cell 26
+        td.datepicker-layout__cell 27
+        td.datepicker-layout__cell 28
+        td.datepicker-layout__cell 29
+        td.datepicker-layout__cell 30
+        td.datepicker-layout__cell 31
+        td.datepicker-layout__cell.datepicker-layout__cell_other-month 1
+    .datepicker-layout__buttons
+      .datepicker-layout__button_confirm
+        +button({title: 'очистить'})
+      .datepicker-layout__button_remove
+        +button({title: 'применить'})
