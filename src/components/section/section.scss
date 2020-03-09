@@ -5,11 +5,13 @@
   position: relative;
   max-width: $xlg;
   margin: 0 auto;
-  padding: 140px;
+  padding: 15px 15px;
   overflow: hidden;
   background: #FFFFFF;
 
   &_theme_cards {
     background: #F4F4F6;
   }
+
+  @include media-block($ptb: 140px);
 }
