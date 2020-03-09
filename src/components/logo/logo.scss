@@ -2,11 +2,35 @@
 @import '../../scss/utils.scss';
 
 .logo {
-  width: 48px;
-  height: 48px;
+ max-width: rem(110);
+ 
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__img {
+    width: rem(40);
+    height: rem(40);
+  }
 
-  &__path {
-    fill: #1F2041;
+  &__img-path {
+    fill: $darker;
     fill-opacity: 0.25;
+  }
+
+  &__title {
+    margin-left: rem(12.5);
+    width: rem(54);
+    height: rem(14);
+  }
+
+  &__title-path {
+    fill: $darker;
+  }
+
+  &_theme_uikit {
+    width: rem(48);
+    height: rem(48);
   }
 }
