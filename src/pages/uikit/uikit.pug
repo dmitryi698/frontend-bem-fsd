@@ -11,7 +11,7 @@ block main
       
     +section()
       .uikit__logo
-        +logo
+        +logo({ theme: 'uikit'})
       .uikit__row
         .uikit__colors
           +type(
@@ -69,7 +69,7 @@ block main
     //- Form uikit -//
     +section()
       .uikit__logo
-        +logo
+        +logo({ theme: 'uikit'})
       .uikit__row
         .uikit__column
           .uikit__item
@@ -235,7 +235,7 @@ block main
     //- Cards -//
     +section({theme: 'cards'})
       .uikit__logo
-        +logo
+        +logo({ theme: 'uikit'})
       .uikit__row
         .uikit__column
           .uikit__search
@@ -265,3 +265,4 @@ block main
               counter: '65',
               starcount: 4,
               checked: true})
+    +header({})

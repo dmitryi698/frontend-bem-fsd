@@ -1,6 +1,6 @@
 /*************************************/
 
-/* Variables */
+/********** Variables **********/
 
 // Font
 $main-font              : 'Montserrat';
@@ -35,13 +35,13 @@ $back                   : #e5e5e5;
 $primary-grad           : linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
 $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgba(102, 210, 234, 1) 100%);
 
-/* Variables */
-
 /*************************************/
 
-/********** Mixins and functions **********/
+
+/********** Functions **********/
 
 /* Background transparency change function */
+
 @function alphagrad($grad, $alpha: 1) {
   @if ($grad : $primary-grad) {
     @return linear-gradient(180deg, rgba(188, 156, 255, $alpha) 0%, rgba(139, 164, 249, $alpha) 100%);
@@ -50,8 +50,11 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
     @return linear-gradient(180deg, rgba(111, 207, 151, $alpha) 0%, rgba(102, 210, 234, $alpha) 100%);
   }
 }
+/******************************************/
 
-// px to rem
+
+/* Function px to rem */
+
 @function rem($pixels, $context: $main-font-size) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
@@ -64,12 +67,11 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
   @return decimal-round(($pixels / $context * 1rem), 2);
 }
 
-@mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
-}
+/******************************************/
 
-// function for rounding to hundredths
+
+/* Function for rounding to hundredths */
+
 @function decimal-round ($number, $digits: 0, $mode: round) {
   $n: 1;
 
@@ -114,4 +116,31 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
   }
 }
 
-/* Mixins */
+/******************************************/
+
+/********** Mixins **********/
+
+/* Mixin media-block */
+
+@mixin media-block($ptb: 15px){
+
+  @media (min-width: $xs) {
+    padding: $ptb calc(50vw - 230px);
+  }
+
+  @media (min-width: $sm) {
+    padding: $ptb calc(50vw - 364px);
+  }
+
+  @media (min-width: $md) {
+    padding: $ptb calc(50vw - 470px);
+  }
+
+  @media (min-width: $lg) {
+    padding: $ptb calc(50vw - 530px);
+  }
+
+  @media (min-width: $xlg) {
+    padding: $ptb calc(50vw - 628px);
+  }
+}
