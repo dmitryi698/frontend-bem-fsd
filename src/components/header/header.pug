@@ -1,3 +1,7 @@
+include ../logo/logo
+include ../menu/menu
+include ../button/button
+
 mixin header(options)
   if !options
     - options = {}
@@ -5,5 +9,19 @@ mixin header(options)
   - let classes = options.theme ? 'header_theme_' + options.theme : '';
 
     header.header(class = classes)
-      +logo({isTitle: true}) 
-      block
+      .header__logo
+        +logo({isTitle: true})
+      .header__menu
+        +menu
+      .header__buttons
+        .header__button
+          +button({
+            color: 'white',
+            title: 'login'
+            })
+        .header__button
+          +button({
+            color: 'blue',
+            title: 'register'
+            })
+        block

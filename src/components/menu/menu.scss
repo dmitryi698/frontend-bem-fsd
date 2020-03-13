@@ -1,0 +1,40 @@
+/* menu */ 
+@import '../../scss/utils.scss';
+
+.menu {
+  
+  &__button {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  &__item {
+    padding-right: rem(30);
+  }
+  
+  &__link {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(17);
+    color: $medium;
+
+    &:hover {
+      text-shadow: 0.65px 0.3px 0.3px, -0.65px -0.3px 0.3px;
+      color: $dark;
+      
+    }
+
+    &_activated {
+      text-shadow: 0.65px 0.3px 0.3px, -0.65px -0.3px 0.3px;
+      color: $dark;
+    }
+   
+  }
+}

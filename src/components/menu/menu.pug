@@ -1,0 +1,36 @@
+//-
+  options.items - массив с элементами меню
+  options.items.item.name - имя элемента меню
+  options.items.item.href - ссылка элемента меню
+  for item in options.items
+  a.menu__item(href=item.href || '/some_page')=item.name
+    +menu({items: [
+      {href: '/index.html', name: 'Home'},
+      {href: '/index.html', name: 'About Us'},
+      {href: '/index.html', name: 'Services'},
+      {href: '/index.html', name: 'Careers'},
+      {href: '/index.html', name: 'News'},
+      {href: '/index.html', name: 'Documentation'},
+    ]})
+mixin menu(options)
+  if !options
+    - options = {}
+  if !options.items
+    - options.items = []
+
+    
+  .menu.js-menu
+    button.menu__button.js-menu__button(hidden)
+    nav.menu__list
+      li.menu__item
+        a.menu__link.menu__link_activated(href='/index.html') Home
+      li.menu__item
+        a.menu__link(href='/index.html') About Us
+      li.menu__item
+        a.menu__link(href='/index.html') Services
+      li.menu__item
+        a.menu__link(href='/index.html') Careers
+      li.menu__item
+        a.menu__link(href='/index.html') News
+      li.menu__item
+        a.menu__link(href='/index.html') Documentation
