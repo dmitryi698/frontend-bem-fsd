@@ -11,6 +11,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+
+    &_theme-footer {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -26,15 +30,19 @@
     color: $medium;
 
     &:hover {
-      text-shadow: 0.65px 0.3px 0.3px, -0.65px -0.3px 0.3px;
+      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
       color: $dark;
       
     }
 
     &_activated {
-      text-shadow: 0.65px 0.3px 0.3px, -0.65px -0.3px 0.3px;
+      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
       color: $dark;
     }
    
   }
+}
+
+.menu__list_theme-footer > .menu__link {
+  margin-top: rem(20);
 }
