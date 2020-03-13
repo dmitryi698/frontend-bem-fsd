@@ -124,23 +124,23 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 
 @mixin media-block($ptb: 15px){
 
-  @media (min-width: $xs) {
+  @media screen and (min-width: $xs) {
     padding: $ptb calc(50vw - 230px);
   }
 
-  @media (min-width: $sm) {
+  @media screen and (min-width: $sm) {
     padding: $ptb calc(50vw - 364px);
   }
 
-  @media (min-width: $md) {
+  @media screen and (min-width: $md) {
     padding: $ptb calc(50vw - 470px);
   }
 
-  @media (min-width: $lg) {
+  @media screen and (min-width: $lg) {
     padding: $ptb calc(50vw - 530px);
   }
 
-  @media (min-width: $xlg) {
+  @media screen and (min-width: $xlg) {
     padding: $ptb calc(50vw - 628px);
   }
 }

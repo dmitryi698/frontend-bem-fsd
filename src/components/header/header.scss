@@ -1,18 +1,25 @@
 @import '../../scss/utils.scss';
 
 .header {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: $xlg;
-  margin: 0 auto;
-  padding-top: rem(15);
-  padding-right: rem(15);
-  padding-bottom: rem(15);
-  padding-left: rem(15);
+  width: 100%;
   background: $default;
 
+  &__main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: $xlg;
+    margin: 0 auto;
+    padding-top: rem(15);
+    padding-right: rem(15);
+    padding-bottom: rem(15);
+    padding-left: rem(15);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    @include media-block;
+
+  }
 
   &_theme_uikit {
     padding: 30px 0 65px 30px;
@@ -26,6 +33,23 @@
 
   }
 
+  &__username {
+    padding-left: rem(30);
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(17);
+    color: $medium;
+
+    &:hover {
+      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+      color: $dark;
+    }
+    
+  }
+
   &__menu {
     margin-left: auto;
   }
@@ -37,7 +61,10 @@
 
   &__button {
     margin-right: rem(20);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
-  @include media-block;
 }

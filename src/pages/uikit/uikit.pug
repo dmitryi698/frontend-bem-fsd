@@ -266,4 +266,11 @@ block main
               starcount: 4,
               checked: true})
     .uikit__headers
-      +header({})
+      .uikit__header
+        +header({})
+      .uikit__header
+        +header({isRegistered: true})
+      .uikit__footer
+        +footer({})
+      .uikit__footer
+        +footer({isLogo: true})
