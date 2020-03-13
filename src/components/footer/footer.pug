@@ -1,5 +1,86 @@
-mixin footer(options)
- if !options
-  - options = {}
+include ../title/title
+include ../logo/logo
+include ../textfield/textfield
+include ../menu/menu
 
- .footer
+//- 
+  options.isLogo - вариант футера с логотипом текстом и блоком иконок соц.сетей
+
+
+mixin footer(options)
+  if !options
+    - options = {}
+
+  -
+    let classes = '';
+    classes += options.isLogo ? 'footer__main_theme-logo' : '';
+
+  .footer
+    if options.isLogo
+      footer.footer__wrap
+        .footer__main(class = classes)
+          +logo({isTitle: true})
+          p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+          .footer__social
+            a.footer__link(href = 'https://twitter.com/')
+              span &#xf099;
+            a.footer__link(href = 'https://www.facebook.com/')
+              span &#xf082;
+            a.footer__link(href = 'https://www.instagram.com')
+              span &#xf16d;
+
+    else
+      footer.footer__wrap
+        .footer__main
+          .footer__item
+            +logo({isTitle: true})
+            p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+          .footer__nav
+            +title({main: 'navigation'})
+            +menu({
+              footerMenu: true,
+              items: [
+                {href: '/index.html', name: 'About Us'},
+                {href: '/index.html', name: 'News'},
+                {href: '/index.html', name: 'Support'},
+                {href: '/index.html', name: 'Products'},
+              ]
+            })
+          .footer__nav
+            +title({main: 'about us'})
+            +menu({
+              footerMenu: true,
+              items: [
+                {href: '/index.html', name: 'Who we are'},
+                {href: '/index.html', name: 'Our team'},
+                {href: '/index.html', name: 'Careers'},
+                {href: '/index.html', name: 'Investors'},
+              ]
+            })
+          .footer__nav
+            +title({main: 'support'})
+            +menu({
+              footerMenu: true,
+              items: [
+                {href: '/index.html', name: 'Documentation'},
+                {href: '/index.html', name: 'Community'},
+                {href: '/index.html', name: 'Get in Touch'},
+              ]
+            })
+          .footer__item
+            +title({main: 'Subscribe to our newsletter'})
+            p.footer__text Receive our latest news and promotions in your inbox!
+            +textfield({
+              subscription: true,
+              placeholder: 'Your email address',
+              type: 'email'
+            })
+        .footer__border
+          p.footer__copy Copyright © 2018 Toxin UI Kit. All rights reserved.
+          .footer__social
+            a.footer__link(href = 'https://twitter.com/')
+              span &#xf099;
+            a.footer__link(href = 'https://www.facebook.com/')
+              span &#xf082;
+            a.footer__link(href = 'https://www.instagram.com')
+              span &#xf16d;
