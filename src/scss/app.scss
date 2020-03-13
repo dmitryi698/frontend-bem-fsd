@@ -10,4 +10,11 @@
     font-family: $main-font;
     font-weight: $main-font-weight;
     font-style: $main-font-style;
+
+    @media screen and (min-width: $xxs) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: $xs) {
+      font-size: 13px;
+    }
  }
