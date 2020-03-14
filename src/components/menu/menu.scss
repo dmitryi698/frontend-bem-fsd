@@ -4,21 +4,23 @@
 .menu {
   
   &__button {
-
+    // @media screen and (max-width: $sm) {
+    //   display: block;
+    // }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
-    &_theme-footer {
-      flex-direction: column;
-    }
   }
 
   &__item {
     padding-right: rem(30);
+
+    @media screen and (max-width: $sm) {
+      padding-right: rem(15);
+    }
   }
   
   &__link {
@@ -41,8 +43,4 @@
     }
    
   }
-}
-
-.menu__list_theme-footer > .menu__link {
-  margin-top: rem(20);
 }
