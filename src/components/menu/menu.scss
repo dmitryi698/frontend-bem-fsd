@@ -16,7 +16,10 @@
   }
 
   &__item {
+    position: relative;
     padding-right: rem(30);
+    display: flex;
+    align-items: center;
 
     @media screen and (max-width: $sm) {
       padding-right: rem(15);
@@ -31,16 +34,63 @@
     line-height: rem(17);
     color: $medium;
 
-    &:hover {
-      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
-      color: $dark;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
       
     }
 
+    &:hover,
+    &:focus,
     &_activated {
       text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
       color: $dark;
     }
-   
   }
+
+  
+  &__link:hover + &__dropbtn {
+     text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+     color: $dark;
+  }
+  /* Submenu */
+
+  &__dropbtn {
+    font-family: $icon;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(24);
+    line-height: rem(20);
+    color: $medium;
+  }
+  
+  &__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    background: $default;
+    padding: rem(10);
+
+    &_activated {
+      display: flex;
+    }
+  }
+
+  &__subitem {
+    margin-top: rem(5);
+    color: $medium;
+    
+    &:hover {
+      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+      color: $dark;
+    }
+  }
+
 }

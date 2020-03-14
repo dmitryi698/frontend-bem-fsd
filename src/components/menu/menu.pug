@@ -1,10 +1,12 @@
 //-
   options.items - массив с элементами меню
-  options.items.item.name - имя элемента меню
-  options.items.item.href - ссылка элемента меню
-    +menu({items: [
-      {href: '/index.html', name: 'Home'},
-    ]})
+  item.href - ссылка пункта меню
+  item.title - текст пункта меню
+  itemSub.href - ссылка пункта меню
+  itemSub.title - текст пункта меню
+  item.class - добавляет 
+
+
 mixin menu(options)
   if !options
     - options = {}
@@ -14,15 +16,11 @@ mixin menu(options)
   .menu.js-menu
     button.menu__button.js-menu__button(hidden)
     nav.menu__list
-      li.menu__item
-        a.menu__link.menu__link_activated(href='/index.html') Home
-      li.menu__item
-        a.menu__link(href='/index.html') About Us
-      li.menu__item
-        a.menu__link(href='/index.html') Services
-      li.menu__item
-        a.menu__link(href='/index.html') Careers
-      li.menu__item
-        a.menu__link(href='/index.html') News
-      li.menu__item
-        a.menu__link(href='/index.html') Documentation
+      each item in options.items
+        li.menu__item
+          a.menu__link(href = item.href class = item.isActivated ? ' menu__link_activated' : item.subMenu ? 'js-menu__link' : '' )=item.title
+          if item.subMenu
+            span.menu__dropbtn expand_more
+            ul.menu__submenu
+              each itemSub in item.subMenu
+                a.menu__subitem(href = itemSub.href)=itemSub.title
