@@ -271,6 +271,29 @@ block main
       .uikit__header
         +header({isRegistered: true})
       .uikit__footer
-        +footer({})
+        +footer({
+          items: [{
+            title: 'Navigation',
+            itemList: [
+              {href: '/index.html', name: 'About Us'},
+              {href: '/index.html', name: 'News'},
+              {href: '/index.html', name: 'Support'},
+              {href: '/index.html', name: 'Products'},
+              ]},{
+            title: 'About Us',
+            itemList: [
+              {href: '/index.html', name: 'Who we are'},
+              {href: '/index.html', name: 'Our team'},
+              {href: '/index.html', name: 'Careers'},
+              {href: '/index.html', name: 'Investors'},
+              ]},{
+            title: 'Support',
+            itemList: [
+              {href: '/index.html', name: 'Documentation'},
+              {href: '/index.html', name: 'Community'},
+              {href: '/index.html', name: 'Get in Touch'},
+              ]},
+            ]
+          })
       .uikit__footer
         +footer({isLogo: true})

@@ -38,10 +38,31 @@
     width: 15%;
     flex-basis: rem(110)
   }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+  }
   
   &__item {
+    margin-top: rem(20);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(17);
+    color: $medium;
+  }
+
+  &__promo {
     width: 25%;
     flex-basis: rem(260);
+
+    @media screen and (max-width: $sm) {
+      flex-grow: 1;
+      flex-basis: rem(500);
+      margin: rem(20) auto;
+    }
   }
 
 

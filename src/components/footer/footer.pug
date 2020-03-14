@@ -5,12 +5,15 @@ include ../menu/menu
 
 //- 
   options.isLogo - вариант футера с логотипом текстом и блоком иконок соц.сетей
-
+  options.logoText - текст рядом с логотипом
+  options.copyText - текс copyright
+  options.item.title - заголовок к подменю
+  options.items.item.subItem.href - адресс ссылки меню в футере по умолчанию '/index.html'
+  options.items.item.subItem.name - название ссылки меню
 
 mixin footer(options)
   if !options
     - options = {}
-
   -
     let classes = '';
     classes += options.isLogo ? 'footer__main_theme-logo' : '';
@@ -20,7 +23,7 @@ mixin footer(options)
       footer.footer__wrap
         .footer__main(class = classes)
           +logo({isTitle: true})
-          p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+          p.footer__text=options.logoText || 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
           .footer__social
             a.footer__link(href = 'https://twitter.com/')
               span &#xf099;
@@ -32,42 +35,16 @@ mixin footer(options)
     else
       footer.footer__wrap
         .footer__main
-          .footer__item
+          .footer__promo
             +logo({isTitle: true})
-            p.footer__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
-          .footer__nav
-            +title({main: 'navigation'})
-            +menu({
-              footerMenu: true,
-              items: [
-                {href: '/index.html', name: 'About Us'},
-                {href: '/index.html', name: 'News'},
-                {href: '/index.html', name: 'Support'},
-                {href: '/index.html', name: 'Products'},
-              ]
-            })
-          .footer__nav
-            +title({main: 'about us'})
-            +menu({
-              footerMenu: true,
-              items: [
-                {href: '/index.html', name: 'Who we are'},
-                {href: '/index.html', name: 'Our team'},
-                {href: '/index.html', name: 'Careers'},
-                {href: '/index.html', name: 'Investors'},
-              ]
-            })
-          .footer__nav
-            +title({main: 'support'})
-            +menu({
-              footerMenu: true,
-              items: [
-                {href: '/index.html', name: 'Documentation'},
-                {href: '/index.html', name: 'Community'},
-                {href: '/index.html', name: 'Get in Touch'},
-              ]
-            })
-          .footer__item
+            p.footer__text=options.logoText || 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
+          each item in options.items
+            .footer__nav
+              +title({main: item.title})
+              .footer__menu
+                each itemSub in item.itemList
+                  a.footer__item(href = itemSub.href)=itemSub.name  
+          .footer__promo
             +title({main: 'Subscribe to our newsletter'})
             p.footer__text Receive our latest news and promotions in your inbox!
             +textfield({
@@ -76,7 +53,7 @@ mixin footer(options)
               type: 'email'
             })
         .footer__border
-          p.footer__copy Copyright © 2018 Toxin UI Kit. All rights reserved.
+          p.footer__copy=options.copyText || 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
           .footer__social
             a.footer__link(href = 'https://twitter.com/')
               span &#xf099;
