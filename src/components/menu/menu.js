@@ -1,18 +1,28 @@
 import './menu.scss';
 
 $(() => {
-  $('.js-menu__link').click(() => {
 
-    $('.menu__submenu').toggleClass('menu__submenu_activated');
-    
+  const $touch = $('.js-menu__link');
+  const $menu = $('.js-menu__list');
+
+  $('html').click(function () {
+    $menu.find('.menu__submenu').removeClass('menu__submenu_activated');
   });
 
-  $(document).mouseup((e) => {
-    
-    if (!$('.menu__submenu').is(e.target) && $('.menu__submenu').has(e.target).length === 0) {
+  $menu.click(function (e) {
+    e.stopPropagation();
+  });
 
-      $('.menu__submenu').removeClass('menu__submenu_activated');
+  $touch.on('click', function (e) {
+    e.preventDefault();
+    let submenu = $(this).closest('li').find('.menu__submenu');
+    let isActive = submenu.hasClass('menu__submenu_activated'); // закрыто ли подменю, по которому кликнули
 
+    $menu.find('.menu__submenu').removeClass('menu__submenu_activated'); // закрываем все подменю
+
+    // если меню было закрыто, то открываем его
+    if (!isActive) {
+      submenu.addClass('menu__submenu_activated');
     }
   });
 });

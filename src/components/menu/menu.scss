@@ -46,7 +46,7 @@
     }
 
     &:hover,
-    &:focus,
+    &:active,
     &_activated {
       text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
       color: $dark;
