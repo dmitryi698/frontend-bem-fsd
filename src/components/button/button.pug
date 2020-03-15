@@ -15,6 +15,7 @@ mixin button(options)
   -
     let btnClassName = 'button__main'
     let titleClassName = 'button__title'
+    btnClassName += options.theme ? ' button_theme_' + options.theme : ''
     btnClassName += options.color ? ' button__main_' + options.color : ''
     btnClassName += options.isTransparent ? ' button__main_transparent' : ''
     btnClassName += options.isArrow ? ' button_large' : ''
@@ -27,4 +28,4 @@ mixin button(options)
       autofocus)
       span(class=titleClassName)=options.title ? options.title : 'Button'
       if options.isArrow
-        i.button__arrow arrow_forward
+        span.button__arrow arrow_forward
