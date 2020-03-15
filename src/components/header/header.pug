@@ -13,7 +13,9 @@ mixin header(options)
         .header__logo
           +logo({isTitle: true})
         .header__menu
-          +menu
+          +menu({
+            items: options.menu
+          })
         if options.isRegistered
           a.header__username(href = '/user_page') Cosmin Negoita
         else
@@ -21,11 +23,11 @@ mixin header(options)
             .header__button
               +button({
                 color: 'white',
-                title: 'login'
+                title: options.logBtn
                 })
             .header__button
               +button({
                 color: 'blue',
-                title: 'register'
+                title: options.regBtn
                 })
           block

@@ -52,6 +52,9 @@
 
   &__menu {
     margin-left: auto;
+
+    
+
   }
 
   &__buttons {
@@ -65,6 +68,21 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+  @media screen and (max-width: $sm) {
+    &__main {
+      justify-content: space-between;
+    }
+
+    &__menu {
+      order: 3;
+      margin-top: rem(20);
+    }
+
+    &__buttons {
+
+    }
+
   }
 
 }

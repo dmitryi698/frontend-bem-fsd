@@ -265,11 +265,50 @@ block main
               counter: '65',
               starcount: 4,
               checked: true})
+    //- Cards -//
+
+    //- Headers & Footers -//
+
     .uikit__headers
       .uikit__header
-        +header({})
+        +header({
+          regBtn: 'Register',
+          logBtn: 'Login',
+          menu: [
+              {title: 'Home', id: 'home', href: '/index.html', isActivated: true},
+              {title: 'About Us', id: 'about', href: '/index.html'},
+              {title: 'Services', id: 'services',
+                subMenu: [
+                  {title: 'Careers', href: '/index.html'},
+                  {title: 'Our team', href: '/index.html'},
+                  {title: 'Help', href: '/index.html'},
+                  {title: 'Some page', href: '/index.html'},
+                ]
+                },
+              {title: 'Careers', id: 'careers', href: '/index.html'},
+              {title: 'News', id: 'news', href: '/index.html'},
+              {title: 'Documentation', id: 'documentation', href: '/index.html'},
+          ]
+        })
       .uikit__header
-        +header({isRegistered: true})
+        +header({
+          isRegistered: true,
+          menu: [
+              {title: 'Home', href: '/index.html', isActivated: true},
+              {title: 'About Us', href: '/index.html'},
+              {title: 'Services',
+                subMenu: [
+                  {title: 'Careers', href: '/index.html'},
+                  {title: 'Our team', href: '/index.html'},
+                  {title: 'Help', href: '/index.html'},
+                  {title: 'Some page', href: '/index.html'},
+                ]
+                },
+              {title: 'Careers', href: '/index.html'},
+              {title: 'News', href: '/index.html'},
+              {title: 'Documentation', href: '/index.html'},
+          ]
+        })
       .uikit__footer
         +footer({
           items: [{
@@ -297,3 +336,5 @@ block main
           })
       .uikit__footer
         +footer({isLogo: true})
+    //- Headers & Footers -//
+
