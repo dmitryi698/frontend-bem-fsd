@@ -18,7 +18,7 @@ $lg                     : 1200px;
 $md                     : 980px;
 $sm                     : 768px;
 $xs                     : 480px;
-$xxs                    : 320px;
+$xxs                    : 310px;
 
 // Main color
 $default                : #ffffff;
@@ -141,6 +141,30 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
   }
 
   @media screen and (min-width: $xlg) {
-    padding: $ptb calc(50vw - 628px);
+    padding: $ptb calc(50vw - 580px);
+  }
+
+  /*  */
+}
+
+@mixin media-vh {
+  @media screen and (max-width: $lg) {
+    min-height: 100vh;
+  }
+
+  @media screen and (max-width: $md) {
+    min-height: 90vh;
+  }
+
+  @media screen and (max-width: $sm) {
+    min-height: 80vh;
+  }
+
+  @media screen and (max-width: $xs) {
+    min-height: 60vh;
+  }
+
+  @media screen and (max-width: $xxs) {
+    min-height: 50vh;
   }
 }
