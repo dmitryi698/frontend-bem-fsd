@@ -20,7 +20,7 @@ mixin signin(options)
         color: 'blue',
         isArrow: true})
     .signin__footer
-      p.signin__text Уже есть аккаунт на Toxin
+      p.signin__text=options.textReg || 'Уже есть аккаунт на Toxin?'
       +button({
-        title: 'Войти',
+        title: options.titleReg || 'Войти',
         color: 'white',})

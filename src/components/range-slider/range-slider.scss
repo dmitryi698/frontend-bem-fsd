@@ -31,6 +31,16 @@
     text-transform: uppercase;
     color: $darker;
   }
+
+  &__text {
+    margin-top: rem(10);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(14);
+    color:  $medium;
+  }
 }
 
 /********* Range slider custom style *********/

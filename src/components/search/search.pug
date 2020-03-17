@@ -12,7 +12,7 @@ mixin search(options)
         })
     .search__element
       +title({main: 'гости'})
-      +dropdown
+      +dropdown({buttons: options.dropBtn})
     .search__element
       +button({
         title: 'подобрать номер',

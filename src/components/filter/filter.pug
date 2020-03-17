@@ -1,0 +1,35 @@
+mixin filter(options)
+  if !options
+    - options = {}
+
+  .filter
+    .filter__item
+      +title({main: 'даты пребывания в отеле'})
+      +date-dropdown({isDateFilter: true})
+    .filter__item
+      +title({main: 'гости'})
+      +dropdown({})
+    .filter__item
+      +range-slider({description: 'Диапазон цены', text: 'Стоимость за сутки пребывания в номере'})
+    .filter__item
+      +title({main: 'checkbox buttons'})
+      +checkbox({label: 'Можно курить'})
+      +checkbox({label: 'Можно с питомцами', checked: true})
+      +checkbox({label: 'Можно пригласить гостей(до 10 человек)', checked: true})
+    .filter__item
+      +title({main: 'доступность'})
+      +checkbox({label: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'})
+      +checkbox({label: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'})
+    .filter__item
+      +title({main: 'Удобства номера'})
+      +dropdown({})
+    .filter__item
+      +checkbox-list({title: 'дополнительные удобства'})
+        +checkbox({label: 'Завтрак', })
+        +checkbox({label: 'Письменный стол', checked: true})
+        +checkbox({label: 'Стул для кормления', checked: true})
+        +checkbox({label: 'Кроватка', checked: true})
+        +checkbox({label: 'Телевизор', })
+        +checkbox({label: 'Шампунь', })
+        +checkbox({label: 'Телевизор', })
+        +checkbox({label: 'Шампунь', })

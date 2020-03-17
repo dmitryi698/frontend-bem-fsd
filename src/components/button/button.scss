@@ -5,8 +5,8 @@
   .button {
 
     &__main {
-      position: relative;
       cursor: pointer;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -21,7 +21,7 @@
       }
 
       &_blue, &_white {
-        padding: 0 rem(21);
+        padding: 0 rem(17.5);
         height: rem(44);
         border-radius: rem(22);
         border: 2px solid transparent;
@@ -89,7 +89,7 @@
     }
 
     &_large {
-      min-width: rem(320);
+      min-width: rem(220);
     }
 
     &_large  > &__title {

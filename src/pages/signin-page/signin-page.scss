@@ -1,0 +1,10 @@
+@import '../../scss/utils.scss';
+
+.signin-page {
+
+  &__signin {
+    width: 100%;
+    max-width: rem(380);
+    margin: auto;
+  }
+}

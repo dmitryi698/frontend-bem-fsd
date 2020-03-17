@@ -1,0 +1,9 @@
+@import '../../scss/utils.scss';
+
+.registration-page {
+
+  &__reg {
+    max-width: rem(380);
+    margin: auto;
+  }
+}

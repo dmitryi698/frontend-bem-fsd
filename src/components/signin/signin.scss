@@ -2,6 +2,8 @@
 @import '../../scss/utils.scss';
 
 .signin {
+  width: 100%;
+  min-width: rem(280);
   padding: rem(40) rem(30) rem(30);
   background: $default;
   border: 1px solid rgba(0, 0, 0, 0.12);

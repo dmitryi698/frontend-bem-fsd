@@ -3,15 +3,47 @@
 
 .section {
   position: relative;
-  max-width: $xlg;
+  display: flex;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 15px 15px;
   overflow: hidden;
   background: #FFFFFF;
 
+  @include media-block($ptb: 140px);
+
   &_theme_cards {
     background: #F4F4F6;
   }
 
-  @include media-block($ptb: 140px);
+  &_theme_signin {
+    align-items: center;
+    min-height: 100vh;
+    background: url('/assets/img/signin.png') no-repeat center center;
+    background-size: cover;
+
+    @include media-vh;
+
+    @include media-block($ptb: 0);
+  }
+
+  &_theme_landing {
+    background: url('/assets/img/landing.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+
+    @include media-vh;
+
+    @include media-block($ptb: 0);
+  }
+
+  &_theme_search {
+    min-height: 100vh;
+
+    @include media-vh;
+
+    @include media-block($ptb: 0);
+  }
+  
 }

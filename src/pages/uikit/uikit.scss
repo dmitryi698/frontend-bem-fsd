@@ -41,7 +41,7 @@
   }
 
   &__fonts {
-    flex-basis: 395px;
+    flex-basis: rem(395);
     
     & .type {
       margin-bottom: rem(50);
@@ -51,50 +51,50 @@
 
   /********** Form elements ***********/
     &__column {
-      flex-basis: 320px;
+      flex-basis: rem(320);
     }
 
     &__item {
-      margin-bottom: 20px;
+      margin-bottom: rem(20);
 
       &_theme_list {
-        margin-bottom: 50px;
+        margin-bottom: rem(50);
       }
 
       &_theme_checkbox {
-        flex-basis: 222px;
+        flex-basis: rem(222);
       }
 
       &_theme_radio {
-        width: 220px;
+        width: rem(220);
         display: flex;
         justify-content: space-between;
       }
 
       &_theme_like-btn {
-        width: 90px;
+        width: rem(90);
         display: flex;
         justify-content: space-between;
       }
 
       &_theme_rating {
-        width: 260px;
+        width: rem(260);
         display: flex;
         justify-content: space-between;
       }
 
       &_theme_toggle {
-        margin-top: 40px;
-        margin-bottom: 16px;
+        margin-top: rem(40);
+        margin-bottom: rem(16);
       }
 
       &_theme_button {
-        margin-top: 16px;
-        margin-bottom: 30px;
+        margin-top: rem(16);
+        margin-bottom: rem(30);
         display: flex;
 
         & .button {
-          margin-right: 20px;
+          margin-right: rem(20);
         }
       }
     }
@@ -111,8 +111,8 @@
     }
 
     &__registration {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: rem(40);
+      margin-bottom: rem(40);
     }
 
     &__total {
@@ -120,23 +120,23 @@
     }
 
     &__signin {
-      margin-top: 40px;
+      margin-top: rem(40);
     }
 
     &__datepicker {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
     }
 
     &__room {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
     }
   /************* Cards **************/
 
   /************* Headers & Footers **************/
 
     &__headers {
-      padding-top: 150px;
-      padding-bottom: 130px;
+      padding-top: rem(150);
+      padding-bottom: rem(130);
       background: #F4F4F6;
       margin: 0 auto;
     }
