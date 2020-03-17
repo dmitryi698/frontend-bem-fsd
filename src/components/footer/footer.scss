@@ -52,6 +52,11 @@
     font-size: rem(14);
     line-height: rem(17);
     color: $medium;
+    
+    &:hover {
+      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+      color: $dark;
+    }
   }
 
   &__promo {
