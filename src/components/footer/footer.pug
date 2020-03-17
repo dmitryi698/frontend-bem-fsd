@@ -44,12 +44,12 @@ mixin footer(options)
               .footer__menu
                 each itemSub in item.itemList
                   a.footer__item(href = itemSub.href)=itemSub.name  
-          .footer__promo
-            +title({main: 'Subscribe to our newsletter'})
-            p.footer__text Receive our latest news and promotions in your inbox!
+          form.footer__promo
+            +title({main: options.subscribeTitle || 'Subscribe to our newsletter'})
+            p.footer__text=options.subscribeText || 'Receive our latest news and promotions in your inbox!'
             +textfield({
               subscription: true,
-              placeholder: 'Your email address',
+              placeholder: options.placeholder || 'Your email address',
               type: 'email'
             })
         .footer__border

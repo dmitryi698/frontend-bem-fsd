@@ -9,7 +9,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: $xlg;
     margin: 0 auto;
     padding-top: rem(15);
     padding-right: rem(15);
@@ -32,11 +31,16 @@
   &__text {
     margin-top: rem(20);
     margin-bottom: rem(20);
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
   }
 
   &__nav {
-    width: 15%;
-    flex-basis: rem(110)
+    flex-basis: rem(150)
   }
 
   &__menu {
@@ -72,7 +76,6 @@
 
 
   &__border {
-    max-width: $xlg;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
