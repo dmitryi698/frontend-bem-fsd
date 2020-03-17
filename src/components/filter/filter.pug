@@ -8,7 +8,7 @@ mixin filter(options)
       +date-dropdown({isDateFilter: true})
     .filter__item
       +title({main: 'гости'})
-      +dropdown({})
+      +dropdown({buttons: true})
     .filter__item
       +range-slider({description: 'Диапазон цены', text: 'Стоимость за сутки пребывания в номере'})
     .filter__item
@@ -22,7 +22,7 @@ mixin filter(options)
       +checkbox({label: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'})
     .filter__item
       +title({main: 'Удобства номера'})
-      +dropdown({})
+      +dropdown({isRooms: true})
     .filter__item
       +checkbox-list({title: 'дополнительные удобства'})
         +checkbox({label: 'Завтрак', })

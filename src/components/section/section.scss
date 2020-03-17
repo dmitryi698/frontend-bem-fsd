@@ -39,11 +39,9 @@
   }
 
   &_theme_search {
-    min-height: 100vh;
+    justify-content: center;
 
-    @include media-vh;
-
-    @include media-block($ptb: 0);
+    @include media-block($ptb: 15px);
   }
   
 }

@@ -30,7 +30,7 @@ mixin room(options)
       .room__slider
         img.room__img(
           src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
-          alt = options.alt)
+          alt = options.alt || 'hotel room')
         .room__controls
           .room__control.room__control_activated
           .room__control

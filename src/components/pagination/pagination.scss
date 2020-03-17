@@ -61,7 +61,8 @@
     display: none;
   }
 
-  &__cards {
+  &__text {
+    margin-top: rem(10);
     text-align: center;
     font-family: $main-font;
     font-style: normal;
