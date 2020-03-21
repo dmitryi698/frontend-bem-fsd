@@ -4,8 +4,9 @@ mixin date-dropdown(options)
 
 
   if options.isDateFilter
-    .date-dropdown.js-date-dropdown
-      .date-dropdown__selection.date-dropdown__selection_theme-filter
+    .date-dropdown.date-dropdown_theme_filter.js-date-dropdown
+      +title({main: options.titleLeft || 'filter date dropdown'})
+      .date-dropdown__selection
         input.date-dropdown__input.js-date-dropdown__input(
           type = 'text'
           placeholder = options.placeholder
@@ -14,7 +15,7 @@ mixin date-dropdown(options)
   else
     .date-dropdown.js-date-dropdown
       .date-dropdown__inner
-        +title({main: options.titleLeft})
+        +title({main: options.titleLeft || 'date dropdown'})
         .date-dropdown__selection
           input.date-dropdown__input.js-date-dropdown__input_start(
             type = 'text'
@@ -22,7 +23,7 @@ mixin date-dropdown(options)
           )
           i.date-dropdown__button-icon keyboard_arrow_down
       .date-dropdown__inner
-        +title({main: options.titleRight})
+        +title({main: options.titleRight || 'date dropdown'})
         .date-dropdown__selection
           input.date-dropdown__input.js-date-dropdown__input_end(
             type = 'text'

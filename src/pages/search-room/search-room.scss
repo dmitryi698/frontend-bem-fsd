@@ -10,11 +10,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: rem(60);
   }
 
   &__title {
     width: 100%;
-    margin-left: rem(10);
+    // margin-left: rem(10);
     font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
@@ -26,11 +29,12 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
   &__item {
-    margin-left: rem(10);
+    // margin-left: rem(10);
     margin-top: rem(20);
   }
 

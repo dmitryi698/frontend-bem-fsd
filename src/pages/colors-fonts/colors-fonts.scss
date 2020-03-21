@@ -1,0 +1,38 @@
+@import '../../scss/utils.scss';
+
+.colors-fonts {
+
+  &__section {
+    width: $xlg;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 145px 150px 191px;
+  }
+
+
+  &__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__colors {
+    width: 270px;
+
+    & .type {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__fonts {
+    width: 400px;
+
+    & .type {
+      margin-bottom: 50px;
+    }
+  }
+
+  
+}

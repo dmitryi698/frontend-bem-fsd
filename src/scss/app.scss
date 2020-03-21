@@ -11,28 +11,8 @@
     font-family: $main-font;
     font-weight: $main-font-weight;
     font-style: $main-font-style;
+ }
 
-    @media screen and (min-width: $xxs) {
-      font-size: 10px;
-    }
-
-    @media screen and (min-width: $xs) {
-      font-size: 12px;
-    }
-
-    @media screen and (min-width: $sm) {
-      font-size: 12px;
-    }
-
-    @media screen and (min-width: $md) {
-      font-size: 12px;
-    }
-
-    @media screen and (min-width: $lg) {
-      font-size: 14px;
-    }
-    
-    @media screen and (min-width: $xlg) {
-      font-size: 14px;
-    }
+ .body {
+   height: 100%;
  }

@@ -17,8 +17,6 @@ mixin checkbox(options)
       input.checkbox__input(
         type = 'checkbox'
         name = options.name
-        tabindex = options.tabindex
-        required = options.required
         checked = options.checked)
       span.checkbox__mark
       span.checkbox__text-label(class = labelClassName)=options.label

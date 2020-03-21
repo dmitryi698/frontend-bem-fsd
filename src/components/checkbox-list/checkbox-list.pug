@@ -1,10 +1,14 @@
 mixin checkbox-list(options)
   if !options
-    - options = {};
+    - options = {}
+  if !options.items
+    - options.items = []
     
   .checkbox-list.js-checkbox-list(class = classes)
     .checkbox-list__label
       p.checkbox-list__title=options.title
       i.checkbox-list__icon-button expand_more
     .checkbox-list__list
-      block
+      each list in options.items
+        each item in list.checkbox
+          +checkbox({name: item.name, label: item.label, checked: item.checked})

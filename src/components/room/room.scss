@@ -4,6 +4,7 @@
 .room {
   position: relative;
   width: rem(270);
+  min-width: rem(260);
   background: $default;
   box-shadow: 0 rem(10) rem(20) $lighter;
   border-radius: rem(4);

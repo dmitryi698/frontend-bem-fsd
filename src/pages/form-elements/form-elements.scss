@@ -1,0 +1,261 @@
+@import '../../scss/utils.scss';
+
+.form-elements {
+
+  &__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__section {
+    position: relative;
+    width: $xlg;
+    margin: 0 auto;
+    height: 1853px;
+  }
+
+  &__textfield {
+    position: absolute;
+    width: 320px;
+    left: 141px;
+    top: 145px;
+    
+  }
+  
+  &__dropdown {
+    position: absolute;
+    width: 320px;
+    left: 141px;
+    top: 311px;
+  }
+  
+  &__masked {
+    position: absolute;
+    width: 320px;
+    left: 141px;
+    top: 400px;
+
+  }
+  
+  &__date-dropdown {
+    position: absolute;
+    width: 320px;
+    left: 141px;
+    top: 502px;
+
+
+  }
+  
+  &__date-filter {
+    position: absolute;
+    width: 266px;
+    left: 141px;
+    top: 607px;
+
+  }
+
+  &__subscription {
+    position: absolute;
+    width: 267px;
+    left: 140px;
+    top: 712px;
+
+  }
+  
+  &__dropdown-rooms {
+   position: absolute;
+   width: 266px;
+   left: 140px;
+   top: 876px;
+
+  }
+  
+  &__dropdown-rooms_expand {
+    position: absolute;
+    width: 266px;
+    height: 181.56px;
+    left: 140px;
+    top: 960px;
+
+
+  }
+  
+  &__checkbox-list {
+    position: absolute;
+    width: 266px;
+    left: 141px;
+    top: 1191px;
+
+  }
+  
+  &__checkbox-list_expand {
+    position: absolute;
+    width: 266px;
+    left: 140px;
+    top: 1254px;
+  }
+  
+  &__offer {
+    position: absolute;
+    width: 291px;
+    left: 140px;
+    top: 1563px;
+
+    & .offer {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__checkbox-btn {
+    position: absolute;
+    width: 222px;
+    left: 587px;
+    top: 143px;
+
+    & .title {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 10px;
+  }
+
+  &__radio-btns {
+    position: absolute;
+    width: 220.74px;
+    left: 587px;
+    top: 313px;
+  }
+
+  &__radio-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__toggle {
+    position: absolute;
+    width: 260px;
+    left: 587px;
+    top: 404.56px;
+
+    & .title {
+      margin-bottom: 16px;
+    }
+
+  }
+
+  &__like-btns {
+    position: absolute;
+    width: 89.72px;
+    left: 587px;
+    top: 534px;
+
+    & .title {
+      margin-bottom: 15px;
+    }
+
+  }
+
+  &__like-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__rate-btns {
+    position: absolute;
+    width: 259.74px;
+    left: 587px;
+    top: 625px;
+  }
+
+  &__rate-btn {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__dropdown-guest {
+    position: absolute;
+    width: 320px;
+    left: 587px;
+    top: 876px;
+  }
+
+  &__rich-checkbox {
+    position: absolute;
+    width: 266px;
+    left: 587px;
+    top: 1196px;
+
+    & .title {
+      margin-bottom: 16px;
+    }
+
+    & .checkbox {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__range-slider {
+    position: absolute;
+    width: 266px;
+    left: 979px;
+    top: 143px;
+
+  }
+
+  &__buttons {
+    position: absolute;
+    width: 320px;
+    left: 979px;
+    top: 231px;
+
+    & .title { 
+      margin-bottom: 16px;
+    }
+
+    & .button { 
+      margin-bottom: 30px;
+      width: 100px;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    width: 235px;
+    left: 979px;
+    top: 540px;
+
+    & .title {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__dropdown-guests_expand {
+    position: absolute;
+    width: 320px;
+    left: 979px;
+    top: 876px;
+  }
+
+  &__bullet {
+    position: absolute;
+    width: 292px;
+    left: 979px;
+    top: 1196px;
+
+  }
+
+  &__review {
+    position: absolute;
+    width: 711px;
+    left: 587px;
+    top: 1573px;
+  }
+}

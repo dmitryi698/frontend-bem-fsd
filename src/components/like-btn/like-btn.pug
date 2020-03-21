@@ -7,5 +7,5 @@ mixin like-btn(options)
   .like-btn.js-like-btn
     a.like-btn__counter.js-like-btn__counter(
       class = classes
-      data-count = options.count)
+      data-count = options.count || '0')
       span.like-btn__icon

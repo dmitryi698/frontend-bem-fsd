@@ -1,10 +1,10 @@
 mixin bullet(options)
   if !options
     - options = {}
-  if !options.items
-    - options.items = []
+  if !options.list
+    - options.list = []
   
   .bullet
     ul.bullet__list
-      for item in options.items
+      for item in options.list
         li.bullet__item=item

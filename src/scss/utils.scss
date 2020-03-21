@@ -146,25 +146,3 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 
   /*  */
 }
-
-@mixin media-vh {
-  @media screen and (max-width: $lg) {
-    min-height: 100vh;
-  }
-
-  @media screen and (max-width: $md) {
-    min-height: 90vh;
-  }
-
-  @media screen and (max-width: $sm) {
-    min-height: 80vh;
-  }
-
-  @media screen and (max-width: $xs) {
-    min-height: 60vh;
-  }
-
-  @media screen and (max-width: $xxs) {
-    min-height: 50vh;
-  }
-}

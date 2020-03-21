@@ -39,11 +39,11 @@ if (blockName) {
 
         // Если это SCSS
         if (extention == 'scss') {
-          // styleFileImport = '@import ' + '\'../../scss/utils.scss\';';
-          // fileContent = '/* ' + blockName + ' */ ' + '\n' + styleFileImport + '\n\n.' + blockName + ' {\n  \n}\n';
+          styleFileImport = '@import ' + '\'../../scss/utils.scss\';';
+          fileContent = '/* ' + blockName + ' */ ' + '\n' + styleFileImport + '\n\n.' + blockName + ' {\n  \n}\n';
           // fileCreateMsg = 'Для импорта стилей: ' + styleFileImport;
         }
-
+        
         // Если это JS
         else if (extention == 'js') {
           styleFileImport = 'import ' + '\'./' + blockName + '.scss\';';

@@ -7,6 +7,6 @@ mixin rating(options)
       - for (let count = 0; count < options.count; count++)
         input.rating__star(
           type = "radio"
-          name = options.name
+          name = options.name || 'rating'
           value = count
           checked = options.isChecked)

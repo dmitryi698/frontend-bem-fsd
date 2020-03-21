@@ -7,7 +7,7 @@ mixin review(options)
     .review__guest
       img.review__img(
         src = '/assets/img/' + options.image
-        alt = options.alt
+        alt = options.alt || 'Review'
       )
       .review__caption
         h3.review__title=options.title
@@ -18,4 +18,4 @@ mixin review(options)
           count: options.count,
           isActivated: true
         })
-      p.review__text=options.review
+      p.review__text=options.text

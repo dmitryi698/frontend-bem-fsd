@@ -1,6 +1,5 @@
 //- 
   options.isRooms - if option enable dropdown - dropdown rooms
-  options.default - for uikit elements
   options.buttons - if option enable, added buttons confirm and clear
 
 mixin dropdown(options)
@@ -11,22 +10,20 @@ mixin dropdown(options)
     let menuClass = '';
     let inputClass = '';
     classes += options.isRooms ? ' js-dropdown_rooms' : 'js-dropdown_guests';
-    inputClass = options.expand ? ' dropdown__selection_expand' : '';
-    menuClass += options.expand ? ' dropdown__menu_expand' : '';
-    menuClass += options.shadow ? ' dropdown__menu_shadow' : '';
+
 
   .dropdown.js-dropdown(class = classes)
-    .dropdown__selection(class = inputClass)
+    .dropdown__selection
       p.dropdown__input
       i.dropdown__button-icon keyboard_arrow_down
-    .dropdown__menu(class = menuClass)
-      .dropdown__option(data-id='adult', data-defaultcount='2', data-mincount='0')
+    .dropdown__menu
+      .dropdown__option(data-id='adult', data-defaultcount=options.adult || '0', data-mincount='0')
         div
           .dropdown__text
-      .dropdown__option(data-id='minor', data-defaultcount='2', data-mincount='0')
+      .dropdown__option(data-id='minor', data-defaultcount=options.minor || '0', data-mincount='0')
         div
           .dropdown__text
-      .dropdown__option(data-id='infant', data-defaultcount='0', data-mincount='0')
+      .dropdown__option(data-id='infant', data-defaultcount=options.infant || '0', data-mincount='0')
         div
           .dropdown__text
       if (options.buttons)

@@ -27,13 +27,16 @@ $(function ($) {
     onChange: updateInputs
   });
 
+  function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
 
   instance = $range.data("ionRangeSlider");
 
   function updateInputs(data) {
-    from = data.from;
-    to = data.to;
-
+    from = numberWithSpaces(data.from);
+    to = numberWithSpaces(data.to);
+    
     $inputFrom.prop("value", from);
     $inputTo.prop("value", to);
     $inputRange.html(`${from}&#8381; - ${to}&#8381;`);

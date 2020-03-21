@@ -6,19 +6,17 @@ mixin textfield(options)
     - options = {}
   -
     let inputClass = '';
-    inputClass += options.isActive ? ' textfield__input_activated' : '';
-    inputClass += (options.isMasked === true & options.type === 'text') ? ' js-textfield__input_masked' : '';
+    inputClass += options.isMasked ? ' js-textfield__input_masked' : '';
 
   .textfield.js-textfield
-    if (options.type === 'text' || options.type === 'email' || options.type === 'password')
-      input.textfield__input(
-        class = inputClass
-        type = options.type
-        placeholder = options.placeholder
-        name = options.name
-        pattern = options.pattern
-        tabindex = options.tabindex
-        required = options.required
-      )
-      if options.subscription
-        button.textfield__icon(type = 'submit') arrow_forward
+    input.textfield__input(
+      class = inputClass
+      type = options.type || 'text'
+      placeholder = options.placeholder
+      name = options.name
+      pattern = options.pattern
+      tabindex = options.tabindex
+      required = options.required
+    )
+    if options.subscription
+      button.textfield__button(type = 'submit') arrow_forward

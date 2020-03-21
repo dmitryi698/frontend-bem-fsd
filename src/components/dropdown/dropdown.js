@@ -125,7 +125,7 @@ import './dropdown.scss';
         // Custom configuration of content option        
         let optionTitle = settings.title;
         for (let key in optionTitle){
-          (key === id) ? $(`div[data-id=${id}] > .dropdown__content`).html(`${settings.title[key]}`) : '';
+          (key === id) ? $this.find(`div[data-id=${id}] > .dropdown__content`).html(`${settings.title[key]}`) : '';
         }
         
         if (settings.controls.position === 'right') {

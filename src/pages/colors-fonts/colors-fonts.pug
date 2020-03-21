@@ -1,0 +1,21 @@
+extends ../../components/layout/layout
+block title
+   | Colors & fonts
+block header
+block main
+   section.colors-fonts__section
+      .colors-fonts__logo
+         +logo
+      .colors-fonts__colors
+         +type({color: 'darker', title: 'Dark Shade 100%', text: '#1F2041'})
+         +type({color: 'dark', title: 'Dark Shade 75%', text: '#1F2041'})
+         +type({color: 'medium', title: 'Dark Shade 50%', text: '#1F2041'})
+         +type({color: 'light', title: 'Dark Shade 25%', text: '#1F2041'})
+         +type({color: 'lighter', title: 'Dark Shade 5%', text: '#1F2041'})
+         +type({color: 'purple', title: 'Purple', text: '#BC9CFF'})
+         +type({color: 'green', title: 'Green', text: '#6FCF97'})
+      .colors-fonts__fonts
+         +type({font: 'h1', description: 'This one is the sub-section or widget title'})
+         +type({font: 'h2', description: 'Next one is the item title inside widgets'})
+         +type({font: 'h3', description: 'This is a label or CTA text'})
+         +type({font: 'body', description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
