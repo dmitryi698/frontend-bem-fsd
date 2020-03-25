@@ -1,0 +1,72 @@
+/* cards */ 
+@import '../../scss/utils.scss';
+
+.cards {
+
+  &__section {
+    position: relative;
+    width: 1440px;
+    height: 1350px;
+    background: #F4F4F6;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 48px;
+    left: 30px;
+    top: 30px;
+  }
+
+  &__search {
+    position: absolute;
+    width: 380px;
+    left: 140px;
+    top: 150px;
+  }
+
+  &__registration {
+    position: absolute;
+    width: 380px;
+    height: 646px;
+    left: 140px;
+    top: 564px;
+  }
+
+  &__total {
+    position: absolute;
+    width: 380px;
+    left: 560px;
+    top: 150px;
+  }
+
+  &__signin {
+    position: absolute;
+    width: 380px;
+    left: 560px;
+    top: 701px;
+  }
+  
+  &__datepicker {
+    position: absolute;
+    width: 320px;
+    left: 980px;
+    top: 150px;
+  }
+
+  &__room-active {
+    position: absolute;
+    width: 270px;
+    left: 980px;
+    top: 559.5px;
+  }
+
+  &__room {
+    position: absolute;
+    width: 270px;
+    height: 257.5px;
+    left: 980px;
+    top: 856px;
+
+  }
+}

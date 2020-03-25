@@ -4,10 +4,11 @@ mixin total(options)
 
   form.total
     .total__header
-        p.total__room № 888
+        p.total__room №
+          span.total__number  888
           span.total__suite  люкс
-        p.total__price-to-day 9 990₽
-          span.total__sub  в сутки
+        p.total__price-to-day 9 990₽&nbsp;
+          span.total__sub в сутки
     .total__datepicker
       +date-dropdown({
         titleLeft: 'Прибытие',

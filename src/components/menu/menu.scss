@@ -4,9 +4,12 @@
 .menu {
   
   &__button {
-    // @media screen and (max-width: $sm) {
-    //   display: block;
-    // }
+    margin: 20px auto;
+    width: 200px;
+    height: 30px;
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
   }
 
   &__list {
@@ -20,6 +23,10 @@
     margin-right: rem(20);
     display: flex;
     align-items: center;
+
+    &_sub {
+      margin-right: 20px;
+    }
 
     @media screen and (max-width: $sm) {
       padding-right: rem(15);

@@ -4,7 +4,7 @@
 .signin {
   width: 100%;
   min-width: rem(280);
-  padding: rem(40) rem(30) rem(30);
+  padding: 10% 7.7% 7.5%;
   background: $default;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -12,25 +12,25 @@
   border-radius: rem(4);
 
   &__title {
-    margin-bottom: rem(20);
+    margin-bottom: 7%;
     font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: rem(24);
+    font-size: rem(26);
     line-height: rem(30);
     color: $darker;
   }
 
   &__mail {
-    margin-bottom: rem(10);
+    margin-bottom: 3.5%;
   }
 
   &__pass {
-    margin-bottom: rem(20);
+    margin-bottom: 6%;
   }
 
   &__button {
-    margin-bottom: rem(30);
+    margin-bottom: 9%;
   }
 
   &__footer {

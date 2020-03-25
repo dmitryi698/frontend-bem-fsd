@@ -2,7 +2,7 @@
 @import '../../scss/utils.scss';
 
 .total {
-  padding: rem(40) rem(30) rem(30);
+  padding: 10% 8% 8%;
   background: $default;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -20,6 +20,15 @@
     font-weight: bold;
     font-size: rem(14);
     line-height: rem(17);
+    color: $darker;
+  }
+
+  &__number {
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(26);
+    line-height: rem(30);
     color: $darker;
   }
 
@@ -43,6 +52,11 @@
     color: $medium;
   }
 
+  &__price-to-day {
+    display: flex;
+    align-items: flex-end;
+  }
+
   &__sub {
     font-weight: normal;
     font-size: rem(12);
@@ -50,16 +64,16 @@
   }
 
   &__datepicker {
-    margin-top: rem(20);
+    margin-top: 7%;
   }
 
   &__dropdown {
-    margin-top: rem(20);
-    margin-bottom: rem(20);
+    margin-top: 6%;
+    margin-bottom: 6%;
   }
 
   &__options {
-    margin-top: rem(10);
+    margin-top: 3%;
     display: flex;
     justify-content: space-between;
   }
@@ -75,7 +89,7 @@
   }
   
   &__text {
-    width: rem(240);
+    width: 75%;
     display: flex;
   }
 
@@ -105,7 +119,7 @@
   &__all {
     display: flex;
     justify-content: space-between;
-    margin-top: rem(20);
+    margin-top: 7.5%;
   }
 
   &__title,
@@ -133,7 +147,7 @@
   }
 
   &__button {
-    margin-top: rem(20);
+    margin-top: 6.5%;
   }
 
 }

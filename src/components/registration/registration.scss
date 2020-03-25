@@ -7,51 +7,54 @@
   box-sizing: border-box;
   box-shadow: 0 0 rem(25) rgba(0, 0, 0, 0.2);
   border-radius: rem(4);
-  padding: rem(40) rem(30) rem(30);
+  padding: 10% 8% 8%;
 
   &__title {
     font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: rem(24);
+    font-size: rem(26);
     line-height: rem(30);
     color: $darker;
   }
 
   &__name {
-    margin-top: rem(20);
+    margin-top: 7%;
   }
 
   &__surname {
-    margin-top: rem(10);
+    margin-top: 3%;
   }
 
   &__gender {
     display: flex;
 
     & .radio {
-      margin-right: rem(20);
+      margin-right: 6%;
     }
   }
   &__birthday {
-    margin-top: rem(20);
+    margin-top: 7%;
   }
 
   &__mail {
-    margin-top: rem(20);
+    margin-top: 7%;
   }
 
   &__pass {
-    margin-top: rem(10);
+    margin-top: 3%;
   }
 
   &__offer {
-    margin-top: rem(10);
-    margin-bottom: rem(20);
+    margin-top: 2%;
+  }
+
+  &__button {
+    margin-top: 7%;
   }
 
   &__footer {
-    margin-top: rem(30);
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,5 +67,9 @@
     font-size: rem(14);
     line-height: rem(18);
     color: #000000;
+  }
+
+  &__button-enter {
+    width: 31%;
   }
 }

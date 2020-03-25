@@ -18,9 +18,9 @@ mixin room(options)
       .room__slider
         img.room__img(
           src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
-          alt = options.alt)
-        i.room__action.room__action_prev expand_more
-        i.room__action.room__action_next expand_more
+          alt = options.alt || 'hotel room')
+        span.room__action.room__action_prev expand_more
+        span.room__action.room__action_next expand_more
         .room__controls
           .room__control.room__control_activated
           .room__control
@@ -30,7 +30,7 @@ mixin room(options)
       .room__slider
         img.room__img(
           src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
-          alt = options.alt || 'hotel room')
+          alt = options.alt || 'hotel roomspan')
         .room__controls
           .room__control.room__control_activated
           .room__control
@@ -38,12 +38,12 @@ mixin room(options)
           .room__control
     .room__content
       .room__title
-        h2.room__number=options.number ? '№' + options.number : '№ 888'
-          span.room__suite=options.suite || ''
-        p.room__price=options.price ? options.price + '₽' : '9 990₽'
-          span.room__sub  в сутки
+        span.room__number=options.number ? '№ ' + options.number : '№ 888'
+          span.room__suite=options.suite ? ' ' + options.suite : ''
+        span.room__price=options.price ? options.price + '₽' : '9 990₽'
+          span.room__day  в сутки
       .room__rate
         .room__stars
-          +rating({count: options.starcount, isChecked: options.checked })
-        p.room__counter=options.counter || '145'
+          +rating({count: options.starcount || '5', isChecked: options.checked || true })
+        p.room__counter=options.rewiev || '145'
           span.room__sub  Отзывов

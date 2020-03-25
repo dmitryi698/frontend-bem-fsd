@@ -5,6 +5,7 @@
   display: flex;
   margin: 0 auto;
   height: 100%;
+  max-width: $max;
   padding: 15px 15px;
   background: #FFFFFF;
 
@@ -15,7 +16,7 @@
 
   &_theme_signin {
     align-items: center;
-    background: url('/assets/img/signin.png') no-repeat center center;
+    background: url('/assets/img/signin-min.jpg') no-repeat center center;
     background-size: cover;
   }
 

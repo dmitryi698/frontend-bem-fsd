@@ -2,8 +2,7 @@
 @import '../../scss/utils.scss';
 
 .room {
-  position: relative;
-  width: rem(270);
+  width: 100%;
   min-width: rem(260);
   background: $default;
   box-shadow: 0 rem(10) rem(20) $lighter;
@@ -12,7 +11,7 @@
 
   &__slider {
     position: relative;
-    
+    min-width: rem(260);
   }
 
   &__img {
@@ -21,31 +20,24 @@
 
   &__action {
     position: absolute;
-    top: 40%;
     cursor: pointer;
-    width: rem(44);
-    height: rem(44);
-    
+    top: 45%;        
     font-family: $icon;
     font-style: normal;
     font-weight: normal;
     font-size: rem(24);
     line-height: rem(24);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     color: $default;
 
     &_prev {
       transform: rotate(90deg);
-      left: 0;
+      left: 5%;
       z-index: 100;
     }
 
     &_next {
       transform: rotate(-90deg);
-      right: 0;
+      right: 5%;
       z-index: 100;
     }
   }
@@ -76,20 +68,21 @@
 
   &__content {
     background: $default;
-    padding: rem(20) rem(20);
+    padding: 7%;
   }
 
   &__title {
     display: flex;
-    margin-bottom: rem(10);
+    margin-bottom: 3.5%;
+    align-items: center;
   }
 
   &__number {
     font-family: $secondary-font;
     font-style: normal;
     font-weight: bold;
-    font-size: rem(14);
-    line-height: rem(17);
+    font-size: rem(18);
+    line-height: rem(26);
     color: $darker;
   }
 
@@ -109,7 +102,17 @@
     font-style: normal;
     font-weight: bold;
     font-size: rem(14);
-    line-height: rem(18);
+    line-height: rem(16);
+    color: $medium;
+
+  }
+
+  &__day {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(12);
+    line-height: rem(14);
     color: $medium;
   }
 
@@ -117,14 +120,14 @@
     font-family: $main-font;
     font-style: normal;
     font-weight: normal;
-    font-size: rem(12);
+    font-size: rem(14);
     line-height: rem(15);
     color: $medium;
   }
 
   &__rate {
     display: flex;
-    padding-top: rem(8);
+    padding-top: 4%;
     border-top: 1px solid rgba(31, 32, 65, 0.1);
     align-items: center;
   }

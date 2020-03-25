@@ -2,7 +2,6 @@
 @import '../../scss/utils.scss';
 
 .logo {
- max-width: rem(110);
  
   &__link {
     display: flex;
@@ -10,8 +9,11 @@
   }
   
   &__img {
-    width: rem(40);
-    height: rem(40);
+    width: 100%;
+
+    &_small {
+      max-width: 40px;
+    }
   }
 
   &__img-path {
@@ -27,10 +29,5 @@
 
   &__title-path {
     fill: $darker;
-  }
-
-  &_theme_uikit {
-    width: rem(48);
-    height: rem(48);
   }
 }

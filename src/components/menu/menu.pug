@@ -17,8 +17,8 @@ mixin menu(options)
     button.menu__button.js-menu__button(hidden)
     nav.menu__list.js-menu__list
       each item in options.items
-        li.menu__item
-          a.menu__link(href = item.href data-id = item.id class = item.isActivated ? ' menu__link_activated' : item.subMenu ? 'js-menu__link' : '' )=item.title
+        li.menu__item(class = item.subMenu ? 'menu__item_sub' : '')
+          a.menu__link(href = item.href || '/some_page' class = item.subMenu ? 'js-menu__link' : '' )=item.title
           if item.subMenu
             span.menu__dropbtn expand_more
             ul.menu__submenu

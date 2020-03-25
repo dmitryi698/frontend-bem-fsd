@@ -11,7 +11,7 @@ mixin header(options)
     .header
       header.header__main(class = classes)
         .header__logo
-          +logo({isTitle: true})
+          +logo({isTitle: true, size: 'small'})
         .header__menu
           +menu({
             items: options.menu

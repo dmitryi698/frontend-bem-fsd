@@ -24,7 +24,7 @@ mixin registration(options)
         placeholder: 'ДД.ММ.ГГ',
         isMasked: true})
     .registration__mail
-      +title({main: 'данные для входа'})
+      +title({main: 'данные для входа в сервис'})
       +textfield({
         placeholder: 'Email',
         type: 'email'
@@ -44,7 +44,8 @@ mixin registration(options)
         type: 'submit'})
     .registration__footer
       p.registration__text Уже есть аккаунт на Toxin
-      +button({
-        title: 'Войти',
-        color: 'white',
-      })
+      .registration__button-enter
+        +button({
+          title: 'Войти',
+          color: 'white',
+        })

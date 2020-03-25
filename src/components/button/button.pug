@@ -20,7 +20,8 @@ mixin button(options)
   .button
     button(
       class = btnClassName
-      type= options.type || 'button'
+      type = options.type || 'button'
+      name = options.name 
       autofocus)
       span.button__title(class=titleClassName)=options.title || 'Button'
       if options.isArrow

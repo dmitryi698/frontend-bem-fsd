@@ -14,6 +14,8 @@ include ../menu/menu
 mixin footer(options)
   if !options
     - options = {}
+  if !options.items
+    - options.items = []
   -
     let classes = '';
     classes += options.isLogo ? 'footer__main_theme-logo' : '';
@@ -22,7 +24,7 @@ mixin footer(options)
     if options.isLogo
       footer.footer__wrap
         .footer__main(class = classes)
-          +logo({isTitle: true})
+          +logo({isTitle: true, size: 'small'})
           p.footer__text=options.logoText || 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
           .footer__social
             a.footer__link(href = 'https://twitter.com/')
@@ -36,17 +38,17 @@ mixin footer(options)
       footer.footer__wrap
         .footer__main
           .footer__promo
-            +logo({isTitle: true})
+            +logo({isTitle: true, size: 'small'})
             p.footer__text=options.logoText || 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
           each item in options.items
             .footer__nav
-              +title({main: item.title})
+              h2.footer__title=item.title
               .footer__menu
                 each itemSub in item.itemList
-                  a.footer__item(href = itemSub.href)=itemSub.name  
+                  a.footer__item(href = itemSub.href || '/some_page')=itemSub.name  
           form.footer__promo
-            +title({main: options.subscribeTitle || 'Subscribe to our newsletter'})
-            p.footer__text=options.subscribeText || 'Receive our latest news and promotions in your inbox!'
+            h2.footer__title=options.subscribeTitle || 'Subscribe to our newsletter'
+            p.footer__text= options.subscribeText || 'Receive our latest news and promotions in your inbox!'
             +textfield({
               subscription: true,
               placeholder: options.placeholder || 'Your email address',

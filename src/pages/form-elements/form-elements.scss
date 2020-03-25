@@ -2,18 +2,20 @@
 
 .form-elements {
 
-  &__logo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-  }
-
   &__section {
     position: relative;
     width: $xlg;
     margin: 0 auto;
     height: 1853px;
   }
+  
+  &__logo {
+    position: absolute;
+    width: 48px;
+    top: 30px;
+    left: 30px;
+  }
+
 
   &__textfield {
     position: absolute;

@@ -9,14 +9,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+    max-width: $max;
     margin: 0 auto;
-    padding-top: rem(15);
-    padding-right: rem(15);
-    padding-bottom: rem(15);
-    padding-left: rem(15);
+    padding: 100px 140px;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-
-    @include media-block($ptb: 100px);
 
   }
 
@@ -41,6 +38,16 @@
 
   &__nav {
     flex-basis: rem(150)
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+    color: $darker;
   }
 
   &__menu {
@@ -76,13 +83,14 @@
 
 
   &__border {
-    margin: 0 auto;
     display: flex;
+    width: 100%;
+    max-width: $max;
     flex-wrap: wrap;
+    margin: 0 auto;
     box-shadow: 0px 10px 20px $lighter;
-    padding: rem(23) rem(15);
+    padding: 25px 140px;
 
-    @include media-block($ptb: 23px);
   }
 
   &__copy {
@@ -124,4 +132,9 @@
 }
 .footer__main_theme-logo > .footer__social {
   padding-bottom: rem(10);
+  flex-grow: 0;
+
+  & .footer__link {
+    margin: 0 10px;
+  }
 }
