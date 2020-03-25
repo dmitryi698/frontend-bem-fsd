@@ -8,6 +8,8 @@
   box-shadow: 0 0 rem(25) rgba(0, 0, 0, 0.2);
   border-radius: rem(4);
   padding: 10% 8% 8%;
+  width: 100%;
+  min-width: rem(280);
 
   &__title {
     font-family: $secondary-font;

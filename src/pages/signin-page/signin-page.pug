@@ -30,7 +30,8 @@ block main
                textReg: 'Нет аккаунта на Toxin?'
             })
 block footer
-   +footer({
+   .signin-page__footer
+      +footer({
          logoText: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
          subscribeTitle: 'Подписка',
          subscribeText: 'Получайте специальные предложения и новости сервиса',
@@ -59,3 +60,5 @@ block footer
                ]},
             ]
          })
+   .signin-page__footer-logo
+      +footer({isLogo: true})

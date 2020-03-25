@@ -4,6 +4,7 @@ $(() => {
 
   const $touch = $('.js-menu__link');
   const $menu = $('.js-menu__list');
+  let menuButton = $('.js-menu__button');
 
   $('html').click(function () {
     $menu.find('.menu__submenu').removeClass('menu__submenu_activated');
@@ -25,4 +26,11 @@ $(() => {
       submenu.addClass('menu__submenu_activated');
     }
   });
+
+  menuButton.click(function(){
+    
+    $menu.toggleClass('menu__list_open');
+    
+  });
+
 });

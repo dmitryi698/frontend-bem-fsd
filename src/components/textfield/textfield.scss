@@ -3,12 +3,12 @@
 
 .textfield {
   position: relative;
-  flex-basis: rem(300);
+  min-width: rem(240);
   
   
   &__input {
     
-    padding-left: 15px;
+    padding-left: 5%;
     width: 100%;
     height: rem(44);
     background: $default;
