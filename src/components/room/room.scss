@@ -3,7 +3,6 @@
 
 .room {
   width: 100%;
-  min-width: rem(260);
   background: $default;
   box-shadow: 0 rem(10) rem(20) $lighter;
   border-radius: rem(4);
@@ -11,7 +10,6 @@
 
   &__slider {
     position: relative;
-    min-width: rem(260);
   }
 
   &__img {
@@ -21,7 +19,7 @@
   &__action {
     position: absolute;
     cursor: pointer;
-    top: 45%;        
+    top: 25%;        
     font-family: $icon;
     font-style: normal;
     font-weight: normal;

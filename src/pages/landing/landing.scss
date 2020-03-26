@@ -10,8 +10,10 @@
   &__text {
     align-self: flex-end;
     flex-basis: rem(300);
+    width: 100%;
     margin-left: auto;
     margin-bottom: rem(20);
+    margin-top: rem(20);
     font-family: $main-font;
     font-style: normal;
     font-weight: normal;

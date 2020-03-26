@@ -1,0 +1,16 @@
+mixin gallery(options)
+  if !options
+    - options = {}
+  if !options.images
+    - options.images = []
+
+  .gallery.js-gallery
+    .gallery__inner
+      .gallery__show
+        img.gallery__img_showed.js-gallery__img_showed
+      .gallery__list
+        each item in options.images
+            img.gallery__img.js-gallery__img(
+              src = '/assets/img/' + item.image
+              alt = item.alt || 'Room picture'
+            )

@@ -3,9 +3,45 @@
 
 .filter {
   
-  max-width: rem(266);
-
-  &__item {
-    margin-bottom: rem(30);
+  &__date-dropdown {
+    margin-bottom: 7%;
   }
+
+  &__dropdown {
+    margin-bottom: 12%;
+  }
+
+  &__range-slider {
+    margin-bottom: 12%;
+  }
+
+  &__checkboxes {
+    margin-bottom: 9%;
+
+    & .title {
+      margin-bottom: 7%;
+    }
+
+    & .checkbox {
+      margin-bottom: 3%;
+    }
+  }
+
+  &__checboxes-rich {
+
+    margin-bottom: 11%;
+
+    & .title {
+      margin-bottom: 6%;
+    }
+
+    & .checkbox {
+      margin-bottom: 2%;
+    }
+  }
+
+  &__checkbox-list {
+
+  }
+ 
 }

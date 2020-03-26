@@ -7,20 +7,4 @@
     width: 100%;
     max-width: rem(380);
   }
-
-  &__footer {
-    display: block;
-
-    @media screen and (max-width: $md) {
-      display: none;
-    }
-  }
-
-  &__footer-logo {
-    display: none;
-
-    @media screen and (max-width: $md) {
-      display: block;
-    }
-  }
 }

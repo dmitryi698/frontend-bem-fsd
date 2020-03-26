@@ -3,33 +3,39 @@ mixin filter(options)
     - options = {}
 
   .filter
-    .filter__item
-      +title({main: 'даты пребывания в отеле'})
-      +date-dropdown({isDateFilter: true})
-    .filter__item
+    .filter__date-dropdown
+      +date-dropdown({isDateFilter: true, title: 'Даты пребывания в отеле'})
+    .filter__dropdown
       +title({main: 'гости'})
       +dropdown({buttons: true})
-    .filter__item
-      +range-slider({description: 'Диапазон цены', text: 'Стоимость за сутки пребывания в номере'})
-    .filter__item
+    .filter__range-slider
+      +range-slider({desc: 'Диапазон цены', text: 'Стоимость за сутки пребывания в номере'})
+    .filter__checkboxes
       +title({main: 'checkbox buttons'})
       +checkbox({label: 'Можно курить'})
       +checkbox({label: 'Можно с питомцами', checked: true})
-      +checkbox({label: 'Можно пригласить гостей(до 10 человек)', checked: true})
-    .filter__item
+      +checkbox({label: 'Можно пригласить гостей (до 10 человек)', checked: true})
+    .filter__checboxes-rich
       +title({main: 'доступность'})
       +checkbox({label: 'Широкий коридор', text: 'Ширина коридоров в номере не менее 91 см.'})
       +checkbox({label: 'Помощник для инвалидов', text: 'На 1 этаже вас встретит специалист и проводит до номера.'})
-    .filter__item
+    .filter__dropdown
       +title({main: 'Удобства номера'})
       +dropdown({isRooms: true})
-    .filter__item
-      +checkbox-list({title: 'дополнительные удобства'})
-        +checkbox({label: 'Завтрак', })
-        +checkbox({label: 'Письменный стол', checked: true})
-        +checkbox({label: 'Стул для кормления', checked: true})
-        +checkbox({label: 'Кроватка', checked: true})
-        +checkbox({label: 'Телевизор', })
-        +checkbox({label: 'Шампунь', })
-        +checkbox({label: 'Телевизор', })
-        +checkbox({label: 'Шампунь', })
+    .filter__checkbox-list
+      +checkbox-list({
+          title: 'Дополнительные удобства',
+          items:[{
+              checkbox: [
+                {label: 'Завтрак'},
+                {label: 'Письменный стол', checked: true},
+                {label: 'Стул для кормления', checked: true},
+                {label: 'Кроватка', checked: true},
+                {label: 'Телевизор'},
+                {label: 'Шампунь'},
+                {label: 'Телевизор'},
+                {label: 'Шампунь'},
+              ]
+          }]
+        })
+        

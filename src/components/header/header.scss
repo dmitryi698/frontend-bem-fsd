@@ -3,7 +3,8 @@
 .header {
   width: 100%;
   background: $default;
-  
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
 /* Main */
   &__main {
     display: flex;
@@ -14,7 +15,10 @@
     max-width: $max;
     margin: 0 auto;
     padding: 15px 140px;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+      @media screen and (max-width: $xxlg) {
+        padding: 15px calc(50vw - 660px);
+      }
 
       @media screen and (max-width: $xlg) {
         padding: 15px calc(50vw - 580px);

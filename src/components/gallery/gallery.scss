@@ -1,0 +1,28 @@
+/* gallery */ 
+@import '../../scss/utils.scss';
+
+.gallery {
+  
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__show {
+    width: 70%;
+  }
+
+  &__list {
+    width: 30%;
+  }
+
+  &__img {
+    max-width: 100%;
+    width: 100%;
+
+    &:nth-child(1) {
+      display: none;
+    }
+  }
+}
