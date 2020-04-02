@@ -1,0 +1,102 @@
+/* room-info */ 
+@import '../../scss/utils.scss';
+
+.room-info {
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+
+  &__info {
+    width: 40%;
+    margin-right: 15%;
+    min-width: 280px;
+
+    & .offer {
+      margin-bottom: 9%;
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 8%;
+
+      }
+    }
+  }
+
+  &__diagram {
+    width: 40%;
+    min-width: 310px;
+
+  }
+  
+  &__title {
+    margin-bottom: 7.5%;
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(19);
+    line-height: rem(24);
+    color: $darker;
+  }
+
+  &__reviews {
+    margin-bottom: 5%;
+    & .review {
+      margin-bottom: 5%;
+    }
+  }
+  
+  &__reviews-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+
+    & .room-info__title {
+      margin: 0;
+    }
+  }
+
+  &__counter {
+    align-self: flex-end;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(14);
+    color: $medium;
+
+  }
+
+  &__rule {
+    width: 40%;
+    margin-right: 12%;
+    min-width: 280px;
+
+    & .room-info__title {
+      margin-left: 20px;
+    }
+  }
+
+  &__cancel {
+    width: 45%;
+    min-width: 300px;
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    /* or 171% */
+
+
+    /* Dark 75% */
+
+    color: $dark;
+  }
+
+}

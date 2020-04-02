@@ -1,0 +1,43 @@
+mixin room-info(options)
+  if !options
+    - options = {}
+
+  .room-info
+    .room-info__inner
+      .room-info__info
+        h2.room-info__title Сведения о номере
+        +offer({icon: 'insert_emoticon', title: 'Комфорт', text: 'Шумопоглощающие стены'})
+        +offer({icon: 'location_city', title: 'Удобство', text: ' Окно в каждой из спален'})
+        +offer({icon: 'whatshot', title: 'Уют', text: 'Номер оснащён камином'})
+      .room-info__diagram
+        h2.room-info__title Впечатления от номера
+    .room-info__reviews
+      .room-info__reviews-header
+        h2.room-info__title Отзывы посетителей номера
+        span.room-info__counter 2 отзыва
+      +review({
+          image: 'murad.png',
+          title: 'Мурад Сарафанов',
+          subtitle: '5 дней назад',
+          text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+          count: '12'
+        })
+      +review({
+        image: 'review2.jpg',
+        title: 'Патрисия Стёклышкова',
+        subtitle: 'Неделю назад',
+        text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+        count: '2'
+      })
+    .room-info__inner
+      .room-info__rule
+        h2.room-info__title Правила
+        +bullet({list: [
+          'Нельзя с питомцами',
+          'Без вечеринок и мероприятий',
+          'Время прибытия — после 13:00, а выезд до 12:00'
+          ]
+        })
+      .room-info__cancel
+        h2.room-info__title Отмена
+        p.room-info__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

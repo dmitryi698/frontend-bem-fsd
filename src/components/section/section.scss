@@ -72,21 +72,25 @@
   }
 
   &_theme_room {
+    
+    flex-wrap: wrap;
 
     @media screen and (max-width: $xxlg) {
-      padding: 30px calc(50vw - 660px);
+      padding: 70px calc(50vw - 660px);
     }
 
     @media screen and (max-width: $xlg) {
-      padding: 30px calc(50vw - 580px);
+      padding: 70px calc(50vw - 580px);
     }
 
     @media screen and (max-width: $lg) {
-      padding: 30px calc(50vw - 480px);
+      padding: 70px calc(50vw - 480px);
     }
 
     @media screen and (max-width: $md) {
-      padding: 30px 15px;
+      padding: 70px 15px;
+      justify-content: center;
+
     }
 
     @media screen and (max-width: 690px) {

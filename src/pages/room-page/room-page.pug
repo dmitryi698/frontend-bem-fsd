@@ -1,0 +1,16 @@
+extends ../../components/layout/layout
+block title
+   | Room details
+block main
+   .room-page__gallery
+      +gallery({images:[
+         {image: 'gallery1.jpg'},
+         {image: 'gallery2.jpg'},
+         {image: 'gallery3.jpg'},
+      ]})
+   +section({theme:'room'})
+      .room-page__content
+         +room-info({})
+      .room-page__aside
+         +total({})
+      

@@ -1,0 +1,23 @@
+/* room-page */ 
+@import '../../scss/utils.scss';
+
+.room-page {
+
+  &__gallery {
+    width: 100%;
+    max-width: $max;
+    margin: 0 auto;
+  }
+  
+  &__content {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__aside {
+    width: 33%;
+    min-width: 280px;
+    margin-left: 7%;
+  }
+}
