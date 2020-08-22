@@ -125,8 +125,7 @@ module.exports = {
         })),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery'
+            jQuery: 'jquery'
         })
         // new HtmlWebpackPlugin({
         //     template: `${PATHS.src}/index.html`,
