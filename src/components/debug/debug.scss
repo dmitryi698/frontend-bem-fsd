@@ -1,0 +1,6 @@
+/* debug */ 
+@import '../../scss/utils.scss';
+
+.debug {
+  @include debug(rgba(117, 141, 117, 0.212), rgba(72, 179, 99, 0.418));
+}

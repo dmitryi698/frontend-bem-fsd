@@ -1,0 +1,10 @@
+mixin debug(options)
+  if !options
+    - options = {}
+
+  .debug
+    div
+      div
+        - for(let count = 1; count < 25; count++ )
+          div=count
+            block
