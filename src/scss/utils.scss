@@ -1,6 +1,4 @@
-/*************************************/
 
-/********** Variables **********/
 
 // Font
 $main-font              : 'Montserrat';
@@ -13,14 +11,11 @@ $main-font-weight       : normal;
 $secondary-font-weight  : bold;
 $main-font-style        : normal;
 // Size
-$max                    : 1920px;
-$xxlg                   : 1600px;
-$xlg                    : 1440px;
-$lg                     : 1200px;
-$md                     : 980px;
-$sm                     : 768px;
-$xs                     : 480px;
-$xxs                    : 320px;
+$xl                     : 1200px;
+$lg                     : 992px;
+$md                     : 760px;
+$sm                     : 576px;
+$xs                     : 320px;
 
 // Main color
 $default                : #ffffff;
@@ -37,10 +32,8 @@ $back                   : #e5e5e5;
 $primary-grad           : linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
 $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgba(102, 210, 234, 1) 100%);
 
-/*************************************/
 
 
-/********** Functions **********/
 
 /* Background transparency change function */
 
@@ -68,8 +61,6 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 
   @return decimal-round(($pixels / $context * 1rem), 2);
 }
-
-/******************************************/
 
 
 /* Function for rounding to hundredths */
@@ -116,35 +107,4 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
     @warn '#{ $mode } is undefined keyword.';
     @return $number;
   }
-}
-
-/******************************************/
-
-/********** Mixins **********/
-
-/* Mixin media-block */
-
-@mixin media-block($ptb: 15px){
-
-  @media screen and (min-width: $xs) {
-    padding: $ptb calc(50vw - 230px);
-  }
-
-  @media screen and (min-width: $sm) {
-    padding: $ptb calc(50vw - 364px);
-  }
-
-  @media screen and (min-width: $md) {
-    padding: $ptb calc(50vw - 470px);
-  }
-
-  @media screen and (min-width: $lg) {
-    padding: $ptb calc(50vw - 530px);
-  }
-
-  @media screen and (min-width: $xlg) {
-    padding: $ptb calc(50vw - 580px);
-  }
-
-  /*  */
 }
