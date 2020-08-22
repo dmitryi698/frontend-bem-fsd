@@ -45,7 +45,7 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
     @return linear-gradient(180deg, rgba(111, 207, 151, $alpha) 0%, rgba(102, 210, 234, $alpha) 100%);
   }
 }
-/******************************************/
+
 
 
 /* Function px to rem */
@@ -61,6 +61,7 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 
   @return decimal-round(($pixels / $context * 1rem), 2);
 }
+
 
 
 /* Function for rounding to hundredths */
@@ -110,7 +111,7 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 }
 
 
-// Smart-grid
+// Smart-grid settings
 
 $columns: 12;
 $atom: (100% / $columns);

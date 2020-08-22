@@ -2,11 +2,6 @@
 @import '../../scss/utils.scss';
 
 .section {
-  display: flex;
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  max-width: $max;
   padding: 15px 140px;
   background: $default;
   overflow: hidden;
@@ -28,73 +23,19 @@
     display: flex;
     flex-wrap: wrap;
 
-     @media screen and (max-width: $xxlg) {
-       padding: 15px calc(50vw - 630px);
-     }
-
-     @media screen and (max-width: $xlg) {
-       padding: 15px calc(50vw - 580px);
-     }
-
-     @media screen and (max-width: $lg) {
-       padding: 15px calc(50vw - 480px);
-     }
-
-     @media screen and (max-width: $md) {
-       padding: 15px 15px;
-     }
+    
   }
 
   &_theme_search {
     justify-content:  space-between;
 
-    @media screen and (max-width: $xxlg) {
-      padding: 30px calc(50vw - 660px);
-    }
-
-    @media screen and (max-width: $xlg) {
-      padding: 30px calc(50vw - 580px);
-    }
-
-    @media screen and (max-width: $lg) {
-      padding: 30px calc(50vw - 480px);
-    }
-
-    @media screen and (max-width: $md) {
-      padding: 30px 15px;
-    }
-    
-    @media screen and (max-width: 690px) {
-      align-items: center;
-      padding: 30px 15px;
-      flex-direction: column;
-    }
+  
   }
 
   &_theme_room {
     
     flex-wrap: wrap;
 
-    @media screen and (max-width: $xxlg) {
-      padding: 70px calc(50vw - 660px);
-    }
-
-    @media screen and (max-width: $xlg) {
-      padding: 70px calc(50vw - 580px);
-    }
-
-    @media screen and (max-width: $lg) {
-      padding: 70px calc(50vw - 480px);
-    }
-
-    @media screen and (max-width: $md) {
-      padding: 70px 15px;
-      justify-content: center;
-
-    }
-
-    @media screen and (max-width: 690px) {
-      
-    }
+   
   }
 }

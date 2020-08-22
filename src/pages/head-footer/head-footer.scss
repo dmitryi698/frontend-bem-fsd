@@ -5,10 +5,7 @@
 
   &__section {
     position: relative;
-    width: 1440px;
-    height: 1350px;
     background: #F4F4F6;
-    margin: 0 auto;
   }
 
   &__logo {
@@ -21,7 +18,6 @@
 
   &__registration {
     position: absolute;
-    width: 1440px;
     left: 0px;
     top: 150px;
 
@@ -29,21 +25,18 @@
 
   &__signin {
     position: absolute;
-    width: 1440px;
     left: 0px;
     top: 260px;
   }
 
   &__footer {
     position: absolute;
-    width: 1440px;
     left: 0px;
     top: 370px;
   }
 
   &__footer-logo {
     position: absolute;
-    width: 1440px;
     left: 0px;
     top: 853px;
   }
