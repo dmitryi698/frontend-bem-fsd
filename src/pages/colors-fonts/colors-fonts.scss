@@ -2,24 +2,31 @@
 
 .colors-fonts {
 
-  &__section {
-    position: relative;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 145px 150px 191px;
+
+  &__header {
+   @include wrapper();
+   max-width: 1440px;
+   padding: 30px 30px 65px;
   }
 
-
   &__logo {
-    position: absolute;
     width: 48px;
-    top: 30px;
-    left: 30px;
+
+  }
+
+  &__wrapper {
+    @include row-flex();
+    justify-content: space-between;
+    background: $default;
+    @include md(justify-content, center)
   }
 
   &__colors {
-    width: 270px;
+    @include col();
+    @include size(6);
+    @include size-md(12);
+    @include size-sm(20);
+    @include size-xs(24);
 
     & .type {
       margin-bottom: 20px;
@@ -27,7 +34,14 @@
   }
 
   &__fonts {
-    width: 400px;
+    @include col();
+    @include size(9.8);
+    @include size-lg(14);
+    @include md(margin-top, 40px)
+    @include size-sm(20);
+    @include size-xs(24);
+
+
 
     & .type {
       margin-bottom: 50px;

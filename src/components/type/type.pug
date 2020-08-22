@@ -28,5 +28,11 @@ mixin type(options)
         h2.type__title=options.title
         p.type__text=options.text
     else
-      span.type__font(class = fontClass)=options.font
-      p.type__description(class = descClass)=options.description
+      if(options.font == 'Body')
+        span.type__font(class = fontClass)=options.font
+        span.type__description(class = descClass)=options.description
+          block
+      else
+        #{options.font}.type__font(class = fontClass)=options.font
+        span.type__description(class = descClass)=options.description
+          block

@@ -3,9 +3,9 @@
 .header {
   width: 100%;
   background: $default;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
-/* Main */
+
   &__main {
     display: flex;
     align-items: center;
@@ -14,9 +14,6 @@
     width: 100%;
     padding: 15px 140px;
   }
-/* Main */
-
-/* Username */
 
   &__username {
     padding-left: rem(30);
@@ -33,9 +30,6 @@
       color: $dark;
     }
   }
-/* Username */
-
-/* Menu */
 
   &__menu {
     margin-left: auto;

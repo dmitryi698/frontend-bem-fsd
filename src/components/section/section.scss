@@ -2,10 +2,13 @@
 @import '../../scss/utils.scss';
 
 .section {
-  padding: 15px 140px;
   background: $default;
   overflow: hidden;
+  @include wrapper();
 
+  &_theme_colors {
+    background: $default;
+  }
 
   &_theme_cards {
     background: #F4F4F6;

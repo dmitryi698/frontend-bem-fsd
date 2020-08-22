@@ -2,7 +2,6 @@
 @import '../../scss/utils.scss';
 
 $colors: (
-
   darker  : $darker,
   dark    : $dark,
   medium  : $medium,
@@ -14,7 +13,7 @@ $colors: (
 
 .type {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
   min-width: 280px;
   
@@ -56,14 +55,12 @@ $colors: (
     font-family: $main-font;
     font-style: normal;
     font-weight: normal;
-    font-size: rem(19);
-    line-height: rem(23);
-    text-align: right;
+    font-size: 24px;
+    line-height: 29px;
     color: $light;
     align-self: start;
-    margin-right: rem(30);
     text-transform: uppercase;
-    flex-basis: 8%;
+    margin-left: 20px;
 
     &_h2 {
       font-size: 19px;
@@ -71,14 +68,17 @@ $colors: (
     }
 
     &_h3 {
-      font-size: 14px;
-      line-height: 24px
-    }
-
-    &_body {
       font-size: 12px;
       line-height: 15px;
+      padding-left: 10px;
+      
+    }
+
+    &_Body {
+      font-size: 14px;
+      line-height: 24px;
       text-transform: none;
+      margin-left: 10px;
 
     }
   }
@@ -90,7 +90,9 @@ $colors: (
     font-size: 23px;
     line-height: 30px;
     color: $darker;
-    flex: 1 2 82%;
+    margin-left: 30px;
+    padding-right: 30px;
+
 
     &_h2 {
       font-size: 19px;
@@ -98,17 +100,19 @@ $colors: (
     }
 
     &_h3 {
+      font-family: $main-font;
       font-size: 12px;
       line-height: 15px;
       text-transform: uppercase;
     }
 
-    &_body {
+    &_Body {
+      font-family: $main-font;
       font-size: 14px;
       line-height: 24px;
       font-weight: normal;
       color: $dark;
-      padding-right: rem(35);
+      padding-right: 70px;
 
     }
   }
