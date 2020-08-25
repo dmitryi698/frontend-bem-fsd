@@ -6,7 +6,7 @@ $break_md: 768px;
 $break_sm: 576px;
 $break_xs: 320px;
 
-$offset: 20px;
+$offset: 10px;
 $offset_lg: $offset;
 $offset_md: $offset;
 $offset_sm: $offset;
@@ -18,16 +18,28 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 20px;
-$fields_lg: 15px;
+$fields: 30px;
+$fields_md: 20px;
+$fields_sm: 15px;
+$fields_xs: 10px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
     padding-right: $fields;
 
-    @include lg-block(){
-        padding-left: $fields_lg;
-        padding-right: $fields_lg;
+    @include md-block(){
+        padding-left: $fields_md;
+        padding-right: $fields_md;
+    }
+
+    @include sm-block(){
+        padding-left: $fields_sm;
+        padding-right: $fields_sm;
+    }
+
+    @include xs-block(){
+        padding-left: $fields_xs;
+        padding-right: $fields_xs;
     }
 }
 
@@ -42,7 +54,7 @@ $fields_lg: 15px;
 }
 
 @mixin wrapper(){
-    max-width: 1160px;
+    max-width: 1200px;
     margin: 0 auto;
     @include wrapper-full();
 }

@@ -12,7 +12,7 @@ $secondary-font-weight  : bold;
 $main-font-style        : normal;
 // Size
 
-$xl                     : 1160px;
+$xl                     : 1200px;
 $lg                     : 992px;
 $md                     : 760px;
 $sm                     : 576px;
@@ -116,15 +116,15 @@ $secondary-grad         : linear-gradient(180deg, rgba(111, 207, 151, 1) 0%, rgb
 $columns: 24;
 $atom: (100% / $columns);
 
-$break_lg: $lg;
-$break_md: $md;
-$break_sm: $sm;
-$break_xs: $xs;
+$break_lg: 992px;
+$break_md: 768px;
+$break_sm: 576px;
+$break_xs: 320px;
 
 $offset: 10px;
 $offset_lg: $offset;
-$offset_md: $offset/2;
-$offset_sm: $offset/2;
+$offset_md: $offset;
+$offset_sm: $offset;
 $offset_xs: $offset;
 
 $offset_one_side: ($offset / 2);
@@ -133,17 +133,28 @@ $offset_md_one_side: ($offset_md / 2);
 $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 
-$fields: 30px;
-$fields_lg: 20px;
-$fields_sm: 5px;
+$fields: 20px;
+$fields_md: 20px;
+$fields_sm: 15px;
+$fields_xs: 10px;
 
 @mixin wrapper-full() {
   padding-left: $fields;
   padding-right: $fields;
 
-  @include lg-block() {
-    padding-left: $fields_lg;
-    padding-right: $fields_lg;
+  @include md-block() {
+    padding-left: $fields_md;
+    padding-right: $fields_md;
+  }
+
+  @include sm-block() {
+    padding-left: $fields_sm;
+    padding-right: $fields_sm;
+  }
+
+  @include xs-block() {
+    padding-left: $fields_xs;
+    padding-right: $fields_xs;
   }
 }
 
@@ -158,7 +169,7 @@ $fields_sm: 5px;
 }
 
 @mixin wrapper() {
-  max-width: $xl;
+  max-width: 1200px;
   margin: 0 auto;
   @include wrapper-full();
 }
