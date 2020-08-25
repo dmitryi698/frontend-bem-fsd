@@ -10,7 +10,7 @@
     
     padding-left: 5%;
     width: 100%;
-    height: rem(44);
+    padding: 3.2%;
     background: $default;
     border: 1px solid $light;
     box-sizing: border-box;
@@ -23,7 +23,11 @@
     line-height: rem(24);
     overflow: hidden;
     color: $light;
+    
+    @include xs(font-size, 12px);
 
+
+    
       &::placeholder {
         color: $light;
       }
@@ -62,5 +66,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     
-  } 
+  }
+
 }
