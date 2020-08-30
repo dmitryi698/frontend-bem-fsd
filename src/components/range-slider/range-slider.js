@@ -1,75 +1,52 @@
 import './range-slider.scss';
 
 
-$(function ($) {
-  var $range = $(".js-range-slider__input"),
-    $inputRange = $(".js-input-range"),
-    $inputFrom = $(".js-input-from"),
-    $inputTo = $(".js-input-to"),
-    instance,
-    min = 0,
-    max = 1000,
-    from = 0,
-    to = 0;
+class Slider {
 
-  $range.ionRangeSlider({
-    skin: "user",
-    type: "double",
-    min: 0,
-    max: 15000,
-    from: 5000,
-    to: 10000,
-    step: 1000,
-    hide_min_max: true,
-    hide_from_to: true,
-    keyboard: true,
-    onStart: updateInputs,
-    onChange: updateInputs
-  });
-
-  function numberWithSpaces(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  constructor(options) {
+    this.options = options;
+    this.render();
   }
 
-  instance = $range.data("ionRangeSlider");
+  render() {
 
-  function updateInputs(data) {
-    from = numberWithSpaces(data.from);
-    to = numberWithSpaces(data.to);
+    let $range = $(".js-range-slider__input");
+    let $inputRange = $(".js-input-range");
+    let $inputFrom = $(".js-input-from");
+    let $inputTo = $(".js-input-to");
     
-    $inputFrom.prop("value", from);
-    $inputTo.prop("value", to);
-    $inputRange.html(`${from}&#8381; - ${to}&#8381;`);
+    $range.ionRangeSlider({
+      skin: "user",
+      type: "double",
+      min: 0,
+      max: 15000,
+      from: 5000,
+      to: 10000,
+      step: 1000,
+      hide_min_max: true,
+      hide_from_to: true,
+      keyboard: true,
+      onStart: setInputValue,
+      onChange: setInputValue
+    });
+
+    function numberWithSpaces(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
+    function setInputValue(data) {
+      let from = numberWithSpaces(data.from);
+      let to = numberWithSpaces(data.to);
+
+      $inputFrom.prop("value", from);
+      $inputTo.prop("value", to);
+      $inputRange.html(`${from}&#8381; - ${to}&#8381;`);
+    }
   }
+}
 
-  $inputFrom.on("input", function () {
-    var val = $(this).prop("value");
-
-    // validate
-    if (val < min) {
-      val = min;
-    } else if (val > to) {
-      val = to;
-    }
-
-    instance.update({
-      from: val
-    });
-  });
-
-  $inputTo.on("input", function () {
-    var val = $(this).prop("value");
-
-    // validate
-    if (val < from) {
-      val = from;
-    } else if (val > max) {
-      val = max;
-    }
-
-    instance.update({
-      to: val
-    });
-
+$(() => {
+  $('.range-slider').each((index, node) => {
+    new Slider($(node));
   });
 });
