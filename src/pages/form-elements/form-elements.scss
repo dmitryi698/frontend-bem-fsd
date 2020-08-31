@@ -21,9 +21,19 @@
     @include col;
     @include size(6.8);
 
+
     &_center {
       margin-left: 120px;
       margin-right: 65px;
+      min-width: 280px;
+      @include sm-block() {
+        margin: 50px;
+        
+      }
+      @include xs-block() {
+        margin: 0;
+        
+      }
     }
 
   }

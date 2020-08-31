@@ -4,6 +4,7 @@
 .dropdown {
   position: relative;
   width: 100%;
+  min-width: 240px;
   
   &__selection {
     cursor: pointer;
