@@ -1,0 +1,17 @@
+/* test */ 
+@import '../../scss/utils.scss';
+
+.test {
+  
+  &__wrapper{
+    @include wrapper();
+    padding-top: 100px;
+    padding-bottom: 500px;
+
+  }
+
+  &__inner {
+    min-width: 320px;
+    @include size(6);
+  }
+}

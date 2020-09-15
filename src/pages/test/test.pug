@@ -1,0 +1,15 @@
+extends ../../components/layout/layout
+block title
+   | test
+block header
+block main
+   .test__wrapper
+      .test__inner
+        +diagram({
+           title: 'Впечатления от номера',
+           items:[
+           'Великолепно',
+           'Хорошо',
+           'Удовлетворительно',
+           'Разочарован'
+        ]})

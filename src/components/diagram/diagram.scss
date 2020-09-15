@@ -1,34 +1,136 @@
 /* diagram */ 
 @import '../../scss/utils.scss';
 
-.diagram {
-  
-  &__container {
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative;
 
-    &::after {
-      content: '';
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      background: $default;
-      border-radius: 50%;
-      top: 25%;
-      left: 25%;
+.diagram {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $secondary-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: rem(19);
+    line-height: rem(24);
+    color: $darker;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__svg {
+    width: 50%;
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 2;
+    cursor: pointer;
+
+    &:hover,
+    &_hovered {
+      stroke-width: 5;
+      transition-property: all;
+      transition-duration: 1.2s;
     }
+
+    &:nth-child(2) {
+      stroke-dasharray: 49 100;
+      stroke-dashoffset: -25.5;
+      
+    }
+    &:nth-child(3) {
+      stroke-dasharray: 24.5 100;
+      stroke-dashoffset: -.5;
+    }
+    &:nth-child(4) {
+      stroke-dasharray: 25 100;
+      stroke-dashoffset: -75;
+    }
+    
+  }
+  &__clean {
+    fill: none;
+    stroke-width: 2;
+    stroke-dasharray: 200 100;
+    stroke: $default;
+    overflow: hidden;
 
   }
 
-  &__sector {
+  &__desc {
+    transform: translateY(0.25em);
+  }
+
+  &__number {
+    font-family: Quicksand;
+    font-style: normal;
+    line-height: 1;
+    font-weight: bold;
+    font-size: rem(6);
+    text-anchor: middle;
+    fill: #BC9CFF;
+    transform: translateY(-0.25em);
+  }
+
+  &__text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: rem(4);
+    font-weight: bold;
+    text-anchor: middle;
+    fill: #BC9CFF;
+    transform: translateY(0.7em);
+  }
+
+  &__legend {
     width: 50%;
-    height: 50%;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform-origin: left bottom;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 8px;
+
+    }
+
+    &:nth-child(1)::before {
+      background: $diagram-first;
+    }
+
+    &:nth-child(2)::before {
+      background: $secondary-grad;
+    }
+
+    &:nth-child(3)::before {
+      background: $primary-grad;
+    }
+
+    &:nth-child(4)::before {
+      background: $diagram-second;
+    }
   }
 }
