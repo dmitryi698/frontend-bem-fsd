@@ -2,8 +2,8 @@
   options.items - массив с элементами меню
   item.href - ссылка пункта меню
   item.title - текст пункта меню
-  itemSub.href - ссылка пункта меню
-  itemSub.title - текст пункта меню
+  itemSub.href - ссылка пункта подменю
+  itemSub.title - текст пункта подменю
   item.class - добавляет 
 
 
@@ -15,12 +15,13 @@ mixin menu(options)
 
   .menu.js-menu
     button.menu__button.js-menu__button Menu
-    nav.menu__list.js-menu__list
-      each item in options.items
-        li.menu__item(class = item.subMenu ? 'menu__item_sub' : '')
-          a.menu__link(href = item.href || '/some_page' class = item.subMenu ? 'js-menu__link' : '' )=item.title
-          if item.subMenu
-            span.menu__dropbtn expand_more
-            ul.menu__submenu
-              each itemSub in item.subMenu
-                a.menu__subitem(href = itemSub.href)=itemSub.title
+    nav.menu__main
+      ul.menu__list
+        each item in options.items
+          li.menu__item(class = item.subMenu ? 'menu__item_sub' : '')
+            a.menu__link(href = item.href || '/some_page' class = item.subMenu ? 'js-menu__link' : '')=item.title
+            if item.subMenu
+              span.menu__dropbtn expand_more
+              ul.menu__submenu.js-menu__submenu
+                each itemSub in item.subMenu
+                  a.menu__subitem(href = itemSub.href)=itemSub.title

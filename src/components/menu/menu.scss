@@ -8,7 +8,6 @@
     display: none;
     margin: 3% auto;
     width: 100%;
-    height: 10%;
     background: $default;
 
     font-family: $main-font;
@@ -18,34 +17,28 @@
     line-height: rem(15);
     text-transform: uppercase;
     color: $primary;
-
-
-    @media screen and (max-width: $sm) {
-      display: block;
-    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
 
    
-     @media screen and (max-width: $sm) {
-       display: none;
-       flex-direction: column;
+    //  @media screen and (max-width: $sm) {
+    //    display: none;
+    //    flex-direction: column;
        
-        &_open {
-          display: flex;
-          padding-left: 15%;
-        }
+    //     &_open {
+    //       display: flex;
+    //       padding-left: 15%;
+    //     }
 
-     }
+    //  }
   }
 
   &__item {
     position: relative;
-    margin-right: rem(20);
+    margin-right: rem(30);
     display: flex;
     align-items: center;
 
@@ -53,10 +46,10 @@
       margin-right: 20px;
     }
 
-    @media screen and (max-width: $sm) {
-      padding-right: rem(15);
-      margin-bottom: rem(10);
-    }
+    // @media screen and (max-width: $sm) {
+    //   padding-right: rem(15);
+    //   margin-bottom: rem(10);
+    // }
   }
   
   &__link {
@@ -79,7 +72,7 @@
     }
 
     &:hover,
-    &:active,
+    &:focus,
     &_activated {
       text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
       color: $dark;
@@ -88,6 +81,15 @@
 
   
   &__link:hover + &__dropbtn {
+     text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+     color: $dark;
+  }
+
+  &__link:focus + &__dropbtn {
+     text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
+     color: $dark;
+  }
+  &__link_activated + &__dropbtn {
      text-shadow: 0.6px 0.3px 0.3px, -0.6px -0.3px 0.3px;
      color: $dark;
   }
