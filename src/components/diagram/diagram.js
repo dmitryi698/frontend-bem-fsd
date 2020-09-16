@@ -9,19 +9,19 @@ class Diagram {
 
   render() {
 
-    
-    let circles = document.querySelectorAll('.diagram__circle');
-    let listItem = document.querySelectorAll('.js-diagram__item');
+    let circle = $('.js-diagram__circle', this.$component);
+    let listItem = $('.js-diagram__item', this.$component);
 
-    listItem.forEach(function (item, index) {
-      item.addEventListener('mouseover', function () {
-        circles[index].classList.add('diagram__circle_hovered');
+
+    listItem.each(function (index, elem) {
+      $(elem).on('mouseover', function() {
+        circle.eq(index).addClass('diagram__circle_hovered');
       });
 
-      item.addEventListener('mouseout', function () {
-        circles[index].classList.remove('diagram__circle_hovered');
+      $(elem).on('mouseout', function() {
+        circle.eq(index).removeClass('diagram__circle_hovered');
       });
-    });
+    })
  
   }
 }
