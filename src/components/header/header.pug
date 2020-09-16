@@ -12,24 +12,25 @@ mixin header(options)
       header.header__main(class = classes)
         .header__logo
           +logo({isTitle: true, size: 'small'})
-        .header__menu
-          +menu({
-            items: options.menu
-          })
-        if options.isRegistered
-          a.header__username(href = '/user_page') Cosmin Negoita
-        else
-          .header__buttons
-            .header__button
-              +button({
-                color: 'white',
-                theme: 'header',
-                title: options.logBtn
-                })
-            .header__button
-              +button({
-                color: 'blue',
-                theme: 'header',
-                title: options.regBtn
-                })
-          block
+        .header__inner
+          .header__menu
+            +menu({
+              items: options.menu
+            })
+          if options.isRegistered
+            a.header__username(href = '/user_page') Cosmin Negoita
+          else
+            .header__buttons
+              .header__button
+                +button({
+                  color: 'white',
+                  theme: 'header',
+                  title: options.logBtn
+                  })
+              .header__button
+                +button({
+                  color: 'blue',
+                  theme: 'header',
+                  title: options.regBtn
+                  })
+            block

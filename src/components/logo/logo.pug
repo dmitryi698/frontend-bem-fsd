@@ -6,6 +6,7 @@ mixin logo(options)
     let imgClass = '';
     classes = options.theme ? 'logo_theme_' + options.theme : '';
     imgClass = options.size ? 'logo__img_' + options.size : '';
+    
   .logo(class = classes)
     a.logo__link(href=options.href || '/index.html')
       svg.logo__img(class = imgClass viewBox="0 0 48 48" fill="none" xmlns="http:/\/www.w3.org/2000/svg" )

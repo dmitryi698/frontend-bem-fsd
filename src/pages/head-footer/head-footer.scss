@@ -4,40 +4,30 @@
 .head-footer {
 
   &__section {
-    position: relative;
     background: #F4F4F6;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   &__logo {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 30px;
-    top: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
   }
 
   &__registration {
-    position: absolute;
-    left: 0px;
-    top: 150px;
-
+    padding-top: 5%;
   }
 
   &__signin {
-    position: absolute;
-    left: 0px;
-    top: 260px;
+   
   }
 
   &__footer {
-    position: absolute;
-    left: 0px;
-    top: 370px;
+    
   }
 
   &__footer-logo {
-    position: absolute;
-    left: 0px;
-    top: 853px;
+    
   }
 }

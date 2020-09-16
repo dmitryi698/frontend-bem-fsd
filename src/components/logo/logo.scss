@@ -2,14 +2,14 @@
 @import '../../scss/utils.scss';
 
 .logo {
- 
+
   &__link {
     display: flex;
     align-items: center;
   }
   
   &__img {
-    width: 100%;
+    width: 50px;
 
     &_small {
       max-width: 40px;
@@ -24,7 +24,6 @@
   &__title {
     margin-left: rem(12.5);
     width: rem(54);
-    height: rem(14);
   }
 
   &__title-path {

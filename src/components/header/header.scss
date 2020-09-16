@@ -7,14 +7,37 @@
 
 
   &__main {
-    display: flex;
+    @include wrapper();
+    @include row-flex();
+    margin: 0 auto;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 15px 140px;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    width: 80%;
+  }
+
+  &__buttons {
+    display: flex;
+    
+
+  }
+
+  &__button {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
   &__username {
     padding-left: rem(30);
     border-left: 1px solid rgba(31, 32, 65, 0.1);
@@ -30,23 +53,5 @@
       color: $dark;
     }
   }
-
-  &__menu {
-    margin-left: auto;
-  }
-
-  &__buttons {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__button {
-    margin-right: rem(20);
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
 
 }
