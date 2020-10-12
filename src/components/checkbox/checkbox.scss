@@ -68,7 +68,7 @@
 /* Checked */
 
 .checkbox__input:checked+.checkbox__mark {
-  background-image: url('/assets/img/checkbox.svg');
+  background-image: url('./img/checkbox.svg');
   border: rem(1) solid $primary;
   box-sizing: border-box;
   border-radius: rem(4)

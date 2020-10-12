@@ -1,9 +1,6 @@
 const path = require('path')
 const fs = require('fs')
-// const Glob = require('glob-all')
-const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const PurgeCssPlugin = require('purgecss-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
@@ -16,7 +13,7 @@ const PATHS = {
 }
 
 const PAGES_DIR = `${PATHS.src}/pages`
-const PAGES = fs.readdirSync(PAGES_DIR).filter((file) => {return file.includes('base') !== 0;})
+const PAGES = fs.readdirSync(PAGES_DIR).filter((file) => { return file.indexOf('base') !== 0; })
 
 module.exports = {
     externals: {
@@ -24,10 +21,10 @@ module.exports = {
     },
 
     entry: {
-        app: PATHS.src
+        app: `${PATHS.src}/index.js`
     },
     output: {
-        filename: `${PATHS.assets}js/[name].[hash].js`,
+        filename: `${PATHS.assets}js/[name].js`,
         path: PATHS.dist,
         publicPath: '/'
     },
@@ -44,88 +41,94 @@ module.exports = {
         }
     },
     module: {
-        rules: [{
-            test: /\.pug$/,
-            loader: 'pug-loader',
-            },{
-            test: /\.js$/,
-            loader: 'babel-loader',
-            exclude: '/node_modules/'
-            },{
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'file-loader',
-            options:{
-                name: '[name].[ext]',
+        rules: [
+            {
+                test: /\.jsx?$/,
+                use: 'babel-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+            }, {
+                test: /\.(woff(2)?|ttf|eot)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: 'assets/fonts/[name].[ext]',
                 }
-            },{
-            test: /\.(png|jpg|gif|svg)$/,
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]',
-            }
-            },{
-            test: /\.scss$/,
-            use: [
-                'style-loader',
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: { sourceMap: true }
-                }, {
-                    loader: 'postcss-loader',
-                    options: { sourceMap: true, config: { path: `./postcss.config.js` } }
-                }, {
-                    loader: 'sass-loader',
-                    options: { sourceMap: true }
+            }, {
+                test: /\.(png|jpg|gif|svg)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: 'assets/img/[name].[ext]',
                 }
-            ]
-        },{
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: { sourceMap: true }
-                }, {
-                    loader: 'postcss-loader',
-                    options: { sourceMap: true, config: { path: `./postcss.config.js` } }
-                }
-            ]
-        },
-        ]},
-    resolve:{
-        alias:{
-            '@': PATHS.src,
+            }, {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                config: path.resolve(__dirname, '../postcss.config.js')
+                            }
+                        }
+                    }, {
+                        loader: 'sass-loader',
+                        options: { sourceMap: true }
+                    }
+                ]
+            }, {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                config: path.resolve(__dirname, '../postcss.config.js')
+                            }
+                        }
+                    }
+                ]
+            },
+
+        ]
+    },
+    resolve: {
+        // extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            '~': PATHS.src,
         }
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].[hash].css`
+            filename: `${PATHS.assets}css/[name].css`
         }),
-        new MomentLocalesPlugin({
-            localesToKeep: ['es-us', 'ru'],
-        }),
-        // new PurgeCssPlugin({
-        //     paths: glob.sync([
-        //         `${ PAGES_DIR }/**/*.pug`,
-        //         `${PATHS.src}/*.js`
-        //     ])
-        // }),
-        new CopyWebpackPlugin([
-            { from: `${PATHS.src}/components/`, to: `${PATHS.assets}img/[name].[ext]`, ignore: ['*.js', '*.css', '*.scss', '*.pug'], toType: 'template',},
-            { from: `${PATHS.src}/pages/`, to: `${PATHS.assets}img/[name].[ext]`, ignore: ['*.js', '*.css', '*.scss', '*.pug'], toType: 'template',},
-            { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+        new CopyWebpackPlugin({
+            patterns: [
+            // { from: `${PATHS.src}/components/`, to: `${PATHS.assets}img/`, context: 'img/', },
+            // { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
-        ]),
+            ]
+        }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}/${page}.pug`,
-            filename: `${page}.html`,
+            filename: `./${page}.html`,
             inject: true,
+            minify: false,
         })),
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jQuery: 'jquery'
+            jQuery: 'jquery',
         })
         // new HtmlWebpackPlugin({
         //     template: `${PATHS.src}/index.html`,

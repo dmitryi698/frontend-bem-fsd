@@ -11,6 +11,6 @@ mixin gallery(options)
       .gallery__list
         each item in options.images
             img.gallery__img.js-gallery__img(
-              src = '/assets/img/' + item.image
+              src = './img/' + item.image
               alt = item.alt || 'Room picture'
             )

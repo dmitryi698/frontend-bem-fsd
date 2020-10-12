@@ -16,12 +16,12 @@
 
   &_theme_signin {
     align-items: center;
-    background: url('/assets/img/signin-min.jpg') no-repeat center center;
+    background: url('./img/signin-min.jpg') no-repeat center center;
     background-size: cover;
   }
 
   &_theme_landing {
-    background: url('/assets/img/landing.jpg') no-repeat center center;
+    background: url('./img/landing.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;

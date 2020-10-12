@@ -8,7 +8,7 @@
     position: relative;
     width: 120px;
     height: 24px;
-    background-image: url('/assets/img/star_border.svg');
+    background-image: url('./img/star_border.svg');
   }
 
   /* Rating star */
@@ -23,7 +23,7 @@
     
     &:checked,
     &:hover {
-      background-image: url('/assets/img/star.svg');
+      background-image: url('./img/star.svg');
     }
   }
 }
@@ -31,7 +31,7 @@
 
 
 .rating__star:hover~.rating__star {
-  background-image: url('/assets/img/star_border.svg');
+  background-image: url('./img/star_border.svg');
 
 }
 

@@ -17,7 +17,7 @@ mixin room(options)
     if options.isAction
       .room__slider
         img.room__img(
-          src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
+          src = options.image ? './img/' + options.image : './img/room.jpg'
           alt = options.alt || 'hotel room')
         span.room__action.room__action_prev expand_more
         span.room__action.room__action_next expand_more
@@ -29,7 +29,7 @@ mixin room(options)
     else
       .room__slider
         img.room__img(
-          src = options.image ? '/assets/img/' + options.image : '/assets/img/room.jpg'
+          src = options.image ? './img/' + options.image : './img/room.jpg'
           alt = options.alt || 'hotel roomspan')
         .room__controls
           .room__control.room__control_activated

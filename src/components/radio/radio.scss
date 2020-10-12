@@ -46,7 +46,7 @@
 /* Checked */
 
 .radio__input:checked + .radio__mark {
-  background-image: url('/assets/img/radio-icon.svg');
+  background-image: url('./img/radio-icon.svg');
   border: rem(1) solid $primary;
   box-sizing: border-box;
   border-radius: 50%;

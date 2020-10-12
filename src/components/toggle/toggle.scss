@@ -26,7 +26,7 @@
     overflow: hidden;
     border-radius: rem(10);
     background: $default;
-    background-image: url('/assets/img/toggle.svg');
+    background-image: url('./img/toggle.svg');
     background-repeat: no-repeat;
     background-position: 10% 50%;
     border: rem(1) solid $light;
@@ -44,7 +44,7 @@
 }
 
 .toggle__input:checked + .toggle__mark {
-  background-image: url('/assets/img/toggle-active.svg');
+  background-image: url('./img/toggle-active.svg');
   background-position: 90% 50%;
   border: rem(1) solid $primary;
   box-sizing: border-box;

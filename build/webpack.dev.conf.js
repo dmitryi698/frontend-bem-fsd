@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 
 
@@ -8,6 +8,20 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
     devtool: 'cheap-module-eval-source-map',
     devServer: {
+        stats: {
+            assets: false,
+            children: false,
+            chunks: false,
+            hash: false,
+            modules: false,
+            publicPath: false,
+            timings: false,
+            version: false,
+            warnings: true,
+            colors: {
+                green: '\u001b[32m'
+            },
+        },
         contentBase: baseWebpackConfig.externals.paths.dist,
         port: 8081,
         overlay: {

@@ -4,7 +4,7 @@
 .bullet {
   
   &__list {
-    list-style-image: url('/assets/img/ellipse.svg');
+    list-style-image: url('./img/ellipse.svg');
     margin-left: rem(20);
   }
 
