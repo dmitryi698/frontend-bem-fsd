@@ -1,14 +1,13 @@
-/* type */ 
+/* type */
 @import '../../scss/utils.scss';
 
-$colors: (
-  darker  : $darker,
-  dark    : $dark,
-  medium  : $medium,
-  light   : $light,
+$colors: (darker : $darker,
+  dark : $dark,
+  medium : $medium,
+  light : $light,
   lighter : $lighter,
-  purple  : $primary,
-  green   : $secondary,
+  purple : $primary,
+  green : $secondary,
 );
 
 .type {
@@ -16,7 +15,7 @@ $colors: (
   flex-flow: row nowrap;
   align-items: center;
   min-width: 280px;
-  
+
   &__color {
     width: rem(70);
     height: rem(70);
@@ -25,15 +24,16 @@ $colors: (
     margin-right: rem(40);
 
 
-      @each $color, $tint in $colors {
-        &_#{$color} {
-          background: $tint;
-        }
+    @each $color,
+    $tint in $colors {
+      &_#{$color} {
+        background: $tint;
+      }
     }
   }
+
   &__content {
     flex-grow: 1;
-
   }
 
   &__title,
@@ -71,7 +71,7 @@ $colors: (
       font-size: 12px;
       line-height: 15px;
       padding-left: 10px;
-      
+
     }
 
     &_Body {
@@ -84,34 +84,22 @@ $colors: (
   }
 
   &__description {
-    font-family: $secondary-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 30px;
-    color: $darker;
+    @include h;
     margin-left: 30px;
     padding-right: 30px;
 
 
     &_h2 {
-      font-size: 19px;
-      line-height: 24px;
+      @include h(2);
     }
 
     &_h3 {
-      font-family: $main-font;
-      font-size: 12px;
-      line-height: 15px;
+      @include h(3);
       text-transform: uppercase;
     }
 
     &_Body {
-      font-family: $main-font;
-      font-size: 14px;
-      line-height: 24px;
-      font-weight: normal;
-      color: $dark;
+      @include text;
       padding-right: 70px;
 
     }

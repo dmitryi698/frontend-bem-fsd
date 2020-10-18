@@ -49,7 +49,7 @@ module.exports = {
             },
             {
                 test: /\.pug$/,
-              loader: 'pug-loader?pretty=true',
+                loader: 'pug-loader',
             }, {
                 test: /\.(woff(2)?|ttf|eot)$/i,
                 loader: 'file-loader',
@@ -115,8 +115,6 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-            // { from: `${PATHS.src}/components/`, to: `${PATHS.assets}img/`, context: 'img/', },
-            // { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
             { from: `${PATHS.src}/static`, to: '' },
             ]
         }),
@@ -130,5 +128,9 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         })
+        // new HtmlWebpackPlugin({
+        //     template: `${PATHS.src}/index.html`,
+        //     filename: './index.html',
+        //     inject: true
     ]
 }

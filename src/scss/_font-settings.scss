@@ -1,0 +1,43 @@
+$main-font: 'Montserrat';
+$secondary-font: 'Quicksand',
+'Open Sans';
+$icon: 'Material Icons';
+$main-font-color: rgba(31, 32, 65, 0.75);
+$title-color: #1f2041;
+$main-font-size: 14px;
+$main-font-weight: normal;
+$secondary-font-weight: bold;
+$main-font-style: normal;
+
+@mixin h($n: 1) {
+  font-family: $secondary-font;
+  font-style: $main-font-style;
+  font-weight: $secondary-font-weight;
+  color: $title-color;
+
+  @if $n == 1 {
+    font-size: rem(24);
+    line-height: rem(30);
+  }
+
+  @else if $n == 2 {
+    font-size: rem(19);
+    line-height: rem(24);
+  }
+
+  @else if $n == 3 {
+    font-family: $main-font;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: uppercase;
+  }
+}
+
+@mixin text {
+  font-family: $main-font;
+  font-style: $main-font-style;
+  font-weight: $main-font-weight;
+  font-size: $main-font-size;
+  line-height: rem(24);
+  color: $main-font-color;
+}
