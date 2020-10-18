@@ -49,7 +49,7 @@ module.exports = {
             },
             {
                 test: /\.pug$/,
-                loader: 'pug-loader',
+              loader: 'pug-loader?pretty=true',
             }, {
                 test: /\.(woff(2)?|ttf|eot)$/i,
                 loader: 'file-loader',
@@ -130,9 +130,5 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
         })
-        // new HtmlWebpackPlugin({
-        //     template: `${PATHS.src}/index.html`,
-        //     filename: './index.html',
-        //     inject: true
     ]
 }
