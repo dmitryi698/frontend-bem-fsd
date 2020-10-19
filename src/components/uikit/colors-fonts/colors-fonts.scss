@@ -1,8 +1,6 @@
-@import '../../scss/utils.scss';
+@import '../../../scss/utils.scss';
 
 .colors-fonts {
-
-
   &__header {
    @include wrapper;
    max-width: 1440px;

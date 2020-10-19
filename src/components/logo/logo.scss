@@ -5,10 +5,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  max-width: 105px;
+  max-width: rem(105);
   
   &_ui {
-    max-width: 48px;
+    max-width: rem(48);
   }
   &__image {
     width: 100%;

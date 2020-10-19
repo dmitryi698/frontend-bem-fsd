@@ -1,0 +1,56 @@
+section.head-footer__section
+   .head-footer__logo
+      +logo
+   .head-footer__registration
+      +header({
+         logBtn: 'Login',
+         regBtn: 'Register',
+         menu:[
+            {title: 'Home',},
+            {title: 'About Us',},
+            {title: 'Services', subMenu:[
+               {title: '123', href: '123'}
+            ]},
+            {title: 'Careers',},
+            {title: 'News',},
+            {title: 'Documentation',}
+            ]       
+         })
+   .head-footer__signin
+      +header({
+         isRegistered: true,
+         menu:[
+            {title: 'Home',},
+            {title: 'About Us',},
+            {title: 'Services', subMenu:[
+               {title: '123', href: '123'}
+            ]},
+            {title: 'Careers',},
+            {title: 'News',},
+            {title: 'Documentation',}
+            ]       
+         })
+   .head-footer__footer
+      +footer({
+         items:[
+            {title: 'Navigation', itemList:[
+               {name: 'About Us'},
+               {name: 'News'},
+               {name: 'Support'},
+               {name: 'Products'},
+            ]},
+            {title: 'ABOUT US', itemList:[
+               {name: 'Who we are'},
+               {name: 'Our team'},
+               {name: 'Careers'},
+               {name: 'Investors'},
+            ]},
+            {title: 'Support', itemList:[
+               {name: 'Documentation'},
+               {name: 'Community'},
+               {name: 'Get in Touch'},
+            ]},
+         ]
+      })
+   .head-footer__footer-logo
+      +footer({isLogo: true})
