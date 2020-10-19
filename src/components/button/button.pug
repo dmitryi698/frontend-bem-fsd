@@ -17,12 +17,11 @@ mixin button(options)
     btnClassName += options.theme ? ' button_theme_' + options.theme : ''
     btnClassName += options.color ? ' button__main_' + options.color : ''
 
-  .button
-    button(
-      class = btnClassName
-      type = options.type || 'button'
-      name = options.name 
-      autofocus)
-      span.button__title(class=titleClassName)=options.title || 'Button'
-      if options.isArrow
-        span.button__arrow arrow_forward
+  button.button(
+    class = btnClassName
+    type = options.type || 'button'
+    name = options.name 
+    autofocus)
+    span.button__title(class=titleClassName)=options.title || 'Button'
+    if options.isArrow
+      span.button__arrow arrow_forward

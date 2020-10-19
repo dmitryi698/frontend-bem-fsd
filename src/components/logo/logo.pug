@@ -2,8 +2,8 @@ mixin logo(options)
   if !options
     - options = {}
   -
-    let classes = '';
-    let type = options.typeLogo === 'img' ? "./assets/img/logo-img.svg" : "./assets/img/logo.svg";
-  .logo(class = classes)
-    a.logo__link(href=options.href || '/index.html')
-      img.logo__image(src=type, alt="Company Logo")
+    let classes = 'logo';
+    let type = options.ui ? "./assets/img/logo-img.svg" : "./assets/img/logo.svg";
+    classes += options.ui ? ' logo_ui' : '';
+  a(class=classes href=options.href || '/index.html')
+    img.logo__image(src=type, alt="Company Logo")

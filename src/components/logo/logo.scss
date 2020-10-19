@@ -1,15 +1,16 @@
-/* logo */ 
+/* logo */
 @import '../../scss/utils.scss';
 
 .logo {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  max-width: 105px;
   
-  &__link {
-    display: flex;
-    align-items: center;
+  &_ui {
+    max-width: 48px;
   }
-  
-  &__img {
-    width: 50px;
+  &__image {
+    width: 100%;
   }
 }
