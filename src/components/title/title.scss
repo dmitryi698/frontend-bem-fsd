@@ -4,26 +4,15 @@
 .title {
   margin-bottom: rem(5);
   display: flex;
+  justify-content: space-between;
 
   &__main {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(12);
-    line-height: rem(15);
-    margin-right: auto;
-
-    text-transform: uppercase;
-    color: $darker;
+    @include h(3);
   }
 
   &__desc {
-    font-family: $main-font;
-    font-style: normal;
+    @include h(3);
     font-weight: normal;
-    font-size: rem(12);
-    line-height: rem(15);
-    text-transform: uppercase;
     color: $medium;
   }
 }

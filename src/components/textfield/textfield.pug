@@ -1,5 +1,5 @@
-//- options.isActive added modifier 'activated';
 //- options.isMasked added modifier 'masked';
+//- options.state: 'hover'
 
 mixin textfield(options)
   if !options
@@ -7,6 +7,7 @@ mixin textfield(options)
   -
     let inputClass = '';
     inputClass += options.isMasked ? ' js-textfield__input_masked' : '';
+    inputClass += options.state ? 'textfield__input_' + options.state : '';
 
   .textfield.js-textfield
     input.textfield__input(
@@ -19,4 +20,4 @@ mixin textfield(options)
       required = options.required
     )
     if options.subscription
-      button.textfield__button(type = 'submit') arrow_forward
+      button.textfield__button

@@ -1,11 +1,27 @@
-extends ../../components/uikit-layout/uikit-layout
-block title
-   | Form elements
-block header
-   //- +debug
-   header.form-elements__header
-      .form-elements__logo
-         +logo({ui: true})
-block main
-   
-   
+.form-elements
+   .form-elements__row
+      .form-elements__col
+         //- .form-element__textfield
+         //-    +title({main: 'textfield', desc: 'default'})
+         //-    +textfield({placeholder: 'Email'})
+         //- .form-element__textfield_hovered
+         //-    +title({main: 'textfield', desc: 'hover/focus'})
+         //-    +textfield({placeholder: 'This is pretty awesome', state: 'hovered'})
+         //- .form-element__dropdown
+         //-    +title({main: 'dropdown', desc: 'default'})
+         //-    +dropdown
+         //- .form-element__masked-textfield
+         //-    +title({main: 'masked text field', desc: 'default', })
+         //-    +textfield({isMasked: true, placeholder: 'ДД.ММ.ГГГГ'})
+         //- .form-element__date-dropdown
+         //-    +date-dropdown({titleLeft: 'date Dropdown', titleRight: 'date Dropdown', placeholder: 'ДД.ММ.ГГГГ'})
+         //- .form-element__filter
+         //-    +date-dropdown({isDateFilter: true, placeholder: 'ДД.ММ - ДД.ММ'})
+         .form-element__subscription
+            +title({main: 'subscription textfield'})
+            +textfield({placeholder: 'Email', subscription: true})
+      .form-elements__col
+      .form-elements__col
+   .form-elements__row
+      .form-elements__col
+      .form-elements__col

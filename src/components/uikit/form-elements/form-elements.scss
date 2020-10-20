@@ -1,13 +1,18 @@
 @import '../../../scss/utils.scss';
 
 .form-elements {
+  @include wrapper;
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  &__header {
-    max-width: $full-width;
-    padding: 30px;
+  &__row {
+    @include row-flex;
   }
 
-  &__logo {
-
+  &__col {
+    @include col;
+    @include size(6.8);
   }
 }

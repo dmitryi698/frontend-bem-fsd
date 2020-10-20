@@ -6,6 +6,10 @@
     padding: rem(30);
   }
   &__colors-fonts {
-    margin-top: 37px;
+    @include wrapper;
+    padding-top: 37px;
+  }
+  &__form-elements {
+    
   }
 }

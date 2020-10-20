@@ -32,19 +32,13 @@
   }
 
   &__input {
+    @include text;
     position: relative;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 75%;
-
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(14);
-    line-height: rem(24);
-    color: $dark;
 
     &_default {
       border-radius: rem(4) rem(4) 0 0;
@@ -60,28 +54,23 @@
   }
 
   &__button-icon {
+    @include icon;
+    color: $medium;
     position: absolute;
     top: 25%;
     right: 0;
-
     width: rem(44);
     text-align: center;
-    font-family: $icon;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(24);
-    line-height: rem(24);
-    color: $medium;
   }
 
   &__menu {  
     display: none;
 
     &_open {
-      width: 100%;
       position: absolute;
       left: 0;
       top: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       background: $default;
@@ -106,8 +95,6 @@
     }
   }
 
-  /*Dropdown option items*/
-
   &__option {
     display: flex;
     justify-content: space-between;
@@ -121,27 +108,15 @@
   }
 
   &__content {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(12);
-    line-height: rem(15);
-    text-transform: uppercase;
-    color: $darker;
+    @include h(3);
   }
 
   &__counter {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(12);
-    line-height: rem(15);
-
+    @include h(3);
     display: flex;
     text-align: center;
     align-items: center;
     text-transform: uppercase;
-    color: $darker;
   }
 
   &__controls {
@@ -202,12 +177,7 @@
     &_clear,
     &_confirm {
       cursor: pointer;
-      font-family: $main-font;
-      font-style: normal;
-      font-weight: bold;
-      font-size: rem(12);
-      line-height: rem(15);
-      text-transform: uppercase;
+      @include h(3);
       color: $medium;
     }
     

@@ -51,6 +51,7 @@ $icon-color: rgba(31, 32, 65, 0.5);
   font-weight: $main-font-weight;
   font-size: rem(24);
   line-height: rem(24);
+  color: $medium;
 }
 
 @function rem($pixels, $context: $main-font-size) {
