@@ -15,4 +15,13 @@
     @include col;
     @include size(6.8);
   }
+
+
+
+  &__list-second {
+
+    & .form-elements__item:nth-child(4) {
+      margin-bottom: 150px;
+    }
+  }
 }

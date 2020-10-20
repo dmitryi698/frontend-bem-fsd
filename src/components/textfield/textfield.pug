@@ -10,7 +10,7 @@ mixin textfield(options)
     inputClass += options.state ? 'textfield__input_' + options.state : '';
 
   .textfield.js-textfield
-    input.textfield__input(
+    input.textfield__input.js-textfield__input(
       class = inputClass
       type = options.type || 'text'
       placeholder = options.placeholder
@@ -20,4 +20,4 @@ mixin textfield(options)
       required = options.required
     )
     if options.subscription
-      button.textfield__button
+      button.textfield__button.js-textfield__button

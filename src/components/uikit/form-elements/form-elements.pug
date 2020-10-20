@@ -1,25 +1,44 @@
 .form-elements
    .form-elements__row
       .form-elements__col
-         //- .form-element__textfield
-         //-    +title({main: 'textfield', desc: 'default'})
-         //-    +textfield({placeholder: 'Email'})
-         //- .form-element__textfield_hovered
-         //-    +title({main: 'textfield', desc: 'hover/focus'})
-         //-    +textfield({placeholder: 'This is pretty awesome', state: 'hovered'})
-         //- .form-element__dropdown
-         //-    +title({main: 'dropdown', desc: 'default'})
-         //-    +dropdown
-         //- .form-element__masked-textfield
-         //-    +title({main: 'masked text field', desc: 'default', })
-         //-    +textfield({isMasked: true, placeholder: 'ДД.ММ.ГГГГ'})
-         //- .form-element__date-dropdown
-         //-    +date-dropdown({titleLeft: 'date Dropdown', titleRight: 'date Dropdown', placeholder: 'ДД.ММ.ГГГГ'})
-         //- .form-element__filter
-         //-    +date-dropdown({isDateFilter: true, placeholder: 'ДД.ММ - ДД.ММ'})
-         .form-element__subscription
-            +title({main: 'subscription textfield'})
-            +textfield({placeholder: 'Email', subscription: true})
+         //- .form-elements__list-first
+         //-    .form-elements__item
+         //-       +title({main: 'textfield', desc: 'default'})
+         //-       +textfield({placeholder: 'Email'})
+         //-    .form-elements__item
+         //-       +title({main: 'textfield', desc: 'hover/focus'})
+         //-       +textfield({placeholder: 'This is pretty awesome', state: 'hovered'})
+         //-    .form-elements__item
+         //-       +title({main: 'dropdown', desc: 'default'})
+         //-       +dropdown
+         //-    .form-elements__item
+         //-       +title({main: 'masked text field', desc: 'default', })
+         //-       +textfield({isMasked: true, placeholder: 'ДД.ММ.ГГГГ'})
+         //-    .form-elements__item
+         //-       +date-dropdown({titleLeft: 'date Dropdown', titleRight: 'date Dropdown', placeholder: 'ДД.ММ.ГГГГ'})
+         .form-elements__list-second
+            .form-elements__item
+               +date-dropdown({isDateFilter: true, placeholder: 'ДД.ММ - ДД.ММ'})
+            .form-elements__item
+               +title({main: 'subscription textfield'})
+               +textfield({placeholder: 'Email', subscription: true})
+            .form-elements__item
+               +title({main: dropdown, desc: 'Default'})
+               +dropdown({isRooms: true, adult: '2', minor: '2'})
+            .form-elements__item
+               +title({main: dropdown, desc: 'Default'})
+               +dropdown({isRooms: true,expanded: true, adult: '2', minor: '2'})
+            .form-elements__item
+               +checkbox-list()
+            .form-elements__item
+               +checkbox-list({opened: true, items: [
+                  { name: 'breekfast', label: 'Завтрак' },
+                  { name: 'breekfast', label: 'Письменный стол', checked: true },
+                  { name: 'breekfast', label: 'Стул для кормления', checked: true },
+                  { name: 'breekfast', label: 'Кроватка', checked: true },
+                  { name: 'breekfast', label: 'Телевизор'},
+                  { name: 'breekfast', label: 'Шампунь' },
+               ]} )
       .form-elements__col
       .form-elements__col
    .form-elements__row

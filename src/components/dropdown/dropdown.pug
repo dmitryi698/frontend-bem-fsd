@@ -7,14 +7,17 @@ mixin dropdown(options)
     - options = {}
   -
     let classes = '';
+    let menuClass = '';
+    let selectionClass = '';
     classes += options.isRooms ? ' js-dropdown_rooms' : 'js-dropdown_guests';
-
-
-  .dropdown.js-dropdown(class = classes)
-    .dropdown__selection
+    selectionClass += options.expanded ? ' dropdown__selection_open' : '';
+    menuClass += options.expanded ? ' dropdown__menu_open' : '';
+  
+  .dropdown.js-dropdown(class=classes)
+    .dropdown__selection(class=selectionClass)
       p.dropdown__input
       i.dropdown__button-icon keyboard_arrow_down
-    .dropdown__menu
+    .dropdown__menu(class=menuClass)
       .dropdown__option(data-id='adult', data-defaultcount=options.adult || '0', data-mincount='0')
         div
           .dropdown__text

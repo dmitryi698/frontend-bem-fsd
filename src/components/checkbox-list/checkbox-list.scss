@@ -6,45 +6,40 @@
   display: flex;
   flex-direction: column;
   min-width: 240px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   
   &__label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 3%;
   }
 
   &__title {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: bold;
-    font-size: rem(12);
-    line-height: rem(15);
-    text-transform: uppercase;
-    color: $darker;
+    @include h(3);
   }
 
   &__icon-button {
+    @include icon;
     cursor: pointer;
     width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
-    
-    font-family: $icon;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(24);
-    line-height: rem(24);
-    text-align: center;
-    color: $medium;
     
   }
 
   &__list {
-    display: none;
-}
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(15);
 
-  & .checkbox {
-    margin-bottom: 3%;
+    & .checkbox {
+      margin-bottom: rem(7);
+    }
   }
 }
 
@@ -53,7 +48,6 @@
 }
 
 .checkbox-list_open .checkbox-list__list {
-  display: flex;
-  flex-direction: column;
-  padding-top: 4%;
+  visibility: visible;
+
 }

@@ -1,14 +1,18 @@
+//- title
+//- items = [{name, label, checked}]
+
 mixin checkbox-list(options)
   if !options
     - options = {}
   if !options.items
     - options.items = []
-    
+  -
+    let classes = '';
+    classes += options.opened ? ' checkbox-list_open' : '';
   .checkbox-list.js-checkbox-list(class = classes)
     .checkbox-list__label
-      p.checkbox-list__title=options.title
-      i.checkbox-list__icon-button expand_more
-    .checkbox-list__list
-      each list in options.items
-        each item in list.checkbox
-          +checkbox({name: item.name, label: item.label, checked: item.checked})
+      p.checkbox-list__title=options.title || 'expandable checkbox list'
+      i.checkbox-list__icon-button.js-checkbox-list__icon-button expand_more
+    .checkbox-list__list.js-checkbox-list__list
+      each item in options.items
+        +checkbox({name: item.name, label: item.label, checked: item.checked})
