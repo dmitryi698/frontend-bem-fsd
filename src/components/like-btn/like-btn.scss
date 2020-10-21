@@ -1,4 +1,4 @@
-/* like-btn */ 
+/* like-btn */
 @import '../../scss/utils.scss';
 
 
@@ -38,16 +38,15 @@
   }
 }
 
-/********* Activated *********/
-
+/* Activated */
 .like-btn__counter_active {
-    border-color: $primary;
+  border-color: $primary;
 
-    &.like-btn__counter:after{
-      color: $primary;
-    }
-
-    & > .like-btn__icon {
-      background-image: url('./img/favorite.svg');
-    }
+  &.like-btn__counter:after {
+    color: $primary;
   }
+
+  &>.like-btn__icon {
+    background-image: url('./img/favorite.svg');
+  }
+}

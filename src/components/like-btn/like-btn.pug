@@ -1,11 +1,13 @@
 mixin like-btn(options)
   if !options
     - options = {}
-  -
-    let classes = options.isActivated ? ' like-btn__counter_active' : ''
+  if !options.items
+    - options.items = []
 
-  .like-btn.js-like-btn
-    a.like-btn__counter.js-like-btn__counter(
-      class = classes
-      data-count = options.count || '0')
-      span.like-btn__icon
+
+  each item in options.items
+    .like-btn.js-like-btn
+      a.like-btn__counter.js-like-btn__counter(
+        class = item.isActivated ? ' like-btn__counter_active' : ''
+        data-count = item.count || '0' )
+        span.like-btn__icon

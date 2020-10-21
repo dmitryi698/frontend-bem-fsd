@@ -1,14 +1,17 @@
 mixin radio(options)
   if !options
     - options = {}
+  if !options.items
+    - options.items = []
 
   .radio
-    label.radio__label
-      input.radio__input(
-        type = 'radio'
-        name = options.name
-        tabindex = options.tabindex
-        required = options.required
-        checked = options.checked)
-      span.radio__mark
-      span.radio__text-label(class = labelClassName)=options.label
+    each item in options.items
+      label.radio__label
+        input.radio__input(
+          type = 'radio'
+          name = item.name || 'name'
+          tabindex = item.tabindex || '0'
+          required = item.required
+          checked = item.checked)
+        span.radio__mark
+        span.radio__text-label(class = labelClassName)=item.label || 'Some text'

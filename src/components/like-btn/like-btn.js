@@ -1,14 +1,35 @@
+/* global $ */
 import './like-btn.scss';
 
 
-$('.js-like-btn__counter').on('click', function (event, count) {
-  event.preventDefault();
+class Likebtn {
+  constructor($component) {
+    this.$component = $component;
+    this.render();
+  }
 
-  var $this = $(this),
-    count = $this.attr('data-count'),
-    active = $this.hasClass('like-btn__counter_active');
+  render() {
+    let $btnCounter = $( '.js-like-btn__counter', this.$component );
+    $btnCounter.on( 'click', btnActivated );
 
+    function btnActivated (event) {
+      event.preventDefault();
 
-  $this.attr('data-count', active ? --count : ++count).toggleClass('like-btn__counter_active');
+      let $this = $(this);
+      let active = $this.hasClass('like-btn__counter_active');
+      let counter = +$this.attr('data-count');
 
+      if ( active ) {
+        $this.attr('data-count', --counter).removeClass('like-btn__counter_active');
+      }
+      else {
+        $this.attr('data-count', ++counter).addClass('like-btn__counter_active');
+      }
+    }
+  }
+}
+
+$(() => {
+  let likeBtn = new Likebtn('.js-like-btn');
+  console.log();
 });

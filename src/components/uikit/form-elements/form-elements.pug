@@ -55,7 +55,24 @@
                ]
             })
          .form-elements__item
-            
+            +radio({
+               items: [
+                  { label: 'Мужчина', name: 'floor', checked: true },
+                  { label: 'Женщина', name: 'floor' },
+               ]
+            })
+         .form-elements__item
+            +toggle({
+               items: [
+                  { name: 'offer', label: 'Получать спецпредложения', checked: true },
+                  { name: 'offer', label: 'Получать спецпредложения' }
+               ]
+            })
+         .form-elements__item
+            +like-btn({ items: [
+               { count: '2' },
+               { count: '12', isActivated: true }
+            ] })
       .form-elements__col
    .form-elements__row
       .form-elements__col

@@ -61,6 +61,10 @@
     margin-top: rem(5);
   }
 
+  &:not(:last-child) {
+    margin-bottom: rem(10);
+  }
+
 }
 
 /* Checked */

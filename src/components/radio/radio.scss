@@ -1,14 +1,17 @@
 /* radio */ 
 @import '../../scss/utils.scss';
 
-.radio {
-  
-  margin-top: rem(10);
+.radio { 
+  display: flex;
   
   &__label {
     cursor: pointer;
     padding-left: rem(30);
     display: block;
+
+    &:not(:last-child) {
+      margin-right: rem(20);
+    }
   }
 
   &__input {
@@ -29,16 +32,12 @@
     border-radius: 50%;
     background: $default;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
     border: rem(1) solid $light;
   }
 
   &__text-label {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(14);
-    line-height: rem(24);
+    @include text;
     color: $medium;
   }
 }
@@ -47,6 +46,7 @@
 
 .radio__input:checked + .radio__mark {
   background-image: url('./img/radio-icon.svg');
+  background-position: center;
   border: rem(1) solid $primary;
   box-sizing: border-box;
   border-radius: 50%;

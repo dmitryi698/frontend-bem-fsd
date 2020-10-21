@@ -7,6 +7,10 @@
     cursor: pointer;
     padding-left: rem(50);
     display: block;
+    
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
   }
 
   &__input {
@@ -34,11 +38,7 @@
   }
 
   &__text {
-    font-family: $main-font;
-    font-style: normal;
-    font-weight: normal;
-    font-size: rem(14);
-    line-height: rem(24);
+    @include text;
     color: $medium;
   }
 }
