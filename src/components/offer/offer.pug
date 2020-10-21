@@ -1,9 +1,12 @@
 mixin offer(options)
   if !options
     - options = {}
+  if !options.items
+    - options.items = []
 
-  .offer
-    i.offer__icon()=options.icon
-    .offer__content
-      h3.offer__title()=options.title
-      p.offer__text()=options.text
+  each item in options.items
+    .offer
+      i.offer__icon()=item.icon
+      .offer__content
+        h3.offer__title()=item.title || 'Комфорт'
+        p.offer__text()=item.text || 'Шумопоглощающие стены'

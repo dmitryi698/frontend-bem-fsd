@@ -6,13 +6,16 @@
   align-items: center;
   padding-bottom: rem(17);
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  
+  &:not(:last-child) {
+    margin-bottom: rem(20);
+
+  }
 
   &__icon {
     position: relative;
     margin-right: rem(10);
-    font-family: $icon;
-    font-style: normal;
-    font-weight: normal;
+    @include icon;
     font-size: rem(48);
     line-height: rem(41);
     text-align: center;
@@ -23,12 +26,8 @@
   
   &__title,
   &__text {
-    font-family: $main-font;
-    font-style: normal;
+    @include text;
     font-weight: bold;
-    font-size: rem(14);
-    line-height: rem(24);
-    color: $dark;
   }
 
   &__text {

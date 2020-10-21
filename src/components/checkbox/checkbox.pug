@@ -1,24 +1,24 @@
 //- 
   options.label - текст после чекбокса
   options.text -  если активна опция, то появляется подпись под основным текстом чекбокса(RICH CHECKBOX)
-  
-
-
 
 mixin checkbox(options)
   if !options
     - options = {}
+  if !options.items
+    - options.items = []
   -
-    let labelClassName = ''
-    labelClassName += options.text ? ' checkbox__text-label-rich' : ''
+    let labelClassName = '';
+    labelClassName += options.text ? ' checkbox__text-label-rich' : '';
 
-  .checkbox
-    label.checkbox__label
-      input.checkbox__input(
-        type = 'checkbox'
-        name = options.name
-        checked = options.checked)
-      span.checkbox__mark
-      span.checkbox__text-label(class = labelClassName)=options.label
-      -if(options.text)
-        p.checkbox__rich-text=options.text
+  each item in options.items
+    .checkbox
+      label.checkbox__label
+        input.checkbox__input(
+          type='checkbox'
+          name=item.name
+          checked=item.checked )
+        span.checkbox__mark
+        span.checkbox__text-label( class=labelClassName )=item.label
+        -if( options.text )
+          p.checkbox__rich-text=item.text

@@ -23,10 +23,10 @@
                +title({main: 'subscription textfield'})
                +textfield({placeholder: 'Email', subscription: true})
             .form-elements__item
-               +title({main: dropdown, desc: 'Default'})
+               +title({main: 'dropdown', desc: 'Default'})
                +dropdown({isRooms: true, adult: '2', minor: '2'})
             .form-elements__item
-               +title({main: dropdown, desc: 'Default'})
+               +title({main: 'dropdown', desc: 'Default'})
                +dropdown({isRooms: true,expanded: true, adult: '2', minor: '2'})
             .form-elements__item
                +checkbox-list()
@@ -39,7 +39,23 @@
                   { name: 'breekfast', label: 'Телевизор'},
                   { name: 'breekfast', label: 'Шампунь' },
                ]} )
+            .form-elements__item
+               +offer({items: [
+                  { icon: 'insert_emoticon', },
+                  { icon: 'location_city', title: 'Удобство', text: 'Окно в каждой из спален' }
+               ]})
       .form-elements__col
+         .form-elements__item
+            +title({main: 'Checkbox Buttons'})
+            +checkbox({
+               items: [
+                  { name: 'checkbox', label: 'Можно курить' },
+                  { name: 'checkbox', label: 'Можно с питомцами', checked: true },
+                  { name: 'checkbox', label: 'Можно пригласить гостей (до 10 человек)', checked: true },
+               ]
+            })
+         .form-elements__item
+            
       .form-elements__col
    .form-elements__row
       .form-elements__col
