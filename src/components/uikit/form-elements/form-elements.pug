@@ -55,6 +55,7 @@
                ]
             })
          .form-elements__item
+            +title({main: 'Radio Buttons'})
             +radio({
                items: [
                   { label: 'Мужчина', name: 'floor', checked: true },
@@ -62,6 +63,7 @@
                ]
             })
          .form-elements__item
+            +title({main: 'Toggle'})
             +toggle({
                items: [
                   { name: 'offer', label: 'Получать спецпредложения', checked: true },
@@ -69,10 +71,13 @@
                ]
             })
          .form-elements__item
-            +like-btn({ items: [
-               { count: '2' },
-               { count: '12', isActivated: true }
-            ] })
+            +title({main: 'like button'})
+            +like-btn({ count: '2' })
+            +like-btn({ count: '12', isActivated: true })
+         .form-elements__item
+            +title({ main: 'Rate button' })
+            +rating({ name: 'one', count: 4, isChecked: true })
+            +rating({ name: 'two', count: 5, isChecked: true })
       .form-elements__col
    .form-elements__row
       .form-elements__col

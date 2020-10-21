@@ -1,10 +1,10 @@
-/* rating */ 
 @import '../../scss/utils.scss';
 
 .rating {
   border: none;
-  
+
   &__grope {
+    cursor: pointer;
     position: relative;
     width: 120px;
     height: 24px;
@@ -14,19 +14,24 @@
   /* Rating star */
 
   &__star {
+    cursor: pointer;
     appearance: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 24px;
     height: 24px;
-    
+    margin: 0;
+    padding: 0;
+    background-image: url('./img/star_border.svg');
+
     &:checked,
     &:hover {
       background-image: url('./img/star.svg');
     }
   }
 }
+
 /* Checked hover, checked */
 
 
