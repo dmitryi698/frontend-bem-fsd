@@ -18,6 +18,10 @@
     box-sizing: border-box;
     border-radius: rem(4);
 
+    &:hover {
+      border: 1px solid $medium;
+    }
+
     &_open {
       border-radius: rem(4) rem(4) 0 0;
       border-bottom: none;

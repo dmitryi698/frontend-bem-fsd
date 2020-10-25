@@ -1,20 +1,21 @@
+/* global $ */
 import './range-slider.scss';
 
 
 class Slider {
 
-  constructor(options) {
-    this.options = options;
+  constructor($component) {
+    this.$component = $component;
     this.render();
   }
 
   render() {
 
-    let $range = $(".js-range-slider__input");
-    let $inputRange = $(".js-input-range");
-    let $inputFrom = $(".js-input-from");
-    let $inputTo = $(".js-input-to");
-    
+    let $range = $('.js-range-slider__input', this.$component);
+    let $inputRange = $('.js-input-range', this.$component);
+    let $inputFrom = $('.js-input-from', this.$component);
+    let $inputTo = $('.js-input-to', this.$component);
+
     $range.ionRangeSlider({
       skin: "user",
       type: "double",

@@ -30,6 +30,11 @@
     box-sizing: border-box;
     border-radius: rem(4);
 
+    &:hover,
+    &:focus {
+      border: 1px solid $medium;
+    }
+
   }
 
   &__input {

@@ -1,21 +1,21 @@
 .form-elements
    .form-elements__row
       .form-elements__col
-         //- .form-elements__list-first
-         //-    .form-elements__item
-         //-       +title({main: 'textfield', desc: 'default'})
-         //-       +textfield({placeholder: 'Email'})
-         //-    .form-elements__item
-         //-       +title({main: 'textfield', desc: 'hover/focus'})
-         //-       +textfield({placeholder: 'This is pretty awesome', state: 'hovered'})
-         //-    .form-elements__item
-         //-       +title({main: 'dropdown', desc: 'default'})
-         //-       +dropdown
-         //-    .form-elements__item
-         //-       +title({main: 'masked text field', desc: 'default', })
-         //-       +textfield({isMasked: true, placeholder: 'ДД.ММ.ГГГГ'})
-         //-    .form-elements__item
-         //-       +date-dropdown({titleLeft: 'date Dropdown', titleRight: 'date Dropdown', placeholder: 'ДД.ММ.ГГГГ'})
+         .form-elements__list-first
+            .form-elements__item
+               +title({main: 'textfield', desc: 'default'})
+               +textfield({placeholder: 'Email'})
+            .form-elements__item
+               +title({main: 'textfield', desc: 'hover/focus'})
+               +textfield({placeholder: 'This is pretty awesome', state: 'hovered'})
+            .form-elements__item
+               +title({main: 'dropdown', desc: 'default'})
+               +dropdown
+            .form-elements__item
+               +title({main: 'masked text field', desc: 'default', })
+               +textfield({isMasked: true, placeholder: 'ДД.ММ.ГГГГ'})
+            .form-elements__item
+               +date-dropdown({titleLeft: 'date Dropdown', titleRight: 'date Dropdown', placeholder: 'ДД.ММ.ГГГГ'})
          .form-elements__list-second
             .form-elements__item
                +date-dropdown({isDateFilter: true, placeholder: 'ДД.ММ - ДД.ММ'})
@@ -79,6 +79,13 @@
             +rating({ name: 'one', count: 4, isChecked: true })
             +rating({ name: 'two', count: 5, isChecked: true })
       .form-elements__col
+         .form-elements__item
+            +range-slider({ title: 'Range Slider' })
+         .form-elements__item
+            +title({ main: 'Buttons' })
+            +button
+            +button({isFocused: true})
+            +button({theme: 'blue'})
    .form-elements__row
       .form-elements__col
       .form-elements__col

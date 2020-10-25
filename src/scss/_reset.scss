@@ -90,10 +90,10 @@ video {
 a {
   text-decoration: none;
 
-  &:active,
-  &:hover {
-    outline: 0;
-  }
+  // &:active,
+  // &:hover {
+  //   outline: 0;
+  // }
 }
 
 // List
@@ -126,9 +126,9 @@ html {
   box-sizing: border-box;
 }
 
-:focus {
-  outline: 0;
-}
+// :focus {
+//   outline: 0;
+// }
 
 img,
 audio,
@@ -171,10 +171,10 @@ textarea {
 //   margin: 0;
 // }
 
-button,
-input {
-  line-height: normal;
-}
+// button,
+// input {
+//   line-height: normal;
+// }
 
 // Table
 table {

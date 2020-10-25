@@ -1,8 +1,6 @@
 /* global $ */
 import './date-dropdown.scss';
 
-
-
 class Datepicker {
   constructor($component) {
     this.$component = $component;
@@ -28,7 +26,8 @@ class Datepicker {
       nextHtml: nextCustom,
       navTitles: {
         days: 'MM yyyy'
-      }, onSelect: function (fd, date) {
+      },
+      onSelect: function (fd, date) {
         $end.data('datepicker')
           .update('minDate', date);
         $end.focus();
@@ -52,7 +51,9 @@ class Datepicker {
       }
     });
 
-    $('.datepicker--button[data-action="clear"]').each(function (index) { $(okButton).insertAfter($(this)); });
+    $('.datepicker--button[data-action="clear"]').each(function (index) {
+      $(okButton).insertAfter($(this));
+    });
 
     $filterDate.datepicker({
       offset: 5,
@@ -73,7 +74,11 @@ class Datepicker {
 }
 
 
-  $(() => {
-    let dateFilter = new Datepicker('.js-date-dropdown_theme_filter');
-    let dateDropdown = new Datepicker('.js-date-dropdown');
+$(() => {
+  $('.js-date-dropdown_theme_filter').each((index, $node) => {
+    new Datepicker($node);
   });
+  $('.js-date-dropdown').each((index, $node) => {
+    new Datepicker($node);
+  });
+})

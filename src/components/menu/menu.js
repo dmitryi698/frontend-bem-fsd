@@ -1,3 +1,4 @@
+/* global $ */
 import './menu.scss';
 
 class Menu {
@@ -14,7 +15,7 @@ class Menu {
 
     $menuItem.each(function (index, item) {
       $(item).on({
-        
+
         click: function (e) {
           e.preventDefault();
           $(this).toggleClass('menu__link_activated');
@@ -24,10 +25,14 @@ class Menu {
           $(this).removeClass('menu__link_activated');
           $submenuItem.eq(index).slideUp();
         }
-        
-      })     
+
+      })
     })
   }
 }
 
-let menu = new Menu('.js-menu');
+$(() => {
+  $('.js-menu').each((index, $node) => {
+    new Menu($node);
+  })
+})

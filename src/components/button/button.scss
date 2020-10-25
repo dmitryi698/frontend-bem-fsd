@@ -1,91 +1,107 @@
-/* button */ 
+/* button */
 @import '../../scss/utils.scss';
 
+@mixin button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: $primary;
+  background-color: $default;
+}
 
-  .button {
 
-    &__main {
-      cursor: pointer;
-      position: relative;
-      padding: 0;
-      background: $default;
-      color: $primary;
+.button {
+  @include h(3);
+  @include button;
 
-
-      &:hover {
-        color: $medium;
-      }
-
-      &_blue, &_white {
-        padding: rem(11.5) rem(17.5);
-        border-radius: rem(22);
-        border: 2px solid transparent;
-        width: 100%;
-      }
-      
-      &_blue {
-        border: 2px solid transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),$primary-grad;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
-        color: $default;
-        
-
-        &:hover {
-          color: $default;
-        }
-      }
-      
-      &_white {
-        border: solid 2px transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $primary-grad;
-        background-origin: border-box;
-        background-clip: content-box, border-box;
-        box-shadow: 2px 1000px 1px $default inset;
-        color: $primary;
-
-        &:hover {
-          color: $primary;
-        }
-      }
-
-      &_blue:hover,
-      &_white:hover {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), $primary-grad;
-        background-clip: border-box;
-      }
-    }
-
-    &__title {
-      font-family: $main-font;
-      font-style: normal;
-      font-weight: bold;
-      font-size: rem(12);
-      line-height: rem(15);
-      text-transform: uppercase;
-      
-    }
-
-    &__arrow {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 14.5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: $icon;
-      font-style: normal;
-      font-weight: normal;
-      font-size: rem(24);
-      line-height: rem(24);
-      color: $default;
-    }
-
-    &_theme_header {
-      max-height: rem(34);
-      padding: 8px 18px;
-    }
-    
+  &:focus,
+  &_is-focused {
+    outline: none;
+    color: $medium;
   }
+
+  &:focus-visible {
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $medium;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &_theme-blue {
+    padding: rem(14) rem(20);
+    border: 2px solid ;
+  }
+}
+//   &_blue,
+//   &_white {
+//     padding: rem(11.5) rem(17.5);
+//     border-radius: rem(22);
+//     border: 2px solid transparent;
+//     width: 100%;
+//   }
+
+//   &_blue {
+//     border: 2px solid transparent;
+//     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $primary-grad;
+//     background-origin: border-box;
+//     background-clip: content-box, border-box;
+//     color: $default;
+
+
+//     &:hover {
+//       color: $default;
+//     }
+//   }
+
+//   &_white {
+//     border: solid 2px transparent;
+//     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), $primary-grad;
+//     background-origin: border-box;
+//     background-clip: content-box, border-box;
+//     box-shadow: 2px 1000px 1px $default inset;
+//     color: $primary;
+
+//     &:hover {
+//       color: $primary;
+//     }
+//   }
+
+//   &_blue:hover,
+//   &_white:hover {
+//     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), $primary-grad;
+//     background-clip: border-box;
+//   }
+
+// &__title {
+//   @include h(3);
+
+// }
+
+// &__arrow {
+//   @include icon;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   height: 100%;
+//   width: 14.5%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// &_theme_header {
+//   max-height: rem(34);
+//   padding: 8px 18px;
+// }
+
+// }

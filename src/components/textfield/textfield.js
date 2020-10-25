@@ -18,5 +18,7 @@ class Textfield {
 }
 
 $(() => {
-  let textfield = new Textfield('.js-textfield');
+  $('.js-textfield').each((index, $node) => {
+    new Textfield($node)
+  })
 });
