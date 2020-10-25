@@ -4,7 +4,6 @@
   "description": "second task",
   "author": "Mitrich",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js",
